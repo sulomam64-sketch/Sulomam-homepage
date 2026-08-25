@@ -4,66 +4,78 @@
 
 このリポジトリは既に Netlify 向け設定済みです（[`netlify.toml`](netlify.toml) / [`public/_redirects`](public/_redirects)）。
 
----
-
-## フェーズ 0 — サイト側の準備
-
-1. [`src/content/config.ts`](src/content/config.ts) の `contactEmail` を **本番の受信メール**に変更する（いまはプレースホルダ）
-2. GitHub にこのリポジトリを push する（未作成なら新規 repo を作成）
-3. ローカルで `npm run build` が通ることを確認
+仮URL: https://sulomam-homepage.netlify.app  
+問い合わせ先: `sulomam@sulomam.com`（移管後も **MX を消さない**）
 
 ---
 
-## フェーズ 1 — Netlify にサイト公開（仮URL）
+## フェーズ 0 — サイト側の準備（完了）
 
-1. [Netlify](https://app.netlify.com/) にログイン（GNA 制作時のアカウント）
-2. **Add new site** → **Import an existing project** → GitHub の `sulomam-homepage` を選択
-3. ビルド設定（`netlify.toml` があれば自動）:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. デプロイ完了後、`https://xxxx.netlify.app` で確認
-   - Home / Work / GNA / Contact
-   - 言語切替・ナイトモード
-   - `/work` を直接開いても 404 にならないこと（SPA）
-5. この時点ではまだ独自ドメインを接続しなくてよい
+- [x] `contactEmail` を本番アドレスへ
+- [x] GitHub へ push
+- [x] `npm run build` 確認
 
 ---
 
-## フェーズ 2 — Jimdo でドメイン移管の準備
+## フェーズ 1 — Netlify にサイト公開（完了）
 
-Jimdo 管理画面で次を実施（メニュー名はプランにより異なる）:
+- [x] https://sulomam-homepage.netlify.app で公開済み
 
-1. **ドメインのロック解除**（Transfer lock / レジストリロックを OFF）
-2. **Whois / 登録者メール**が届く実アドレスか確認
-3. **Auth Code（認証コード / EPP）を取得**して控える
-4. **WHOIS プライバシーを一時 OFF**（移管失敗の定番原因）
-5. ドメイン取得から **60 日未満**でないか確認（未満だと移管不可のことが多い）
-6. `@sulomam.com` のメールを使っている場合は、移管後の **MX レコード**方針をメモ（メール継続なら MX を消さない）
+---
 
-Jimdo ヘルプの「ドメイン移管」「レジストラ変更」も併読する。
+## フェーズ 2 — Jimdo で Auth Code 取得（いまここ）
+
+Jimdo で取得した `.com` ドメインは、画面だけで Auth Code が出ないことが多く、**サポートへ「ドメイン移管申請」メッセージを送る**のが定番です。
+
+### 手順
+
+1. Jimdo にログインし、`sulomam.com` を使っているサイトの編集画面を開く
+2. **管理メニュー → サポート → 新規メッセージ**
+3. 件名: `ドメイン移管申請` / カテゴリ: `ドメイン`
+4. 本文に次をコピーして埋める:
+
+```
+ご契約者名 ：（Jimdo契約者の氏名）
+ご契約ドメイン名(移管希望のドメイン)：sulomam.com
+対象ドメイン移管に同意しますか：はい
+Admin-C (ドメインの管理者メールアドレス) メールアドレス：（Whois/管理者に登録している受信可能なメール）
+移管先の指定事業者番号（AGNT-○○○○）：（.com のため不要。空欄で可）
+ドメイン移管の目的について：他ホームページサービスで使用するために移管
+（補足：Netlify Domains へ移管し、公式サイトを Netlify で公開するため）
+ドメインのオプション解約に同意します：同意する
+```
+
+5. 送信後、**数日以内**に Jimdo から Auth Code がメールで届くことが多い
+6. 届いた Auth Code を控える（期限切れに注意）
+7. 取得から **60 日未満**のドメインは移管できないことが多い
+
+参考: [Jimdo — Authcode の取得](https://help.jimdo-dolphin.com/hc/ja/articles/360000775083)
+
+AI ビルダー画面の場合は、独自ドメイン横の `⋮` →「ドメインを移管する」から申請できることもあります。どちらの UI でも、最終的に管理者メールへ Auth Code が届きます。
 
 ---
 
 ## フェーズ 3 — Netlify Domains へ移管
 
-1. Netlify → **Domains** → **Transfer a domain**（表記は Transfer domain など）
-2. `sulomam.com` を入力し、Jimdo の **Auth Code** を入力
+1. [Netlify Domains](https://app.netlify.com/teams/) → **Domains** → **Transfer a domain**（表記は Transfer domain など）
+2. `sulomam.com` と Jimdo の **Auth Code** を入力
 3. 移管費用・更新年を確認して開始
 4. 登録者メールに届く **承認リンクを必ずクリック**
 5. 完了まで **数日〜最大およそ 5〜7 日**かかることがある
 6. 完了後、Netlify Domains に `sulomam.com` が表示されることを確認
 
-よくある止まりどころ: Auth Code 期限切れ / ロック再 ON / 承認メール未クリック / 取得 60 日未満。
+よくある止まりどころ: Auth Code 期限切れ / 承認メール未クリック / 取得 60 日未満。
 
 ---
 
 ## フェーズ 4 — サイトにドメインを接続
 
-1. 公開したサイト → **Domain management** → **Add custom domain**
+1. [sulomam-homepage](https://app.netlify.com/projects/sulomam-homepage) → **Domain management** → **Add custom domain**
 2. `sulomam.com` と `www.sulomam.com` を追加
 3. Netlify Domains 管理下なら、画面の指示どおり **Netlify DNS** に揃える
-4. HTTPS（証明書）が **Active / Provisioned** になるまで待つ
-5. スマホ・別回線で `https://sulomam.com` が新サイトか確認
+4. **MX（メール）は触らない** — `sulomam@sulomam.com` を継続するため
+5. HTTPS（証明書）が **Active / Provisioned** になるまで待つ
+6. スマホ・別回線で `https://sulomam.com` が新サイトか確認
 
 ---
 
@@ -85,4 +97,4 @@ Jimdo ヘルプの「ドメイン移管」「レジストラ変更」も併読�
 
 ## エージェントが代行できないこと
 
-Jimdo / Netlify へのログイン、Auth Code 取得、移管申請・承認は **ご自身の操作が必要**です。
+Jimdo / Netlify へのログイン、サポートへの移管申請、Auth Code の受領、移管申請・承認は **ご自身の操作が必要**です。Auth Code が届いたらチャットに共有（または「取れた」と連絡）してもらえれば、次の Netlify 操作を案内します。
