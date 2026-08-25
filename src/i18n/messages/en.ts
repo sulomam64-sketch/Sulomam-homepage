@@ -131,54 +131,12 @@ export const en: Messages = {
   gna: {
     eyebrow: 'GNA',
     title: 'GNA how-to guide',
-    lead: 'A short guide to Guitar Navigation Assistant (GNA) screens and practice flow. Best read with the app open.',
-    intro: {
-      id: 'intro',
-      title: 'What is GNA?',
-      body: [
-        'GNA helps you practice chords, scales, and keys on the fretboard.',
-        'Keys, scales, and practice streaks are logged so you can see how far your map has grown.',
-        'Start with one key and one shape, then expand to nearby positions and other keys.',
-      ],
-    },
-    lessons: [
-      {
-        id: 'chords',
-        title: 'Lesson 1 — Chords',
-        body: [
-          'On the chord screen, see fingerings on the fretboard.',
-          'Click/tap to toggle frets; right-click/long-press to mute (×).',
-          'In free build mode, add frets and follow chord naming. Learn one open-position shape first, then try the same chord elsewhere.',
-        ],
-      },
-      {
-        id: 'scales',
-        title: 'Lesson 2 — Scales',
-        body: [
-          'Scale tones light up across the neck. Yellow is the root; tap a cell to hear it.',
-          'Pentatonics can show by Box. Turn the frame on to see the current box; arrows move to the next.',
-          'With CAGED, shift the same scale across positions. Build phrases in one box, then connect to the next.',
-        ],
-      },
-      {
-        id: 'keys',
-        title: 'Lesson 3 — Keys (diatonic)',
-        body: [
-          'Enter chords you hear to list major / natural-minor key candidates.',
-          'Don’t guess the key alone — check candidates, then return to fretboard or scales with a clear goal.',
-          'If a backing loop is available, open the scale in that key and practice in place.',
-        ],
-      },
-      {
-        id: 'practice',
-        title: 'Lesson 4 — Practice & GNA log',
-        body: [
-          'Quizzes add score on correct answers and grow streaks. Short checks stick in memory.',
-          'The GNA log shows keys, scales, CAGED shapes, and streaks — circle of fifths and charts show spread.',
-          'Suggested flow: pick one key → touch chords or scales → quick quiz → check the map. One step a day is enough.',
-        ],
-      },
-    ],
+    lead: 'Articles on Guitar Navigation Assistant (GNA) screens and practice flow. Best read with the app open.',
+    postsHeading: 'Articles',
+    postsNote: 'Article bodies are in Japanese.',
+    readMore: 'Read more',
+    backToList: '← Back to articles',
+    emptyPosts: 'No articles yet.',
     termsHeading: 'Glossary',
     termsLead: 'Short notes on words you’ll see in the app.',
     terms: [

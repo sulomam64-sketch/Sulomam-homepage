@@ -1,15 +1,112 @@
-.gna-lesson {
+.gna-posts-note {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.gna-posts {
   max-width: 40rem;
 }
 
-.gna-para {
-  margin: 0 0 0.85rem;
+.gna-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.gna-post-item {
+  padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 40%, transparent);
+}
+
+.gna-post-date {
+  display: block;
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.gna-post-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.gna-post-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gna-post-title a:hover {
+  color: var(--accent-deep);
+}
+
+.gna-post-summary {
+  margin: 0 0 0.65rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.gna-post-more {
+  color: var(--accent-deep);
+  font-size: 0.92rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.gna-article {
+  padding-bottom: 3rem;
+}
+
+.gna-article-body {
+  max-width: 40rem;
+}
+
+.gna-article-body :is(p, ul, ol) {
+  margin: 0 0 0.95rem;
   color: var(--ink-soft);
   line-height: 1.75;
 }
 
-.gna-para:last-child {
-  margin-bottom: 0;
+.gna-article-body :is(ul, ol) {
+  padding-left: 1.25rem;
+}
+
+.gna-article-body :is(h2, h3) {
+  margin: 1.75rem 0 0.75rem;
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.gna-article-body h2 {
+  font-size: 1.35rem;
+}
+
+.gna-article-body h3 {
+  font-size: 1.15rem;
+}
+
+.gna-article-body a {
+  color: var(--accent-deep);
+}
+
+.gna-back {
+  max-width: 40rem;
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.gna-back a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .gna-terms {
@@ -48,4 +145,10 @@
   color: var(--ink-soft);
   line-height: 1.7;
   font-size: 0.95rem;
+}
+
+.gna-para {
+  margin: 0 0 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
 }

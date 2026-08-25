@@ -131,54 +131,12 @@ export const es: Messages = {
   gna: {
     eyebrow: 'GNA',
     title: 'Guía de uso de GNA',
-    lead: 'Guía breve de pantallas y práctica en Guitar Navigation Assistant (GNA). Mejor leerla con la app abierta.',
-    intro: {
-      id: 'intro',
-      title: '¿Qué es GNA?',
-      body: [
-        'GNA ayuda a practicar acordes, escalas y tonalidades en el diapasón.',
-        'Registra tonos, escalas y rachas para ver hasta dónde creció tu mapa.',
-        'Empieza con una tonalidad y una forma; luego amplía a posiciones cercanas y otras tonos.',
-      ],
-    },
-    lessons: [
-      {
-        id: 'chords',
-        title: 'Lección 1 — Acordes',
-        body: [
-          'En la pantalla de acordes ves digitaciones en el diapasón.',
-          'Clic/toque activa trastes; clic derecho/mantener silencia (×).',
-          'En modo libre añades trastes y sigues el nombre del acorde. Aprende una forma abierta y prueba el mismo acorde en otra posición.',
-        ],
-      },
-      {
-        id: 'scales',
-        title: 'Lección 2 — Escalas',
-        body: [
-          'Las notas de la escala se muestran en el mástil. Amarillo = raíz; toca una celda para oírla.',
-          'Las pentatónicas pueden verse por Box. El marco muestra la caja actual; las flechas pasan a la vecina.',
-          'Con CAGED mueves la misma escala de posición. Frasea en una caja y luego conéctala a la siguiente.',
-        ],
-      },
-      {
-        id: 'keys',
-        title: 'Lección 3 — Tonalidad (diatónico)',
-        body: [
-          'Introduce acordes que oyes y verás candidatos mayor / menor natural.',
-          'No adivines solo: mira candidatos y vuelve al diapasón o escalas con un objetivo claro.',
-          'Si hay loop de backing, abre la escala en esa tonalidad y practica ahí.',
-        ],
-      },
-      {
-        id: 'practice',
-        title: 'Lección 4 — Práctica y registro GNA',
-        body: [
-          'El quiz suma puntos y alarga la racha. Un chequeo corto ayuda a memorizar.',
-          'El registro muestra tonos, escalas, formas CAGED y rachas; el círculo de quintas y gráficos muestran el alcance.',
-          'Flujo sugerido: elige un tono → toca acordes o escalas → quiz breve → mira el mapa. Un paso al día basta.',
-        ],
-      },
-    ],
+    lead: 'Artículos sobre pantallas y práctica en Guitar Navigation Assistant (GNA). Mejor leerlos con la app abierta.',
+    postsHeading: 'Artículos',
+    postsNote: 'El cuerpo de los artículos está en japonés.',
+    readMore: 'Leer más',
+    backToList: '← Volver a artículos',
+    emptyPosts: 'Aún no hay artículos.',
     termsHeading: 'Glosario',
     termsLead: 'Notas cortas sobre palabras de la app.',
     terms: [

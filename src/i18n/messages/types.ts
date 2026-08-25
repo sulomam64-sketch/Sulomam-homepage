@@ -6,12 +6,6 @@ export type ServiceItem = {
   description: string
 }
 
-export type GnaLesson = {
-  id: string
-  title: string
-  body: string[]
-}
-
 export type GnaTerm = {
   id: string
   term: string
@@ -84,8 +78,11 @@ export type Messages = {
     eyebrow: string
     title: string
     lead: string
-    intro: GnaLesson
-    lessons: GnaLesson[]
+    postsHeading: string
+    postsNote: string
+    readMore: string
+    backToList: string
+    emptyPosts: string
     termsHeading: string
     termsLead: string
     terms: GnaTerm[]
