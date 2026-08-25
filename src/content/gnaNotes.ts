@@ -1,53 +1,72 @@
-/** GNA articles published on note. Add a new row when you publish. */
+/** GNA articles: Japanese on note, English on Substack. */
 export type GnaNoteArticle = {
   id: string
-  title: string
+  titleJa: string
+  titleEn: string
   date: string
-  summary: string
-  /** note.com article URL. Empty = listed as pending until you paste the link. */
+  summaryJa: string
+  summaryEn: string
+  /** note.com URL (Japanese). Empty until published. */
   noteUrl: string
+  /** Substack URL (English). Empty until published. */
+  substackUrl: string
 }
 
 export const gnaNoteArticles: GnaNoteArticle[] = [
   {
     id: 'what-is-gna',
-    title: 'GNA とは',
+    titleJa: 'GNA とは',
+    titleEn: 'What is GNA?',
     date: '2024-01-01',
-    summary: 'ギターの指板上でコード・スケール・キーを眺めながら練習するためのナビです。',
+    summaryJa: 'ギターの指板上でコード・スケール・キーを眺めながら練習するためのナビです。',
+    summaryEn: 'A fretboard navigator for practicing chords, scales, and keys.',
     noteUrl: '',
+    substackUrl: '',
   },
   {
     id: 'chords',
-    title: '講座 1 — コード',
+    titleJa: '講座 1 — コード',
+    titleEn: 'Lesson 1 — Chords',
     date: '2024-01-02',
-    summary: 'コード画面で押さえを確認し、基本形から別ポジションへ広げる。',
+    summaryJa: 'コード画面で押さえを確認し、基本形から別ポジションへ広げる。',
+    summaryEn: 'Check fingerings on the chord screen, then move beyond open-position shapes.',
     noteUrl: '',
+    substackUrl: '',
   },
   {
     id: 'scales',
-    title: '講座 2 — スケール',
+    titleJa: '講座 2 — スケール',
+    titleEn: 'Lesson 2 — Scales',
     date: '2024-01-03',
-    summary: 'スケール音の表示、Box、CAGED を使ったポジション練習。',
+    summaryJa: 'スケール音の表示、Box、CAGED を使ったポジション練習。',
+    summaryEn: 'Scale tones on the neck, Boxes, and CAGED-based position practice.',
     noteUrl: '',
+    substackUrl: '',
   },
   {
     id: 'keys',
-    title: '講座 3 — キー（ダイアトニック）',
+    titleJa: '講座 3 — キー（ダイアトニック）',
+    titleEn: 'Lesson 3 — Keys (diatonic)',
     date: '2024-01-04',
-    summary: '聞こえたコードからキー候補を見つけ、練習の目的をはっきりさせる。',
+    summaryJa: '聞こえたコードからキー候補を見つけ、練習の目的をはっきりさせる。',
+    summaryEn: 'Find key candidates from chords you hear, then practice with a clear goal.',
     noteUrl: '',
+    substackUrl: '',
   },
   {
     id: 'practice',
-    title: '講座 4 — 練習と GNA 記録',
+    titleJa: '講座 4 — 練習と GNA 記録',
+    titleEn: 'Lesson 4 — Practice & GNA log',
     date: '2024-01-05',
-    summary: 'クイズと記録画面で、短い確認テストと地図の広がりを見る。',
+    summaryJa: 'クイズと記録画面で、短い確認テストと地図の広がりを見る。',
+    summaryEn: 'Use quizzes and the log to check progress and see how your map grows.',
     noteUrl: '',
+    substackUrl: '',
   },
 ]
 
 export function getGnaNoteArticles(): GnaNoteArticle[] {
   return [...gnaNoteArticles].sort(
-    (a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title, 'ja'),
+    (a, b) => b.date.localeCompare(a.date) || a.titleJa.localeCompare(b.titleJa, 'ja'),
   )
 }

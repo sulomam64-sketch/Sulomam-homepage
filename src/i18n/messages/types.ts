@@ -81,7 +81,9 @@ export type Messages = {
     postsHeading: string
     postsNote: string
     openOnNote: string
+    openOnSubstack: string
     pendingNote: string
+    pendingSubstack: string
     emptyPosts: string
     termsHeading: string
     termsLead: string

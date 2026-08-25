@@ -22,15 +22,16 @@ npm run build
 - お問い合わせ宛先・Instagram: `src/content/config.ts`
 - 多言語文言: `src/i18n/messages/`（`ja` / `en` / `zh` / `ko` / `es`）
 - Works のタイトル等（固有名詞）: `src/content/config.ts`
-- **GNA 記事一覧:** [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts)（本文は note）
+- **GNA 記事一覧:** [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts)
 
 ## GNA 記事の書き方
 
-1. [note](https://note.com/) で記事を書く・公開する
-2. 公開URLを [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts) の `noteUrl` に貼る（新規なら行を追加）
-3. GitHub に push → Netlify が反映（未連携ならデプロイを依頼）
+1. **日本語**は [note](https://note.com/) で公開
+2. **英語**は同じテーマを [Substack](https://substack.com/) で公開（完全一致の翻訳でなくてよい）
+3. 両URLを [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts) の `noteUrl` / `substackUrl` に貼る（新規なら行を追加）
+4. GitHub に push → Netlify が反映（未連携ならデプロイを依頼）
 
-サイトの `/gna` は目次（タイトル・要約・note へのリンク）です。本文は note 側に置きます。
+サイトの `/gna` は目次です。本文は note（日本語）と Substack（英語）側に置きます。
 
 ## デプロイ / Jimdo 退会
 
