@@ -1,0 +1,51 @@
+.gna-lesson {
+  max-width: 40rem;
+}
+
+.gna-para {
+  margin: 0 0 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.gna-para:last-child {
+  margin-bottom: 0;
+}
+
+.gna-terms {
+  max-width: 40rem;
+  padding-bottom: 4rem;
+}
+
+.gna-terms-lead {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.gna-term-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gna-term {
+  padding-top: 0.85rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 40%, transparent);
+}
+
+.gna-term dt {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+.gna-term dd {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}

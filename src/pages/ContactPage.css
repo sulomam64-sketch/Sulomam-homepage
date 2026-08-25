@@ -1,0 +1,43 @@
+.contact-form {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 32rem;
+  padding: 0 clamp(1.25rem, 4vw, 3rem) 4rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--teal) 28%, transparent);
+  background: var(--bg-elevated);
+  color: var(--ink);
+  font: inherit;
+  border-radius: 0;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 1px;
+}
+
+.form-note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.form-note code {
+  font-size: 0.78rem;
+  color: var(--accent-deep);
+}

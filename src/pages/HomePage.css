@@ -1,0 +1,160 @@
+.hero {
+  position: relative;
+  min-height: min(92vh, 52rem);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--on-dark);
+}
+
+[data-theme='dark'] .hero {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 75% 15%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 85%, color-mix(in srgb, #64748b 25%, transparent), transparent 50%),
+    linear-gradient(160deg, #0a0a0a 0%, #111827 48%, #09090b 100%);
+  transform: scale(1.02);
+  animation: hero-drift 18s ease-in-out infinite alternate;
+}
+
+.hero-atmosphere::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 18px,
+    color-mix(in srgb, var(--on-dark) 3.5%, transparent) 18px,
+    color-mix(in srgb, var(--on-dark) 3.5%, transparent) 19px
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(44rem, 100%);
+  padding: clamp(3rem, 10vh, 6rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 8vh, 5rem);
+  animation: hero-rise 0.9s ease-out both;
+}
+
+.hero-brand {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--accent-soft);
+}
+
+.hero-headline {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--on-dark);
+}
+
+.hero-lead {
+  margin: 0 0 1.75rem;
+  max-width: 28rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--on-dark) 78%, transparent);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.intro-section p {
+  margin: 0 0 0.85rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+.intro-section p:last-child {
+  margin-bottom: 0;
+}
+
+.consult-points {
+  margin: 0 0 0.5rem;
+  padding-left: 1.2rem;
+  max-width: 40rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.consult-points li + li {
+  margin-top: 0.45rem;
+}
+
+.consult-cta {
+  margin-top: 2rem;
+}
+
+.consult-cta-btn {
+  color: #fffaf8;
+}
+
+.subhead {
+  margin: 2rem 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--accent-deep);
+}
+
+.closing-section {
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--accent) 6%, var(--bg)) 100%
+  );
+}
+
+.closing-aside {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.closing-section .btn {
+  margin-top: 0.5rem;
+}
+
+@keyframes hero-drift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.06) translate3d(-1.5%, 1%, 0);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-atmosphere,
+  .hero-inner {
+    animation: none;
+  }
+}

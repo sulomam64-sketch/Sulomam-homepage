@@ -1,0 +1,212 @@
+import type { Messages } from './types'
+
+export const ko: Messages = {
+  site: {
+    brand: 'Sulomam',
+    tagline: 'Touch of Sound',
+    headline: '소리에, 손맛을.',
+    description: '작편곡·기타·믹스. 용도에 맞춰 개별 견적합니다.',
+    languageLabel: '언어',
+    themeLabel: '표시',
+    themeLight: '라이트',
+    themeDark: '나이트',
+    nav: [
+      { to: '/', label: 'Home' },
+      { to: '/work', label: 'Work' },
+      { to: '/gna', label: 'GNA' },
+      { to: '/contact', label: 'Contact' },
+    ],
+  },
+  layout: {
+    navAria: '메인',
+    instagram: 'Instagram',
+  },
+  home: {
+    consultCta: '무료 상담하기',
+    worksCta: 'Works 보기',
+    servicesHeading: 'Skills',
+    intro: {
+      eyebrow: 'About',
+      title: 'About',
+      paragraphs: [
+        '기타리스트 / 작편곡가 / 믹스 엔지니어 Sulomam 입니다.',
+        'BGM, CM, 라이브 트랙, 편곡·믹스 등 건별로 맞춰 진행합니다.',
+        '고정 요금표는 없고, 상담 후 견적합니다.',
+      ],
+    },
+    services: [
+      {
+        id: 'compose-arrange',
+        title: '작곡·편곡',
+        description: 'BGM, CM, 오프닝, 풀 트랙 등. 용도와 길이에 맞춰 만듭니다.',
+      },
+      {
+        id: 'mix',
+        title: '믹스 / 마무리',
+        description: '기존 소재 믹스, 보컬 편집, 배포·영상에 올릴 수 있는 마무리.',
+      },
+      {
+        id: 'guitar',
+        title: '기타 연주·REC',
+        description: '어쿠스틱 / 일렉 연주·녹음. 트랙 레이어와 질감 보강.',
+      },
+      {
+        id: 'direction',
+        title: '디렉션·상담',
+        description: '방향 정리, 레퍼런스 읽기, AI 초안 다듬기도 상담 가능합니다.',
+      },
+      {
+        id: 'live-support',
+        title: 'Live 서포트',
+        description: '라이브·세션용 연주 지원과, 현장/원격 사운드 도움.',
+      },
+    ],
+    consult: {
+      eyebrow: 'Consultation',
+      title: '상담부터 시작해요',
+      lead: '정해진 요금표는 없습니다. 용도·길이·일정·보유 소재를 듣고 개별 견적합니다.',
+      points: [
+        '메일·Zoom 등 먼저 무료 미팅 가능',
+        '「영상에 음악이 필요」「데모는 있으니 마무리」 등 중간 상담도 환영',
+        'AI로 만든 초안도 편곡·연주·믹스로 함께 다듬을 수 있습니다',
+      ],
+    },
+    closing: {
+      title: '마치며',
+      body: '무료 미팅으로 방향과 견적을 안내합니다. 편하게 연락 주세요.',
+      aside: '편곡만, 믹스만, 기타 녹음만도 환영합니다.',
+      cta: 'Contact',
+    },
+  },
+  work: {
+    eyebrow: 'Work',
+    title: 'Works',
+    lead: '제작·편곡·크레딧의 일부입니다.',
+    production: 'Production',
+    guitar: 'Guitar play',
+    subtitles: {
+      'pokemon-we-move': '포켓몬 공식 YouTube',
+      nomura: '"당신의 꿈을 움직이자"',
+    },
+    descriptions: {
+      'pokemon-we-move': '오프닝 / 드론 쇼. ioly 주식회사와 제작.',
+      sawayaka: '상쾌신용금고 20주년 「사와야카 숏스토리」 음악 제작.',
+      dsj: '「사람의 힘」 특설 사이트 MV 음악.',
+      graphite: 'CM (SC 방송·웹, 2021/8)',
+      nogizaka: '댄스용 곡 제작',
+      tohoshinki: '공동 제작 크레딧',
+      'koda-tour': 'Soundpark와 공동 제작',
+      'koda-lit': '라이브 편곡 (Soundpark)',
+      nomura: '음악 제작 (Soundpark)',
+      pocky: '음악 제작 (Soundpark)',
+      yuma: '작곡·편곡',
+      'drama-cd': '사운드트랙 제작',
+      nakamura: '편곡',
+      root9: '곡 제공',
+      'naitetamaruka-heli': '작곡·편곡·믹스',
+      'naitetamaruka-rainbow': '작곡·편곡·믹스',
+      'nakamura-guitar': 'Percussive Agt',
+      'heartbeat-unlock': '기타 참여',
+      'grateful-dead': 'Egt',
+      gaki: 'Guitar',
+      'yusuke-hana': 'm5 花唄 (Guitar)',
+      'yusuke-history': 'm10 History III (Guitar)',
+      'heartbeat-kaori': 'you are the universe (Agt＆Egt)',
+    },
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Contact',
+    lead: '메일 / Zoom으로 무료 미팅하며 방향과 견적을 드립니다. 편하게 문의하세요.',
+    name: '이름 *',
+    email: '이메일 *',
+    message: '메시지 *',
+    note: '제출 시 메일 앱이 열립니다. 수신 주소는 아래입니다.',
+    submit: '메일 열기',
+    mailSubject: '[Sulomam] 문의',
+    mailUntitled: '제목 없음',
+    mailName: '이름',
+    mailEmail: '이메일',
+  },
+  gna: {
+    eyebrow: 'GNA',
+    title: 'GNA 사용 강의',
+    lead: '기타 내비게이션 어시스턴트(GNA) 화면과 연습 흐름을 짧게 정리합니다. 앱을 연 채로 읽는 것을 권합니다.',
+    intro: {
+      id: 'intro',
+      title: 'GNA란?',
+      body: [
+        'GNA는 지판에서 코드·스케일·키를 보며 연습하는 내비입니다.',
+        '만진 키·스케일·연속 연습이 남아, 지도가 어디까지 넓어졌는지 확인할 수 있습니다.',
+        '키 하나·폼 하나부터 시작해, 익숙해지면 옆 포지션과 다른 키로 넓히세요.',
+      ],
+    },
+    lessons: [
+      {
+        id: 'chords',
+        title: '강의 1 — 코드',
+        body: [
+          '코드 화면에서 선택한 코드의 운지를 지판으로 확인합니다.',
+          '클릭/탭으로 프렛 ON/OFF, 우클릭/길게 누르기로 뮤트(×).',
+          '빈 지판에서 운지를 추가하며 코드명도 따라갑니다. 개방 가까운 기본형 하나부터, 같은 코드를 다른 포지션에서도 쳐 보세요.',
+        ],
+      },
+      {
+        id: 'scales',
+        title: '강의 2 — 스케일',
+        body: [
+          '스케일 음이 지판 전체에 표시됩니다. 노랑=루트, 칸을 탭하면 소리가 납니다.',
+          '펜타토닉은 Box 단위로 표시할 수 있습니다. 프레임 ON으로 현재 상자를 보고 화살표로 이웃으로 이동합니다.',
+          'CAGED와 함께 쓰면 같은 스케일을 포지션 이동하며 연습하기 쉽습니다. 한 Box에서 프레이즈를 만든 뒤 옆 Box로 이으세요.',
+        ],
+      },
+      {
+        id: 'keys',
+        title: '강의 3 — 키(다이어토닉)',
+        body: [
+          '들은 코드를 입력하면 메이저/내추럴 마이너 등 키 후보를 볼 수 있습니다.',
+          '감만으로 키를 정하지 말고 후보를 본 뒤 지판·스케일로 돌아가면 목표가 분명해집니다.',
+          '백킹 루프가 있으면 판별한 키로 스케일을 열고 같은 키로 연습하세요.',
+        ],
+      },
+      {
+        id: 'practice',
+        title: '강의 4 — 연습과 GNA 기록',
+        body: [
+          '퀴즈는 정답 시 점수, 연속 정답으로 스트릭이 늘어납니다. 짧은 확인도 기억에 남습니다.',
+          '기록 화면에서 키·스케일·CAGED·연속 연습을 보고, 5도권·그래프로 확장을 확인합니다.',
+          '추천 흐름: 오늘 키 하나 → 코드/스케일 → 퀴즈 → 기록. 매일 전부 할 필요 없이 하나만 해도 지도는 자랍니다.',
+        ],
+      },
+    ],
+    termsHeading: '용어',
+    termsLead: '앱에서 자주 나오는 말만 짧게 설명합니다.',
+    terms: [
+      {
+        id: 'caged',
+        term: 'CAGED',
+        body: '개방 가까운 기본형(C·A·G·E·D)을 넥 위로 옮겨 익히는 틀입니다. 같은 코드도 폼이 바뀌면 포지션이 달라집니다.',
+      },
+      {
+        id: 'box',
+        term: 'Box',
+        body: '펜타 등을 손이 닿는 ‘상자’로 나눈 포지션입니다. 프레임 ON으로 현재 상자를 보고 화살표로 이웃으로 이동합니다.',
+      },
+      {
+        id: 'diatonic',
+        term: '다이어토닉',
+        body: '어떤 키의 음계로 만든 코드·진행입니다. GNA는 입력 코드로 키 후보를 찾습니다.',
+      },
+      {
+        id: 'fifths',
+        term: '5도권',
+        body: '완전 5도로 이어진 키 배열입니다. 스킬맵에서 만진 루트가 켜집니다.',
+      },
+      {
+        id: 'degree',
+        term: '도수',
+        body: '루트에서 센 거리(1·3·5…). 음이름만이 아니라 관계로 역할을 볼 때 씁니다.',
+      },
+    ],
+  },
+}

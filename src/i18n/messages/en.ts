@@ -1,0 +1,212 @@
+import type { Messages } from './types'
+
+export const en: Messages = {
+  site: {
+    brand: 'Sulomam',
+    tagline: 'Touch of Sound',
+    headline: 'Give sound a human touch.',
+    description: 'Composition, arrangement, guitar, and mix — quoted per project.',
+    languageLabel: 'Language',
+    themeLabel: 'Theme',
+    themeLight: 'Light',
+    themeDark: 'Night',
+    nav: [
+      { to: '/', label: 'Home' },
+      { to: '/work', label: 'Work' },
+      { to: '/gna', label: 'GNA' },
+      { to: '/contact', label: 'Contact' },
+    ],
+  },
+  layout: {
+    navAria: 'Main',
+    instagram: 'Instagram',
+  },
+  home: {
+    consultCta: 'Book a free consult',
+    worksCta: 'View Works',
+    servicesHeading: 'Skills',
+    intro: {
+      eyebrow: 'About',
+      title: 'About',
+      paragraphs: [
+        'Sulomam — guitarist, composer/arranger, and mix engineer.',
+        'I take on BGM, CM, live tracks, arrangements, and mixes — shaped to each brief.',
+        'No fixed price list. Quotes follow a short hearing.',
+      ],
+    },
+    services: [
+      {
+        id: 'compose-arrange',
+        title: 'Compose & arrange',
+        description: 'BGM, CM, openings, full-length tracks — built for use and length.',
+      },
+      {
+        id: 'mix',
+        title: 'Mix / finish',
+        description: 'Mixing existing stems, vocal edit, and delivery-ready polish.',
+      },
+      {
+        id: 'guitar',
+        title: 'Guitar & recording',
+        description: 'Acoustic / electric performance and recording to thicken a track.',
+      },
+      {
+        id: 'direction',
+        title: 'Direction & consult',
+        description: 'Direction, reference reading, and polishing AI drafts included.',
+      },
+      {
+        id: 'live-support',
+        title: 'Live support',
+        description: 'Performance support for live and sessions, plus on-site or remote sound help.',
+      },
+    ],
+    consult: {
+      eyebrow: 'Consultation',
+      title: 'Let’s start with a talk',
+      lead: 'No fixed menu pricing. After use, length, deadline, and materials, I’ll quote individually.',
+      points: [
+        'Free first chat by email or Zoom',
+        'Mid-project asks welcome — “need music for this film,” “demo exists, need finish,” etc.',
+        'AI drafts can be arranged, played, and mixed together',
+      ],
+    },
+    closing: {
+      title: 'Closing',
+      body: 'A free consult first — direction and estimate. Reach out anytime.',
+      aside: 'Arrangement-only, mix-only, or guitar-only jobs are welcome too.',
+      cta: 'Contact',
+    },
+  },
+  work: {
+    eyebrow: 'Work',
+    title: 'Works',
+    lead: 'Selected production, arrangement, and credit work.',
+    production: 'Production',
+    guitar: 'Guitar play',
+    subtitles: {
+      'pokemon-we-move': 'From the official Pokémon YouTube',
+      nomura: '"Move Your Dream"',
+    },
+    descriptions: {
+      'pokemon-we-move': 'Opening / drone show. Produced with ioly Inc.',
+      sawayaka: 'Music for Sawayaka Shinkin 20th anniversary “Sawayaka Short Story.”',
+      dsj: 'MV music for the “Hitono Chikara” special site.',
+      graphite: 'CM (SC broadcast & web, Aug 2021)',
+      nogizaka: 'Dance track production',
+      tohoshinki: 'Co-write credit',
+      'koda-tour': 'Co-production with Soundpark',
+      'koda-lit': 'Live arrangement (with Soundpark)',
+      nomura: 'Music production (with Soundpark)',
+      pocky: 'Music production (with Soundpark)',
+      yuma: 'Compose & arrange',
+      'drama-cd': 'Soundtrack production',
+      nakamura: 'Song arrangement',
+      root9: 'Song contribution',
+      'naitetamaruka-heli': 'Compose, arrange, mix',
+      'naitetamaruka-rainbow': 'Compose, arrange, mix',
+      'nakamura-guitar': 'Percussive Agt',
+      'heartbeat-unlock': 'Guitar',
+      'grateful-dead': 'Egt',
+      gaki: 'Guitar',
+      'yusuke-hana': 'm5 Hana Uta (Guitar)',
+      'yusuke-history': 'm10 History III (Guitar)',
+      'heartbeat-kaori': 'you are the universe (Agt & Egt)',
+    },
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Contact',
+    lead: 'Free consult by email / Zoom for direction and estimate. Feel free to reach out.',
+    name: 'Name *',
+    email: 'Email *',
+    message: 'Message *',
+    note: 'Submit opens your mail app. Destination address below.',
+    submit: 'Open email',
+    mailSubject: '[Sulomam] Inquiry',
+    mailUntitled: 'Untitled',
+    mailName: 'Name',
+    mailEmail: 'Email',
+  },
+  gna: {
+    eyebrow: 'GNA',
+    title: 'GNA how-to guide',
+    lead: 'A short guide to Guitar Navigation Assistant (GNA) screens and practice flow. Best read with the app open.',
+    intro: {
+      id: 'intro',
+      title: 'What is GNA?',
+      body: [
+        'GNA helps you practice chords, scales, and keys on the fretboard.',
+        'Keys, scales, and practice streaks are logged so you can see how far your map has grown.',
+        'Start with one key and one shape, then expand to nearby positions and other keys.',
+      ],
+    },
+    lessons: [
+      {
+        id: 'chords',
+        title: 'Lesson 1 — Chords',
+        body: [
+          'On the chord screen, see fingerings on the fretboard.',
+          'Click/tap to toggle frets; right-click/long-press to mute (×).',
+          'In free build mode, add frets and follow chord naming. Learn one open-position shape first, then try the same chord elsewhere.',
+        ],
+      },
+      {
+        id: 'scales',
+        title: 'Lesson 2 — Scales',
+        body: [
+          'Scale tones light up across the neck. Yellow is the root; tap a cell to hear it.',
+          'Pentatonics can show by Box. Turn the frame on to see the current box; arrows move to the next.',
+          'With CAGED, shift the same scale across positions. Build phrases in one box, then connect to the next.',
+        ],
+      },
+      {
+        id: 'keys',
+        title: 'Lesson 3 — Keys (diatonic)',
+        body: [
+          'Enter chords you hear to list major / natural-minor key candidates.',
+          'Don’t guess the key alone — check candidates, then return to fretboard or scales with a clear goal.',
+          'If a backing loop is available, open the scale in that key and practice in place.',
+        ],
+      },
+      {
+        id: 'practice',
+        title: 'Lesson 4 — Practice & GNA log',
+        body: [
+          'Quizzes add score on correct answers and grow streaks. Short checks stick in memory.',
+          'The GNA log shows keys, scales, CAGED shapes, and streaks — circle of fifths and charts show spread.',
+          'Suggested flow: pick one key → touch chords or scales → quick quiz → check the map. One step a day is enough.',
+        ],
+      },
+    ],
+    termsHeading: 'Glossary',
+    termsLead: 'Short notes on words you’ll see in the app.',
+    terms: [
+      {
+        id: 'caged',
+        term: 'CAGED',
+        body: 'Open-position shapes (C·A·G·E·D) moved up the neck. Same chord, different positions.',
+      },
+      {
+        id: 'box',
+        term: 'Box',
+        body: 'A reachable “box” of notes (e.g. pentatonic). Frame ON shows the active box; move to neighbors with arrows.',
+      },
+      {
+        id: 'diatonic',
+        term: 'Diatonic',
+        body: 'Chords/progressions from a key’s scale. GNA lists key candidates from entered chords.',
+      },
+      {
+        id: 'fifths',
+        term: 'Circle of fifths',
+        body: 'Keys arranged by perfect fifths. Touched roots light up on the skill map.',
+      },
+      {
+        id: 'degree',
+        term: 'Scale degree',
+        body: 'Distance from the root (1st, 3rd, 5th…). Roles by relation, not only note names.',
+      },
+    ],
+  },
+}

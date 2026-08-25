@@ -1,0 +1,212 @@
+import type { Messages } from './types'
+
+export const zh: Messages = {
+  site: {
+    brand: 'Sulomam',
+    tagline: 'Touch of Sound',
+    headline: '让声音有手感。',
+    description: '作曲编曲、吉他、混音。按项目单独报价。',
+    languageLabel: '语言',
+    themeLabel: '外观',
+    themeLight: '浅色',
+    themeDark: '夜间',
+    nav: [
+      { to: '/', label: 'Home' },
+      { to: '/work', label: 'Work' },
+      { to: '/gna', label: 'GNA' },
+      { to: '/contact', label: 'Contact' },
+    ],
+  },
+  layout: {
+    navAria: '主导航',
+    instagram: 'Instagram',
+  },
+  home: {
+    consultCta: '免费咨询',
+    worksCta: '查看 Works',
+    servicesHeading: 'Skills',
+    intro: {
+      eyebrow: 'About',
+      title: 'About',
+      paragraphs: [
+        'Sulomam — 吉他手 / 作曲编曲 / 混音工程师。',
+        '承接 BGM、广告、现场曲、编曲与混音，按需求推进。',
+        '不设固定价目表，沟通后单独报价。',
+      ],
+    },
+    services: [
+      {
+        id: 'compose-arrange',
+        title: '作曲・编曲',
+        description: 'BGM、广告、开场、完整曲目等，按用途与时长搭建。',
+      },
+      {
+        id: 'mix',
+        title: '混音 / 收尾',
+        description: '素材混音、人声编辑，做到可发布或可上视频的状态。',
+      },
+      {
+        id: 'guitar',
+        title: '吉他演奏・录音',
+        description: '木吉他 / 电吉他演奏与录音，为轨道叠加质感。',
+      },
+      {
+        id: 'direction',
+        title: '企划・咨询',
+        description: '方向梳理、参考解读，也可打磨 AI 草稿。',
+      },
+      {
+        id: 'live-support',
+        title: 'Live 支持',
+        description: '现场与录音室的演奏支持，以及现场／远程的声音协助。',
+      },
+    ],
+    consult: {
+      eyebrow: 'Consultation',
+      title: '先从沟通开始',
+      lead: '没有固定价目。根据用途、时长、交期与现有素材单独报价。',
+      points: [
+        '邮件或 Zoom 可先免费沟通',
+        '欢迎中途咨询：要给影像配乐、已有小样要收尾等',
+        '已有 AI 草稿也可一起编曲、演奏、混音',
+      ],
+    },
+    closing: {
+      title: '写在最后',
+      body: '先免费沟通方向与报价，欢迎随时联系。',
+      aside: '只做编曲、只做混音、只录吉他也可以。',
+      cta: 'Contact',
+    },
+  },
+  work: {
+    eyebrow: 'Work',
+    title: 'Works',
+    lead: '部分制作、编曲与演奏履历。',
+    production: 'Production',
+    guitar: 'Guitar play',
+    subtitles: {
+      'pokemon-we-move': '来自宝可梦官方 YouTube',
+      nomura: '「驱动你的梦想」',
+    },
+    descriptions: {
+      'pokemon-we-move': '开场 / 无人机演出。与 ioly 株式会社共同制作。',
+      sawayaka: '爽やか信用金库 20 周年「爽やか短篇故事」配乐。',
+      dsj: '「人的力量」特设站 MV 音乐。',
+      graphite: '广告（SC 播出与网页，2021/8）',
+      nogizaka: '舞蹈用曲制作',
+      tohoshinki: '共同创作署名',
+      'koda-tour': '与 Soundpark 共同制作',
+      'koda-lit': '现场编曲（与 Soundpark）',
+      nomura: '音乐制作（与 Soundpark）',
+      pocky: '音乐制作（与 Soundpark）',
+      yuma: '作曲・编曲',
+      'drama-cd': '原声制作',
+      nakamura: '编曲',
+      root9: '提供曲目',
+      'naitetamaruka-heli': '作曲・编曲・混音',
+      'naitetamaruka-rainbow': '作曲・编曲・混音',
+      'nakamura-guitar': 'Percussive Agt',
+      'heartbeat-unlock': '吉他参与',
+      'grateful-dead': 'Egt',
+      gaki: 'Guitar',
+      'yusuke-hana': 'm5 花唄 (Guitar)',
+      'yusuke-history': 'm10 History III (Guitar)',
+      'heartbeat-kaori': 'you are the universe (Agt＆Egt)',
+    },
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Contact',
+    lead: '可通过邮件 / Zoom 免费沟通方向与报价，欢迎联系。',
+    name: '姓名 *',
+    email: '邮箱 *',
+    message: '留言 *',
+    note: '提交后会打开邮件客户端，收件地址如下。',
+    submit: '打开邮件',
+    mailSubject: '[Sulomam] 咨询',
+    mailUntitled: '无标题',
+    mailName: '姓名',
+    mailEmail: '邮箱',
+  },
+  gna: {
+    eyebrow: 'GNA',
+    title: 'GNA 使用教程',
+    lead: '简要说明吉他导航助手（GNA）的界面与练习方法。建议边打开应用边阅读。',
+    intro: {
+      id: 'intro',
+      title: '什么是 GNA？',
+      body: [
+        'GNA 帮助你在指板上练习和弦、音阶与调性。',
+        '会记录触碰过的调、音阶与连续练习，看到自己的地图扩展了多少。',
+        '先从一个调、一个把位开始，再扩展到邻近把位与其他调。',
+      ],
+    },
+    lessons: [
+      {
+        id: 'chords',
+        title: '第 1 课 — 和弦',
+        body: [
+          '在和弦界面可在指板上查看按法。',
+          '点击/点按切换品丝；右键/长按切换静音（×）。',
+          '自由搭建模式可边加按边看和弦名。先记住一个开放把位，再试同一和弦的其他位置。',
+        ],
+      },
+      {
+        id: 'scales',
+        title: '第 2 课 — 音阶',
+        body: [
+          '音阶音会铺在整指板上。黄色为根音，点格子可发声。',
+          '五声音阶可按 Box 显示。打开边框可看当前箱，用箭头移到邻箱。',
+          '结合 CAGED，可把同一音阶移到不同把位。先在一个 Box 里做乐句，再连到下一个。',
+        ],
+      },
+      {
+        id: 'keys',
+        title: '第 3 课 — 调性（自然音）',
+        body: [
+          '输入听到的和弦，可列出大调/自然小调等候选调。',
+          '不要只凭感觉定调——先看候选，再回到指板或音阶，目标更清晰。',
+          '若有伴奏循环，用判定的调打开音阶，在同一调内练习。',
+        ],
+      },
+      {
+        id: 'practice',
+        title: '第 4 课 — 练习与 GNA 记录',
+        body: [
+          '测验答对加分，连续正确会拉长连击。短测也很有助于记忆。',
+          '记录页可看触碰过的调、音阶、CAGED 形与连续练习；五度圈与图表显示广度。',
+          '建议流程：定一个调 → 碰和弦或音阶 → 快速测验 → 看地图。每天做一步即可。',
+        ],
+      },
+    ],
+    termsHeading: '术语',
+    termsLead: '应用中常见词的简短说明。',
+    terms: [
+      {
+        id: 'caged',
+        term: 'CAGED',
+        body: '以开放把位基本形（C·A·G·E·D）在指板上平移记忆。同一和弦，不同把位。',
+      },
+      {
+        id: 'box',
+        term: 'Box（箱）',
+        body: '把五声等划分成手指可达的「箱」。打开边框可见当前箱，可用箭头移到邻箱。',
+      },
+      {
+        id: 'diatonic',
+        term: '自然音（Diatonic）',
+        body: '由某调音阶构成的和弦与进行。GNA 可根据输入和弦列出候选调。',
+      },
+      {
+        id: 'fifths',
+        term: '五度圈',
+        body: '按纯五度排列的调。技能地图上触碰过的根音会点亮。',
+      },
+      {
+        id: 'degree',
+        term: '音级',
+        body: '相对根音的距离（1、3、5…）。用关系而非仅音名理解角色。',
+      },
+    ],
+  },
+}

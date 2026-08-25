@@ -1,0 +1,212 @@
+import type { Messages } from './types'
+
+export const es: Messages = {
+  site: {
+    brand: 'Sulomam',
+    tagline: 'Touch of Sound',
+    headline: 'Dale tacto al sonido.',
+    description: 'Composición, arreglo, guitarra y mezcla — presupuesto por proyecto.',
+    languageLabel: 'Idioma',
+    themeLabel: 'Tema',
+    themeLight: 'Claro',
+    themeDark: 'Noche',
+    nav: [
+      { to: '/', label: 'Home' },
+      { to: '/work', label: 'Work' },
+      { to: '/gna', label: 'GNA' },
+      { to: '/contact', label: 'Contact' },
+    ],
+  },
+  layout: {
+    navAria: 'Principal',
+    instagram: 'Instagram',
+  },
+  home: {
+    consultCta: 'Consulta gratis',
+    worksCta: 'Ver Works',
+    servicesHeading: 'Skills',
+    intro: {
+      eyebrow: 'About',
+      title: 'About',
+      paragraphs: [
+        'Sulomam — guitarrista, compositor/arreglista e ingeniero de mezcla.',
+        'Trabajo en BGM, CM, temas en vivo, arreglos y mezclas según cada breve.',
+        'Sin lista de precios fija. El presupuesto sigue una breve conversación.',
+      ],
+    },
+    services: [
+      {
+        id: 'compose-arrange',
+        title: 'Componer y arreglar',
+        description: 'BGM, CM, aperturas, temas completos — según uso y duración.',
+      },
+      {
+        id: 'mix',
+        title: 'Mezcla / acabado',
+        description: 'Mezcla de stems, edición vocal y pulido listo para publicar.',
+      },
+      {
+        id: 'guitar',
+        title: 'Guitarra y grabación',
+        description: 'Acústica / eléctrica para enriquecer la pista.',
+      },
+      {
+        id: 'direction',
+        title: 'Dirección y consulta',
+        description: 'Dirección, lectura de referencias y pulido de borradores de IA.',
+      },
+      {
+        id: 'live-support',
+        title: 'Live support',
+        description: 'Apoyo en vivo y en sesión, más ayuda de sonido in situ o remota.',
+      },
+    ],
+    consult: {
+      eyebrow: 'Consultation',
+      title: 'Empecemos hablando',
+      lead: 'Sin menú de precios fijo. Tras uso, duración, plazo y materiales, cito individualmente.',
+      points: [
+        'Primera charla gratis por correo o Zoom',
+        'Consultas a mitad de proyecto bienvenidas',
+        'También se puede arreglar, tocar y mezclar borradores hechos con IA',
+      ],
+    },
+    closing: {
+      title: 'Cierre',
+      body: 'Primero una consulta gratis — dirección y presupuesto. Escríbeme cuando quieras.',
+      aside: 'También acepto solo arreglo, solo mezcla o solo guitarra.',
+      cta: 'Contact',
+    },
+  },
+  work: {
+    eyebrow: 'Work',
+    title: 'Works',
+    lead: 'Selección de producción, arreglos y créditos.',
+    production: 'Production',
+    guitar: 'Guitar play',
+    subtitles: {
+      'pokemon-we-move': 'Del YouTube oficial de Pokémon',
+      nomura: '"Mueve tu sueño"',
+    },
+    descriptions: {
+      'pokemon-we-move': 'Apertura / show de drones. Producido con ioly Inc.',
+      sawayaka: 'Música para el 20.º aniversario de Sawayaka Shinkin.',
+      dsj: 'Música MV para el sitio especial “Hitono Chikara”.',
+      graphite: 'CM (broadcast SC y web, ago 2021)',
+      nogizaka: 'Producción de tema para baile',
+      tohoshinki: 'Crédito de coescritura',
+      'koda-tour': 'Coproducción con Soundpark',
+      'koda-lit': 'Arreglo en vivo (con Soundpark)',
+      nomura: 'Producción musical (con Soundpark)',
+      pocky: 'Producción musical (con Soundpark)',
+      yuma: 'Composición y arreglo',
+      'drama-cd': 'Banda sonora',
+      nakamura: 'Arreglo',
+      root9: 'Aporte de canción',
+      'naitetamaruka-heli': 'Composición, arreglo, mezcla',
+      'naitetamaruka-rainbow': 'Composición, arreglo, mezcla',
+      'nakamura-guitar': 'Percussive Agt',
+      'heartbeat-unlock': 'Guitarra',
+      'grateful-dead': 'Egt',
+      gaki: 'Guitar',
+      'yusuke-hana': 'm5 Hana Uta (Guitar)',
+      'yusuke-history': 'm10 History III (Guitar)',
+      'heartbeat-kaori': 'you are the universe (Agt & Egt)',
+    },
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: 'Contact',
+    lead: 'Consulta gratis por correo / Zoom para dirección y presupuesto.',
+    name: 'Nombre *',
+    email: 'Correo *',
+    message: 'Mensaje *',
+    note: 'Al enviar se abre tu correo. Destino abajo.',
+    submit: 'Abrir correo',
+    mailSubject: '[Sulomam] Consulta',
+    mailUntitled: 'Sin título',
+    mailName: 'Nombre',
+    mailEmail: 'Correo',
+  },
+  gna: {
+    eyebrow: 'GNA',
+    title: 'Guía de uso de GNA',
+    lead: 'Guía breve de pantallas y práctica en Guitar Navigation Assistant (GNA). Mejor leerla con la app abierta.',
+    intro: {
+      id: 'intro',
+      title: '¿Qué es GNA?',
+      body: [
+        'GNA ayuda a practicar acordes, escalas y tonalidades en el diapasón.',
+        'Registra tonos, escalas y rachas para ver hasta dónde creció tu mapa.',
+        'Empieza con una tonalidad y una forma; luego amplía a posiciones cercanas y otras tonos.',
+      ],
+    },
+    lessons: [
+      {
+        id: 'chords',
+        title: 'Lección 1 — Acordes',
+        body: [
+          'En la pantalla de acordes ves digitaciones en el diapasón.',
+          'Clic/toque activa trastes; clic derecho/mantener silencia (×).',
+          'En modo libre añades trastes y sigues el nombre del acorde. Aprende una forma abierta y prueba el mismo acorde en otra posición.',
+        ],
+      },
+      {
+        id: 'scales',
+        title: 'Lección 2 — Escalas',
+        body: [
+          'Las notas de la escala se muestran en el mástil. Amarillo = raíz; toca una celda para oírla.',
+          'Las pentatónicas pueden verse por Box. El marco muestra la caja actual; las flechas pasan a la vecina.',
+          'Con CAGED mueves la misma escala de posición. Frasea en una caja y luego conéctala a la siguiente.',
+        ],
+      },
+      {
+        id: 'keys',
+        title: 'Lección 3 — Tonalidad (diatónico)',
+        body: [
+          'Introduce acordes que oyes y verás candidatos mayor / menor natural.',
+          'No adivines solo: mira candidatos y vuelve al diapasón o escalas con un objetivo claro.',
+          'Si hay loop de backing, abre la escala en esa tonalidad y practica ahí.',
+        ],
+      },
+      {
+        id: 'practice',
+        title: 'Lección 4 — Práctica y registro GNA',
+        body: [
+          'El quiz suma puntos y alarga la racha. Un chequeo corto ayuda a memorizar.',
+          'El registro muestra tonos, escalas, formas CAGED y rachas; el círculo de quintas y gráficos muestran el alcance.',
+          'Flujo sugerido: elige un tono → toca acordes o escalas → quiz breve → mira el mapa. Un paso al día basta.',
+        ],
+      },
+    ],
+    termsHeading: 'Glosario',
+    termsLead: 'Notas cortas sobre palabras de la app.',
+    terms: [
+      {
+        id: 'caged',
+        term: 'CAGED',
+        body: 'Formas abiertas (C·A·G·E·D) movidas por el mástil. Mismo acorde, distinta posición.',
+      },
+      {
+        id: 'box',
+        term: 'Box',
+        body: 'Una “caja” alcanzable de notas (p. ej. pentatónica). El marco muestra la activa; flechas a vecinas.',
+      },
+      {
+        id: 'diatonic',
+        term: 'Diatónico',
+        body: 'Acordes/progresiones de la escala de una tonalidad. GNA lista candidatos desde acordes ingresados.',
+      },
+      {
+        id: 'fifths',
+        term: 'Círculo de quintas',
+        body: 'Tonos por quintas justas. Las raíces tocadas se encienden en el mapa.',
+      },
+      {
+        id: 'degree',
+        term: 'Grado',
+        body: 'Distancia desde la raíz (1.ª, 3.ª, 5.ª…). Roles por relación, no solo nombres.',
+      },
+    ],
+  },
+}
