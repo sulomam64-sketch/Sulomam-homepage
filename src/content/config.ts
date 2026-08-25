@@ -1,12 +1,8 @@
 /** Non-translated site config */
 export const siteConfig = {
   brand: 'Sulomam',
-  /**
-   * Contact form mailto destination.
-   * TODO(go-live): replace with your real inbox before Netlify + domain cutover.
-   * See MIGRATION.md phase 0.
-   */
-  contactEmail: 'CONTACT@EXAMPLE.COM',
+  /** Contact form mailto destination (from current sulomam.com). */
+  contactEmail: 'sulomam@sulomam.com',
   instagram: {
     handle: '@sulomam_guitar',
     url: 'https://www.instagram.com/sulomam_guitar/',
