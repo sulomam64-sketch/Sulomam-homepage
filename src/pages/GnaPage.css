@@ -60,53 +60,9 @@
   text-underline-offset: 0.18em;
 }
 
-.gna-article {
-  padding-bottom: 3rem;
-}
-
-.gna-article-body {
-  max-width: 40rem;
-}
-
-.gna-article-body :is(p, ul, ol) {
-  margin: 0 0 0.95rem;
-  color: var(--ink-soft);
-  line-height: 1.75;
-}
-
-.gna-article-body :is(ul, ol) {
-  padding-left: 1.25rem;
-}
-
-.gna-article-body :is(h2, h3) {
-  margin: 1.75rem 0 0.75rem;
-  font-family: var(--font-display);
-  color: var(--ink);
-  line-height: 1.35;
-}
-
-.gna-article-body h2 {
-  font-size: 1.35rem;
-}
-
-.gna-article-body h3 {
-  font-size: 1.15rem;
-}
-
-.gna-article-body a {
-  color: var(--accent-deep);
-}
-
-.gna-back {
-  max-width: 40rem;
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.gna-back a {
-  color: var(--accent-deep);
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+.gna-post-pending {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .gna-terms {

@@ -22,20 +22,15 @@ npm run build
 - お問い合わせ宛先・Instagram: `src/content/config.ts`
 - 多言語文言: `src/i18n/messages/`（`ja` / `en` / `zh` / `ko` / `es`）
 - Works のタイトル等（固有名詞）: `src/content/config.ts`
-- **GNA 記事（日本語）:** `content/gna/*.md` — 本番では [/admin/](https://sulomam-homepage.netlify.app/admin/)（Decap CMS）から編集
+- **GNA 記事一覧:** [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts)（本文は note）
 
-## GNA 記事の書き方（本番）
+## GNA 記事の書き方
 
-1. **初回だけ** Netlify 管理画面で次を有効化（[プロジェクト設定](https://app.netlify.com/projects/sulomam-homepage)）:
-   - **Project configuration → Identity → Enable Identity** → Invite users で自分のメールを招待
-   - Identity → **Services → Git Gateway → Enable**
-   - **Project configuration → Build & deploy → Continuous deployment → Link repository** → GitHub の `Sulomam-homepage`（branch: `main`）
-2. https://sulomam-homepage.netlify.app/admin/ を開く
-3. 招待メールで登録／ログイン
-4. **GNA 記事** → New → タイトル・日付・本文 → Publish
-5. 数分後に `/gna` に反映
+1. [note](https://note.com/) で記事を書く・公開する
+2. 公開URLを [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts) の `noteUrl` に貼る（新規なら行を追加）
+3. GitHub に push → Netlify が反映（未連携ならデプロイを依頼）
 
-ローカルで Markdown を直接編集する場合: `content/gna/*.md` を編集して push。
+サイトの `/gna` は目次（タイトル・要約・note へのリンク）です。本文は note 側に置きます。
 
 ## デプロイ / Jimdo 退会
 

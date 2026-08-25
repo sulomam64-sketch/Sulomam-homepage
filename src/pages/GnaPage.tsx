@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import { getGnaPosts } from '../content/gnaPosts'
+import { getGnaNoteArticles } from '../content/gnaNotes'
 import { useI18n } from '../i18n'
 import './GnaPage.css'
 
@@ -17,7 +16,7 @@ function formatDate(iso: string, locale: string): string {
 export function GnaPage() {
   const { t, locale } = useI18n()
   const { gna } = t
-  const posts = getGnaPosts()
+  const articles = getGnaNoteArticles()
 
   return (
     <div className="page">
@@ -30,22 +29,37 @@ export function GnaPage() {
 
       <section className="page-section gna-posts" aria-label={gna.postsHeading}>
         <h2 className="page-section-title">{gna.postsHeading}</h2>
-        {posts.length === 0 ? (
+        {articles.length === 0 ? (
           <p className="gna-para">{gna.emptyPosts}</p>
         ) : (
           <ul className="gna-post-list">
-            {posts.map((post) => (
-              <li key={post.slug} className="gna-post-item">
-                <time className="gna-post-date" dateTime={post.date}>
-                  {formatDate(post.date, locale)}
+            {articles.map((article) => (
+              <li key={article.id} className="gna-post-item">
+                <time className="gna-post-date" dateTime={article.date}>
+                  {formatDate(article.date, locale)}
                 </time>
                 <h3 className="gna-post-title">
-                  <Link to={`/gna/${post.slug}`}>{post.title}</Link>
+                  {article.noteUrl ? (
+                    <a href={article.noteUrl} target="_blank" rel="noreferrer">
+                      {article.title}
+                    </a>
+                  ) : (
+                    article.title
+                  )}
                 </h3>
-                {post.summary ? <p className="gna-post-summary">{post.summary}</p> : null}
-                <Link className="gna-post-more" to={`/gna/${post.slug}`}>
-                  {gna.readMore}
-                </Link>
+                {article.summary ? <p className="gna-post-summary">{article.summary}</p> : null}
+                {article.noteUrl ? (
+                  <a
+                    className="gna-post-more"
+                    href={article.noteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {gna.openOnNote}
+                  </a>
+                ) : (
+                  <span className="gna-post-pending">{gna.pendingNote}</span>
+                )}
               </li>
             ))}
           </ul>

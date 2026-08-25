@@ -80,8 +80,8 @@ export type Messages = {
     lead: string
     postsHeading: string
     postsNote: string
-    readMore: string
-    backToList: string
+    openOnNote: string
+    pendingNote: string
     emptyPosts: string
     termsHeading: string
     termsLead: string
