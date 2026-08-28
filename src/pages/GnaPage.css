@@ -67,6 +67,34 @@
   text-underline-offset: 0.18em;
 }
 
+.gna-post-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: #2cb696;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 1px 3px color-mix(in srgb, #2cb696 35%, transparent);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gna-post-note::after {
+  content: '↗';
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.gna-post-note:hover {
+  background: #249e80;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px color-mix(in srgb, #2cb696 40%, transparent);
+}
+
 .gna-post-pending {
   color: var(--muted);
   font-size: 0.9rem;

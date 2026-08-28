@@ -59,7 +59,7 @@ export function GnaPage() {
                   <div className="gna-post-links">
                     {article.noteUrl ? (
                       <a
-                        className="gna-post-more"
+                        className="gna-post-more gna-post-note"
                         href={article.noteUrl}
                         target="_blank"
                         rel="noreferrer"
