@@ -14,13 +14,27 @@ export type GnaNoteArticle = {
 
 export const gnaNoteArticles: GnaNoteArticle[] = [
   {
-    id: 'what-is-gna',
-    titleJa: 'GNA とは',
-    titleEn: 'What is GNA?',
-    date: '2024-01-01',
-    summaryJa: 'ギターの指板上でコード・スケール・キーを眺めながら練習するためのナビです。',
-    summaryEn: 'A fretboard navigator for practicing chords, scales, and keys.',
-    noteUrl: '',
+    id: 'why-gna',
+    titleJa: '指板で迷子になる人へ。GNAを一人で作った理由',
+    titleEn: 'Why I built GNA alone',
+    date: '2026-08-28',
+    summaryJa:
+      'スケール帳・コード帳・キー判別を別々に開いていた練習を、ひとつの指板にまとめた理由。',
+    summaryEn:
+      'Why I merged scale books, chord charts, and key detection onto one fretboard.',
+    noteUrl: 'https://note.com/sulomam_gna/n/n28f50c26ac10',
+    substackUrl: '',
+  },
+  {
+    id: 'closed-test',
+    titleJa: 'GNA（ギターナビゲーションアシスタント）Androidクローズドテスト、テスター募集',
+    titleEn: 'GNA Android closed test — testers wanted',
+    date: '2026-08-28',
+    summaryJa:
+      'Google Play クローズドテスト参加者を募集。無料・課金なし・広告なし。Android 1.0.18。',
+    summaryEn:
+      'Recruiting Google Play closed-test participants. Free, no ads. Android 1.0.18.',
+    noteUrl: 'https://note.com/sulomam_gna/n/nd735e8ab6458',
     substackUrl: '',
   },
   {
