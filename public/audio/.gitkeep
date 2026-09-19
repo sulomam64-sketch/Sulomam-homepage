@@ -1,3 +1,0 @@
-# Audio samples
-
-Place MP3/WAV files here and set `src` on tracks in `src/content/home.ts`, e.g. `src: '/audio/sample.mp3'`.

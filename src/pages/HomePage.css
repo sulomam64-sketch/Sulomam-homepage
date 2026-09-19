@@ -78,6 +78,15 @@
   gap: 0.75rem 1rem;
 }
 
+.listen-section {
+  scroll-margin-top: 5rem;
+  background: color-mix(in srgb, var(--bg-alt) 55%, var(--bg));
+}
+
+.listen-section .section-lead {
+  margin-bottom: 1.35rem;
+}
+
 .intro-section p {
   margin: 0 0 0.85rem;
   line-height: 1.75;
