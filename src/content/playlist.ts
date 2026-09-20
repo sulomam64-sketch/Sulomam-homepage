@@ -26,4 +26,10 @@ export const homePlaylist: PlaylistTrack[] = [
     artist: 'Sulomam',
     src: '/audio/UNDOOR_REMIX.mp3',
   },
+  {
+    id: 'rin-r6b-ballade',
+    title: 'RIN_R6B_BALLADE',
+    artist: 'Sulomam',
+    src: '/audio/RIN_R6B_BALLADE.mp3',
+  },
 ]
