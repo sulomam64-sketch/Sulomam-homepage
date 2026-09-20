@@ -50,6 +50,24 @@ export type Messages = {
       aside: string
       cta: string
     }
+    listen: {
+      eyebrow: string
+      title: string
+      lead: string
+      cta: string
+      play: string
+      pause: string
+      previous: string
+      next: string
+      seek: string
+      volume: string
+      mute: string
+      unmute: string
+      trackList: string
+      hideTrackList: string
+      showTrackList: string
+      nowPlaying: string
+    }
   }
   work: {
     eyebrow: string

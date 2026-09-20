@@ -20,6 +20,7 @@ npm run build
 ## 設定
 
 - お問い合わせ宛先・Instagram: `src/content/config.ts`
+- Listen プレイリスト: `src/content/playlist.ts`（MP3 は `public/audio/` — 入れ方はそこの README）
 - 多言語文言: `src/i18n/messages/`（`ja` / `en` / `zh` / `ko` / `es`）
 - Works のタイトル等（固有名詞）: `src/content/config.ts`
 - **GNA 記事一覧:** [`src/content/gnaNotes.ts`](src/content/gnaNotes.ts)

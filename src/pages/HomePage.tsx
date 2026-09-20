@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
+import { AudioPlaylistPlayer } from '../components/AudioPlaylistPlayer'
 import { ServiceList } from '../components/ServiceList'
+import { homePlaylist } from '../content/playlist'
 import { useI18n } from '../i18n'
 import './HomePage.css'
 
@@ -19,10 +21,24 @@ export function HomePage() {
             <Link className="btn btn-primary" to="/contact">
               {home.consultCta}
             </Link>
+            <a className="btn btn-ghost" href="#listen">
+              {home.listen.cta}
+            </a>
             <Link className="btn btn-ghost" to="/work">
               {home.worksCta}
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section listen-section" id="listen" aria-labelledby="listen-title">
+        <div className="section-inner">
+          <p className="eyebrow">{home.listen.eyebrow}</p>
+          <h2 className="section-title" id="listen-title">
+            {home.listen.title}
+          </h2>
+          <p className="section-lead">{home.listen.lead}</p>
+          <AudioPlaylistPlayer tracks={homePlaylist} labels={home.listen} />
         </div>
       </section>
 
