@@ -21,9 +21,9 @@ export const homePlaylist: PlaylistTrack[] = [
     src: '/audio/ShimmerCloud_amb_inst.mp3',
   },
   {
-    id: 'undoor-dancer',
-    title: 'Undoor_danceR',
+    id: 'undoor-remix',
+    title: 'UNDOOR_REMIX',
     artist: 'Sulomam',
-    src: '/audio/Undoor_danceR.mp3',
+    src: '/audio/UNDOOR_REMIX.mp3',
   },
 ]
