@@ -6,24 +6,24 @@ export type PlaylistTrack = {
   cover?: string
 }
 
-/** Homepage Listen playlist. Replace demo files in `public/audio/` — see that folder’s README. */
+/** Homepage Listen playlist. Drop files in `public/audio/` — see that folder’s README. */
 export const homePlaylist: PlaylistTrack[] = [
   {
-    id: 'demo-neo-fusion',
-    title: 'Demo — Neo Fusion',
+    id: 'pocketmonster-show-op',
+    title: 'pocketmonster_show_op',
     artist: 'Sulomam',
-    src: '/audio/demo-neo-fusion.mp3',
+    src: '/audio/pocketmonster_show_op.mp3',
   },
   {
-    id: 'demo-jazz-guitar',
-    title: 'Demo — Jazz guitar',
+    id: 'shimmercloud-amb-inst',
+    title: 'ShimmerCloud_amb_inst',
     artist: 'Sulomam',
-    src: '/audio/demo-jazz-guitar.mp3',
+    src: '/audio/ShimmerCloud_amb_inst.mp3',
   },
   {
-    id: 'demo-track-sketch',
-    title: 'Demo — Track sketch',
+    id: 'undoor-dancer',
+    title: 'Undoor_danceR',
     artist: 'Sulomam',
-    src: '/audio/demo-track-sketch.mp3',
+    src: '/audio/Undoor_danceR.mp3',
   },
 ]
