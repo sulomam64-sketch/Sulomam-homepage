@@ -16,6 +16,8 @@ Vite serves `public/` at the site root, so `/audio/your-file.mp3` maps to `publi
 
 ## Current files
 
-`demo-neo-fusion.mp3`, `demo-jazz-guitar.mp3`, and `demo-track-sketch.mp3` are short test tones so the Listen player is demoable. Replace them with real **original** demos.
+- `pocketmonster_show_op.mp3`
+- `ShimmerCloud_amb_inst.mp3`
+- `Undoor_danceR.mp3`
 
-Do **not** add client masters or commercial tracks here. Works / YouTube credits stay on the Work page.
+Do **not** add client masters you are not allowed to host. Works / YouTube credits stay on the Work page.
