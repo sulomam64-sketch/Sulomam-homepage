@@ -62,6 +62,11 @@ export const en: Messages = {
         description:
           'Demo-based starts, clarifying direction; brush-ups of AI-generated material welcome.',
       },
+      {
+        id: 'live-support',
+        title: 'Live support',
+        description: 'Performance support for live and sessions, plus on-site or remote sound help.',
+      },
     ],
     closing: {
       aside: 'Arrangement-only, mix-only, or guitar-only jobs are welcome too.',

@@ -62,6 +62,11 @@ export const ja: Messages = {
         description:
           '弾き語りデモ起点や方向性の整理。AI生成素材のブラッシュアップも含め相談可。',
       },
+      {
+        id: 'live-support',
+        title: 'Live サポート',
+        description: 'ライブ・セッション向けの演奏サポートや、現場／リモートでの音まわりの手伝い。',
+      },
     ],
     closing: {
       aside: 'アレンジのみ、MIX のみ、ギター Rec のみなど、部分的なお仕事も歓迎です。',
