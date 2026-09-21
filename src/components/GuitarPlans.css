@@ -8,12 +8,6 @@
   margin: 0 0 1.75rem;
 }
 
-@media (min-width: 720px) {
-  .plans-callouts {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .plans-callout {
   margin: 0;
   padding: 0.9rem 1rem;
