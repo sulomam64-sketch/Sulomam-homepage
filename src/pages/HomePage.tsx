@@ -19,9 +19,6 @@ export function HomePage() {
           <h1 className="hero-headline">{site.headline}</h1>
           <p className="hero-lead">{site.description}</p>
           <div className="hero-actions">
-            <Link className="btn btn-primary" to="/contact">
-              {home.consultCta}
-            </Link>
             <a className="btn btn-ghost" href="#listen">
               {home.listen.cta}
             </a>
@@ -30,6 +27,9 @@ export function HomePage() {
             </a>
             <Link className="btn btn-ghost" to="/work">
               {home.worksCta}
+            </Link>
+            <Link className="btn btn-primary" to="/contact">
+              {home.consultCta}
             </Link>
           </div>
         </div>
