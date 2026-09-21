@@ -27,42 +27,8 @@ export const ko: Messages = {
     worksCta: 'Works 보기',
     plansCta: '플랜',
     servicesHeading: 'Skills',
-    intro: {
-      eyebrow: 'About',
-      title: 'About',
-      paragraphs: [
-        '기타리스트 / 작편곡가 / 믹스 엔지니어 Sulomam 입니다.',
-        'BGM, CM, 라이브 트랙, 편곡·믹스 등 건별로 맞춰 진행합니다.',
-        '기타 REC·트랙 제작·Vocal edit·믹스 가이드라인 요금을 공개합니다. 상업·레이블·광고는 별도 견적입니다.',
-      ],
-    },
-    services: [
-      {
-        id: 'compose-arrange',
-        title: '작곡·편곡',
-        description: 'BGM, CM, 오프닝, 풀 트랙 등. 용도와 길이에 맞춰 만듭니다.',
-      },
-      {
-        id: 'mix',
-        title: '믹스 / 마무리',
-        description: '기존 소재 믹스, 보컬 편집, 배포·영상에 올릴 수 있는 마무리.',
-      },
-      {
-        id: 'guitar',
-        title: '기타 연주·REC',
-        description: '어쿠스틱 / 일렉 연주·녹음. 트랙 레이어와 질감 보강.',
-      },
-      {
-        id: 'direction',
-        title: '디렉션·상담',
-        description: '방향 정리, 레퍼런스 읽기, AI 초안 다듬기도 상담 가능합니다.',
-      },
-      {
-        id: 'live-support',
-        title: 'Live 서포트',
-        description: '라이브·세션용 연주 지원과, 현장/원격 사운드 도움.',
-      },
-    ],
+    intro: en.home.intro,
+    services: en.home.services,
     closing: {
       aside: '편곡만, 믹스만, 기타 녹음만도 환영합니다.',
       consultNote: '어떤 플랜이 맞을지 모르겠다면, 무료로 상담할 수 있습니다.',

@@ -30,36 +30,37 @@ export const en: Messages = {
       eyebrow: 'About',
       title: 'About',
       paragraphs: [
-        'Sulomam — guitarist, composer/arranger, and mix engineer.',
-        'I take on BGM, CM, live tracks, arrangements, and mixes — shaped to each brief.',
-        'Guideline rates for guitar recording, track production, vocal edit, and mix are published below. Commercial / label / ad work is quote only.',
+        'Track maker / guitarist — Sulomam.',
+        'Guideline rates for personal / indie work: guitar on my tracks, brush-ups, vocal edit, and mix. Commercial, label, and advertising jobs are quote-only.',
+        "Start from Plans — or just ask if you're unsure.",
       ],
     },
     services: [
       {
-        id: 'compose-arrange',
-        title: 'Compose & arrange',
-        description: 'BGM, CM, openings, full-length tracks — built for use and length.',
-      },
-      {
-        id: 'mix',
-        title: 'Mix / finish',
-        description: 'Mixing existing stems, vocal edit, and delivery-ready polish.',
+        id: 'track',
+        title: 'Track production',
+        description: 'Loop through Arrange, Brush-up, and Full song (melody + track).',
       },
       {
         id: 'guitar',
-        title: 'Guitar & recording',
-        description: 'Acoustic / electric performance and recording to thicken a track.',
+        title: 'Guitar performance / REC',
+        description: 'Basic / Plus / Arrange.',
+      },
+      {
+        id: 'vocal-edit',
+        title: 'Vocal edit',
+        description: 'Pitch and timing on client-supplied vocals, etc.',
+      },
+      {
+        id: 'mix',
+        title: 'Mix / finishing',
+        description: 'Light through Full (mastering per plan).',
       },
       {
         id: 'direction',
-        title: 'Direction & consult',
-        description: 'Direction, reference reading, and polishing AI drafts included.',
-      },
-      {
-        id: 'live-support',
-        title: 'Live support',
-        description: 'Performance support for live and sessions, plus on-site or remote sound help.',
+        title: 'Direction / consult',
+        description:
+          'Demo-based starts, clarifying direction; brush-ups of AI-generated material welcome.',
       },
     ],
     closing: {
@@ -69,7 +70,7 @@ export const en: Messages = {
     plans: {
       eyebrow: 'Plans',
       title: 'Plans',
-      lead: 'Indie guideline rates. Switching language swaps yen / USD tables (not live FX). Difficulty, song count, and rush jobs can change the price. Commercial / label / ads are quote only.',
+      lead: 'Guideline rates for personal / indie work. Switching language swaps yen / USD tables (not live FX). Difficulty, song count, and rush jobs can change the price. Commercial / label / ads are quote only.',
       inquire: 'Inquire',
       includesLabel: 'Included',
       excludesLabel: 'Not included',
@@ -127,7 +128,7 @@ export const en: Messages = {
         commercial: {
           name: 'Commercial',
           price: 'Quote only',
-          body: 'Ads, corporate, video, and large-scale work. Rights and delivery are negotiated. This is not a cheap add-on to the indie tiers.',
+          body: 'Ads, corporate, video, and large-scale work. Rights and delivery are negotiated. This is not a cheap add-on to the personal / indie tiers.',
           inquire: 'Request a quote',
         },
       },
@@ -240,7 +241,7 @@ export const en: Messages = {
       },
       notesHeading: 'Shared terms',
       notes: [
-        'Prices are indie guidelines. Commercial / label / ads are quote only.',
+        'Prices are guidelines for personal / indie work. Commercial / label / ads are quote only.',
         'Default: usage license for agreed uses. Copyright for Sulomam-created parts stays with Sulomam. Exclusive / Buyout is a quote.',
         'Guitar & Track: Sulomam credit required. Client-supplied song / vocals / material → joint credit; the client keeps rights to their material. Vocal edit & Mix credits are case-by-case.',
         'A light revision is in-scope balance work or small swaps. A major direction change is a separate quote — even on “unlimited”.',

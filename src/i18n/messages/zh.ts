@@ -27,42 +27,8 @@ export const zh: Messages = {
     worksCta: '查看 Works',
     plansCta: '方案',
     servicesHeading: 'Skills',
-    intro: {
-      eyebrow: 'About',
-      title: 'About',
-      paragraphs: [
-        'Sulomam — 吉他手 / 作曲编曲 / 混音工程师。',
-        '承接 BGM、广告、现场曲、编曲与混音，按需求推进。',
-        '吉他录音、编曲、人声编辑与混音已公布指导价。商业 / 厂牌 / 广告另行报价。',
-      ],
-    },
-    services: [
-      {
-        id: 'compose-arrange',
-        title: '作曲・编曲',
-        description: 'BGM、广告、开场、完整曲目等，按用途与时长搭建。',
-      },
-      {
-        id: 'mix',
-        title: '混音 / 收尾',
-        description: '素材混音、人声编辑，做到可发布或可上视频的状态。',
-      },
-      {
-        id: 'guitar',
-        title: '吉他演奏・录音',
-        description: '木吉他 / 电吉他演奏与录音，为轨道叠加质感。',
-      },
-      {
-        id: 'direction',
-        title: '企划・咨询',
-        description: '方向梳理、参考解读，也可打磨 AI 草稿。',
-      },
-      {
-        id: 'live-support',
-        title: 'Live 支持',
-        description: '现场与录音室的演奏支持，以及现场／远程的声音协助。',
-      },
-    ],
+    intro: en.home.intro,
+    services: en.home.services,
     closing: {
       aside: '只做编曲、只做混音、只录吉他也可以。',
       consultNote: '不确定选哪个方案时，仍可免费咨询。',

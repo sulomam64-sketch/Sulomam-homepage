@@ -27,42 +27,8 @@ export const es: Messages = {
     worksCta: 'Ver Works',
     plansCta: 'Planes',
     servicesHeading: 'Skills',
-    intro: {
-      eyebrow: 'About',
-      title: 'About',
-      paragraphs: [
-        'Sulomam — guitarrista, compositor/arreglista e ingeniero de mezcla.',
-        'Trabajo en BGM, CM, temas en vivo, arreglos y mezclas según cada breve.',
-        'Hay tarifas guía de guitarra, producción, edición vocal y mezcla. Comercial / sello / anuncio se cotiza aparte.',
-      ],
-    },
-    services: [
-      {
-        id: 'compose-arrange',
-        title: 'Componer y arreglar',
-        description: 'BGM, CM, aperturas, temas completos — según uso y duración.',
-      },
-      {
-        id: 'mix',
-        title: 'Mezcla / acabado',
-        description: 'Mezcla de stems, edición vocal y pulido listo para publicar.',
-      },
-      {
-        id: 'guitar',
-        title: 'Guitarra y grabación',
-        description: 'Acústica / eléctrica para enriquecer la pista.',
-      },
-      {
-        id: 'direction',
-        title: 'Dirección y consulta',
-        description: 'Dirección, lectura de referencias y pulido de borradores de IA.',
-      },
-      {
-        id: 'live-support',
-        title: 'Live support',
-        description: 'Apoyo en vivo y en sesión, más ayuda de sonido in situ o remota.',
-      },
-    ],
+    intro: en.home.intro,
+    services: en.home.services,
     closing: {
       aside: 'También acepto solo arreglo, solo mezcla o solo guitarra.',
       consultNote: '¿No estás seguro de qué plan? Puedes pedir una consulta gratis.',
