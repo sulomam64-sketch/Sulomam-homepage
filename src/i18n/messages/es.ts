@@ -1,4 +1,5 @@
 import type { Messages } from './types'
+import { en } from './en'
 
 export const es: Messages = {
   site: {
@@ -24,7 +25,7 @@ export const es: Messages = {
   home: {
     consultCta: 'Consulta gratis',
     worksCta: 'Ver Works',
-    plansCta: 'Planes de guitarra',
+    plansCta: 'Planes',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -32,7 +33,7 @@ export const es: Messages = {
       paragraphs: [
         'Sulomam — guitarrista, compositor/arreglista e ingeniero de mezcla.',
         'Trabajo en BGM, CM, temas en vivo, arreglos y mezclas según cada breve.',
-        'La grabación de guitarra tiene planes guía. Composición y mezcla se cotizan tras una breve conversación.',
+        'Hay tarifas guía de guitarra, producción, edición vocal y mezcla. Comercial / sello / anuncio se cotiza aparte.',
       ],
     },
     services: [
@@ -62,99 +63,11 @@ export const es: Messages = {
         description: 'Apoyo en vivo y en sesión, más ayuda de sonido in situ o remota.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: 'Empecemos hablando',
-      lead: 'Producción y mezcla se cotizan según uso, duración, plazo y materiales. La guitarra usa los planes guía de abajo.',
-      points: [
-        'Primera charla gratis por correo o Zoom',
-        'Consultas a mitad de proyecto bienvenidas',
-        'También se puede arreglar, tocar y mezclar borradores hechos con IA',
-      ],
-    },
     closing: {
-      title: 'Cierre',
-      body: 'Primero una consulta gratis — dirección y presupuesto. Escríbeme cuando quieras.',
       aside: 'También acepto solo arreglo, solo mezcla o solo guitarra.',
-      cta: 'Contact',
+      consultNote: '¿No estás seguro de qué plan? Puedes pedir una consulta gratis.',
     },
-    plans: {
-      eyebrow: 'Guitar',
-      title: 'Planes de guitarra',
-      lead: 'Tarifas guía para indie. La dificultad, el número de temas y los encargos urgentes pueden cambiar el precio. Aún no hay menú de producción ni de mezcla.',
-      categoryName: 'Guitarra',
-      inquire: 'Consultar',
-      includesLabel: 'Incluye',
-      excludesLabel: 'No incluye',
-      turnaroundLabel: 'Plazo',
-      featuredLabel: 'Recomendado',
-      creditCallout: 'El crédito es obligatorio (Guitar: Sulomam, o el crédito indicado).',
-      noTabCallout: 'Ningún plan incluye partitura / TAB.',
-      termsHeading: 'Condiciones compartidas',
-      terms: [
-        'El crédito es obligatorio (Guitar: Sulomam o el crédito indicado)',
-        'Ningún plan incluye creación de partitura / TAB',
-        'Los precios son guía indie; dificultad, cantidad y urgencia pueden cambiarlos',
-        'Derechos por defecto: licencia de uso para lo acordado. Sello / comercial / anuncio = presupuesto aparte',
-        'Aporta guía, BPM, tonalidad y referencias',
-        'No trabajo con material que infrinja derechos',
-      ],
-      cards: [
-        {
-          id: 'basic',
-          name: 'Basic',
-          price: 'from $100',
-          blurb: 'Grabación de guitarra de 1 tema para una parte indicada',
-          includes: [
-            'Grabación de guitarra de 1 tema para una parte indicada',
-            'Entrega: WAV (48kHz/24bit; estéreo o según se indique)',
-            'Mejor 1 toma',
-            '1 revisión menor (nivel / ruido / retoma corta)',
-            'Usos personales / indie (streaming, redes, playback en vivo — confirmar al consultar)',
-          ],
-          excludes: ['Stems', 'Partitura / TAB', 'Propuestas de arreglo', 'Paquete comercial'],
-          turnaround: '~3–5 días hábiles tras recibir la guía',
-        },
-        {
-          id: 'plus',
-          name: 'Plus',
-          price: 'from $150',
-          blurb: 'Basic, más opciones de toma y stems',
-          includes: [
-            'Todo lo de Basic',
-            '2–3 opciones de toma o intención de doble tracking',
-            'Stems cuando sea práctico (p. ej. DI + procesado)',
-            'Hasta 2 revisiones menores',
-          ],
-          excludes: ['Partitura / TAB', 'Propuestas de arreglo', 'Paquete comercial'],
-          turnaround: '~4–7 días hábiles',
-        },
-        {
-          id: 'arrange',
-          name: 'Arrange',
-          price: 'from $120',
-          blurb: 'Grabación más ideas de frase / obbligato',
-          includes: [
-            'Grabación Basic + WAV',
-            'Propuestas de frase / obbligato / bases, con 1 revisión aproximada',
-            'Hasta 2 revisiones, incluidos ajustes de dirección',
-          ],
-          excludes: [
-            'Producción completa del tema (planes de Production más adelante)',
-            'Voces / otros instrumentos',
-            'Paquetes de buyout / anuncio',
-            'Partitura / TAB',
-          ],
-          turnaround: '~5–10 días hábiles',
-        },
-      ],
-      commercial: {
-        name: 'Commercial',
-        price: 'Solo presupuesto',
-        body: 'Anuncios, corporativo, vídeo y encargos de gran escala. Derechos y entrega se negocian. No es un extra barato de los planes indie.',
-        inquire: 'Pedir presupuesto',
-      },
-    },
+    plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
       title: 'Demos',

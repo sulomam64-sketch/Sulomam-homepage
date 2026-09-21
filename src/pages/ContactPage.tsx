@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { siteConfig } from '../content/config'
-import { resolveGuitarPlanLabel } from '../content/guitarPlans'
+import { resolvePlanLabel } from '../content/plans'
 import { useI18n } from '../i18n'
 import './ContactPage.css'
 
@@ -9,7 +9,7 @@ export function ContactPage() {
   const { t } = useI18n()
   const { contact } = t
   const [searchParams] = useSearchParams()
-  const planLabel = resolveGuitarPlanLabel(t, searchParams.get('plan'))
+  const planLabel = resolvePlanLabel(t, searchParams.get('plan'))
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [draft, setDraft] = useState('')

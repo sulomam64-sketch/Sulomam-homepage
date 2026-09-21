@@ -6,7 +6,7 @@ export type ServiceItem = {
   description: string
 }
 
-export type GuitarPlanCard = {
+export type PlanCard = {
   id: string
   name: string
   price: string
@@ -16,26 +16,73 @@ export type GuitarPlanCard = {
   turnaround: string
 }
 
-export type GuitarPlansCopy = {
+export type PlanQuote = {
+  name: string
+  price: string
+  body: string
+  inquire: string
+}
+
+export type FaqItem = {
+  id: string
+  question: string
+  answer: string
+}
+
+export type PlansCopy = {
   eyebrow: string
   title: string
   lead: string
-  categoryName: string
   inquire: string
   includesLabel: string
   excludesLabel: string
   turnaroundLabel: string
   featuredLabel: string
-  creditCallout: string
-  noTabCallout: string
-  termsHeading: string
-  terms: string[]
-  cards: GuitarPlanCard[]
-  commercial: {
+  tablistLabel: string
+  tabs: {
+    guitar: string
+    track: string
+    mix: string
+  }
+  guitar: {
+    categoryName: string
+    lead: string
+    creditCallout: string
+    noTabCallout: string
+    cards: PlanCard[]
+    commercial: PlanQuote
+  }
+  track: {
+    categoryName: string
+    lead: string
+    hint: string
+    cards: PlanCard[]
+  }
+  vocalEdit: {
+    heading: string
+    lead: string
+    card: PlanCard
+  }
+  fullSong: {
+    heading: string
+    lead: string
     name: string
     price: string
     body: string
+    turnaround: string
     inquire: string
+  }
+  mix: {
+    categoryName: string
+    lead: string
+    cards: PlanCard[]
+  }
+  notesHeading: string
+  notes: string[]
+  faq: {
+    heading: string
+    lead: string
+    items: FaqItem[]
   }
 }
 
@@ -72,19 +119,11 @@ export type Messages = {
       paragraphs: string[]
     }
     services: ServiceItem[]
-    consult: {
-      eyebrow: string
-      title: string
-      lead: string
-      points: string[]
-    }
     closing: {
-      title: string
-      body: string
       aside: string
-      cta: string
+      consultNote: string
     }
-    plans: GuitarPlansCopy
+    plans: PlansCopy
     listen: {
       eyebrow: string
       title: string

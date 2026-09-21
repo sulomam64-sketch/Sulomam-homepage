@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { AudioPlaylistPlayer } from '../components/AudioPlaylistPlayer'
-import { GuitarPlans } from '../components/GuitarPlans'
+import { Plans } from '../components/Plans'
 import { ServiceList } from '../components/ServiceList'
 import { homePlaylist } from '../content/playlist'
 import { useI18n } from '../i18n'
@@ -56,36 +56,24 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section section-alt" aria-labelledby="skills-title">
         <div className="section-inner">
-          <p className="eyebrow">{home.consult.eyebrow}</p>
-          <h2 className="section-title">{home.consult.title}</h2>
-          <p className="section-lead">{home.consult.lead}</p>
-          <ul className="consult-points">
-            {home.consult.points.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-          <h3 className="subhead">{home.servicesHeading}</h3>
+          <p className="eyebrow">{home.servicesHeading}</p>
+          <h2 className="section-title" id="skills-title">
+            {home.servicesHeading}
+          </h2>
           <ServiceList services={home.services} />
-          <div className="consult-cta">
-            <Link className="btn btn-primary consult-cta-btn" to="/contact">
-              {home.consultCta}
-            </Link>
-          </div>
         </div>
       </section>
 
-      <GuitarPlans />
+      <Plans />
 
       <section className="section closing-section">
         <div className="section-inner narrow">
-          <h2 className="section-title">{home.closing.title}</h2>
-          <p>{home.closing.body}</p>
           <p className="closing-aside">{home.closing.aside}</p>
-          <Link className="btn btn-primary" to="/contact">
-            {home.closing.cta}
-          </Link>
+          <p className="closing-consult">
+            <Link to="/contact">{home.closing.consultNote}</Link>
+          </p>
         </div>
       </section>
     </>
