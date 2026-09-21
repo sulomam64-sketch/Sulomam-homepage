@@ -32,4 +32,10 @@ export const homePlaylist: PlaylistTrack[] = [
     artist: 'Sulomam',
     src: '/audio/RIN_R6B_BALLADE.mp3',
   },
+  {
+    id: 'wander-hiphop-track-demo',
+    title: 'Wander_Hiphop_Track_demo',
+    artist: 'Sulomam',
+    src: '/audio/Wander_Hiphop_Track_demo.mp3',
+  },
 ]
