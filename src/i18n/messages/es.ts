@@ -62,21 +62,9 @@ export const es: Messages = {
         description: 'Apoyo en vivo y en sesión, más ayuda de sonido in situ o remota.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: 'Empecemos hablando',
-      lead: 'Producción y mezcla se cotizan según uso, duración, plazo y materiales. La guitarra usa los planes guía de abajo.',
-      points: [
-        'Primera charla gratis por correo o Zoom',
-        'Consultas a mitad de proyecto bienvenidas',
-        'También se puede arreglar, tocar y mezclar borradores hechos con IA',
-      ],
-    },
     closing: {
-      title: 'Cierre',
-      body: 'Primero una consulta gratis — dirección y presupuesto. Escríbeme cuando quieras.',
       aside: 'También acepto solo arreglo, solo mezcla o solo guitarra.',
-      cta: 'Contact',
+      consultNote: '¿No estás seguro de qué plan? Puedes pedir una consulta gratis.',
     },
     plans: {
       eyebrow: 'Guitar',

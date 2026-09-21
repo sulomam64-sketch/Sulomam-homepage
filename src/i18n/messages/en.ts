@@ -62,21 +62,9 @@ export const en: Messages = {
         description: 'Performance support for live and sessions, plus on-site or remote sound help.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: 'Let’s start with a talk',
-      lead: 'Production and mix are quoted after use, length, deadline, and materials. Guitar recording uses the guideline plans below.',
-      points: [
-        'Free first chat by email or Zoom',
-        'Mid-project asks welcome — “need music for this film,” “demo exists, need finish,” etc.',
-        'AI drafts can be arranged, played, and mixed together',
-      ],
-    },
     closing: {
-      title: 'Closing',
-      body: 'A free consult first — direction and estimate. Reach out anytime.',
       aside: 'Arrangement-only, mix-only, or guitar-only jobs are welcome too.',
-      cta: 'Contact',
+      consultNote: 'Not sure which plan? You can still ask for a free consult.',
     },
     plans: {
       eyebrow: 'Guitar',

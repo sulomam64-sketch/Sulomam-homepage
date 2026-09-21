@@ -97,33 +97,6 @@
   margin-bottom: 0;
 }
 
-.consult-points {
-  margin: 0 0 0.5rem;
-  padding-left: 1.2rem;
-  max-width: 40rem;
-  color: var(--ink-soft);
-  line-height: 1.75;
-}
-
-.consult-points li + li {
-  margin-top: 0.45rem;
-}
-
-.consult-cta {
-  margin-top: 2rem;
-}
-
-.consult-cta-btn {
-  color: #fffaf8;
-}
-
-.subhead {
-  margin: 2rem 0 1rem;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  color: var(--accent-deep);
-}
-
 .closing-section {
   background: linear-gradient(
     180deg,
@@ -133,12 +106,25 @@
 }
 
 .closing-aside {
+  margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
 }
 
-.closing-section .btn {
-  margin-top: 0.5rem;
+.closing-consult {
+  margin: 0.75rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.closing-consult a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.closing-consult a:hover {
+  color: var(--accent);
 }
 
 @keyframes hero-drift {

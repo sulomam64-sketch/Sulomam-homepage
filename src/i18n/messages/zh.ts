@@ -62,21 +62,9 @@ export const zh: Messages = {
         description: '现场与录音室的演奏支持，以及现场／远程的声音协助。',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: '先从沟通开始',
-      lead: '作曲编曲与混音按用途、时长、交期与素材单独报价。吉他录音请看下方指导方案。',
-      points: [
-        '邮件或 Zoom 可先免费沟通',
-        '欢迎中途咨询：要给影像配乐、已有小样要收尾等',
-        '已有 AI 草稿也可一起编曲、演奏、混音',
-      ],
-    },
     closing: {
-      title: '写在最后',
-      body: '先免费沟通方向与报价，欢迎随时联系。',
       aside: '只做编曲、只做混音、只录吉他也可以。',
-      cta: 'Contact',
+      consultNote: '不确定选哪个方案时，仍可免费咨询。',
     },
     plans: {
       eyebrow: 'Guitar',

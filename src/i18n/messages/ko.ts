@@ -62,21 +62,9 @@ export const ko: Messages = {
         description: '라이브·세션용 연주 지원과, 현장/원격 사운드 도움.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: '상담부터 시작해요',
-      lead: '작편곡·믹스는 용도·길이·일정·소재를 듣고 개별 견적합니다. 기타 REC는 아래 가이드라인 플랜을 보세요.',
-      points: [
-        '메일·Zoom 등 먼저 무료 미팅 가능',
-        '「영상에 음악이 필요」「데모는 있으니 마무리」 등 중간 상담도 환영',
-        'AI로 만든 초안도 편곡·연주·믹스로 함께 다듬을 수 있습니다',
-      ],
-    },
     closing: {
-      title: '마치며',
-      body: '무료 미팅으로 방향과 견적을 안내합니다. 편하게 연락 주세요.',
       aside: '편곡만, 믹스만, 기타 녹음만도 환영합니다.',
-      cta: 'Contact',
+      consultNote: '어떤 플랜이 맞을지 모르겠다면, 무료로 상담할 수 있습니다.',
     },
     plans: {
       eyebrow: 'Guitar',

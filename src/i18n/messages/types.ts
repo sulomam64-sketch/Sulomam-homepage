@@ -72,17 +72,9 @@ export type Messages = {
       paragraphs: string[]
     }
     services: ServiceItem[]
-    consult: {
-      eyebrow: string
-      title: string
-      lead: string
-      points: string[]
-    }
     closing: {
-      title: string
-      body: string
       aside: string
-      cta: string
+      consultNote: string
     }
     plans: GuitarPlansCopy
     listen: {
