@@ -30,37 +30,37 @@ export const ja: Messages = {
       eyebrow: 'About',
       title: 'About',
       paragraphs: [
-        'ギタリスト / 作編曲家 / MIX エンジニアの Sulomam です。',
-        'BGM や CM、ライブ用トラック、既存曲のアレンジや MIX など、案件ごとに内容を決めて進めています。',
-        'ギターREC・トラック制作・Vocal edit・MIX のガイドライン料金を公開しています。商用・レーベル・広告はお見積もりです。',
+        'トラックメーカー／ギタリストの Sulomam です。',
+        '自作トラックへのギター、既存曲のブラッシュアップ、Vocal edit、MIX まで、個人・インディ向けのガイドライン料金を公開しています。商業・レーベル・広告はお見積もりです。',
+        '依頼の入口はプランから。迷ったら相談ください。',
       ],
     },
     services: [
       {
-        id: 'compose-arrange',
-        title: '作曲・編曲',
-        description: 'BGM、CM、オープニング、フル尺トラックなど。用途と尺に合わせて組み立てます。',
-      },
-      {
-        id: 'mix',
-        title: 'MIX / 仕上げ',
-        description: '既存素材の MIX、Vox EDIT、リリースや映像に載せられる状態までの仕上げ。',
+        id: 'track',
+        title: 'トラック制作',
+        description: 'Loop〜Arrange、Brush-up、おまかせ（メロ＋トラック）向けの制作。',
       },
       {
         id: 'guitar',
         title: 'ギター演奏・REC',
-        description: 'アコギ / エレキの演奏・REC。トラックへの重ねや、演奏感の補強。',
+        description: 'Basic／Plus／Arrange のギターREC。',
+      },
+      {
+        id: 'vocal-edit',
+        title: 'Vocal edit',
+        description: '支給音源のピッチ・タイミングなど。',
+      },
+      {
+        id: 'mix',
+        title: 'MIX／仕上げ',
+        description: 'Light〜Full（マスタ有無はプランどおり）。',
       },
       {
         id: 'direction',
         title: 'ディレクション・相談',
         description:
-          '方向性の整理、リファレンスの読み解き、AI 生成素材のブラッシュアップも含めご相談ください。',
-      },
-      {
-        id: 'live-support',
-        title: 'Live サポート',
-        description: 'ライブ・セッション向けの演奏サポートや、現場／リモートでの音まわりの手伝い。',
+          '弾き語りデモ起点や方向性の整理。AI生成素材のブラッシュアップも含め相談可。',
       },
     ],
     closing: {
@@ -70,7 +70,7 @@ export const ja: Messages = {
     plans: {
       eyebrow: 'Plans',
       title: 'プラン',
-      lead: 'インディー向けのガイドラインです。言語を切り替えると円／ドル表が入れ替わります（リアルタイム為替ではありません）。難易度・曲数・特急で価格が変わります。商用・レーベル・広告はお見積もりです。',
+      lead: '個人・インディ向けのガイドラインです。言語を切り替えると円／ドル表が入れ替わります（リアルタイム為替ではありません）。難易度・曲数・特急で価格が変わります。商業・レーベル・広告はお見積もりです。',
       inquire: 'このプランで相談',
       includesLabel: '含まれるもの',
       excludesLabel: '含まれないもの',
@@ -236,7 +236,7 @@ export const ja: Messages = {
       },
       notesHeading: '共通条件',
       notes: [
-        '表示価格はインディー向けガイドラインです。商用・レーベル・広告はお見積もりです。',
+        '表示価格は個人・インディ向けガイドラインです。商業・レーベル・広告はお見積もりです。',
         'デフォルトは利用許諾（合意した用途）です。Sulomam が新たに作ったパートの著作権は Sulomam に残ります。Exclusive / Buyout はお見積もりです。',
         'Guitar と Track は Sulomam クレジット必須。クライアント支給の楽曲・ボーカル・素材は共同クレジットとし、クライアント側素材の権利はクライアントに残ります。Vocal edit と Mix のクレジットは案件ごとに判断します。',
         '軽微な修正は、スコープ内のバランス調整や小さな差し替えです。大きな方向転換は「回数無制限」でも別見積もりです。',
