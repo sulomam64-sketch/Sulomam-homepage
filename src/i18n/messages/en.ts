@@ -24,6 +24,7 @@ export const en: Messages = {
   home: {
     consultCta: 'Book a free consult',
     worksCta: 'View Works',
+    plansCta: 'Guitar plans',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -31,7 +32,7 @@ export const en: Messages = {
       paragraphs: [
         'Sulomam — guitarist, composer/arranger, and mix engineer.',
         'I take on BGM, CM, live tracks, arrangements, and mixes — shaped to each brief.',
-        'No fixed price list. Quotes follow a short hearing.',
+        'Guitar recording has published guideline plans. Composition and mix are quoted after a short hearing.',
       ],
     },
     services: [
@@ -64,7 +65,7 @@ export const en: Messages = {
     consult: {
       eyebrow: 'Consultation',
       title: 'Let’s start with a talk',
-      lead: 'No fixed menu pricing. After use, length, deadline, and materials, I’ll quote individually.',
+      lead: 'Production and mix are quoted after use, length, deadline, and materials. Guitar recording uses the guideline plans below.',
       points: [
         'Free first chat by email or Zoom',
         'Mid-project asks welcome — “need music for this film,” “demo exists, need finish,” etc.',
@@ -76,6 +77,83 @@ export const en: Messages = {
       body: 'A free consult first — direction and estimate. Reach out anytime.',
       aside: 'Arrangement-only, mix-only, or guitar-only jobs are welcome too.',
       cta: 'Contact',
+    },
+    plans: {
+      eyebrow: 'Guitar',
+      title: 'Guitar plans',
+      lead: 'Indie guideline rates. Difficulty, song count, and rush jobs can change the price. Track / production and mix menus are not published yet.',
+      categoryName: 'Guitar',
+      inquire: 'Inquire',
+      includesLabel: 'Included',
+      excludesLabel: 'Not included',
+      turnaroundLabel: 'Turnaround',
+      featuredLabel: 'Recommended',
+      creditCallout: 'Credit is mandatory (Guitar: Sulomam, or a specified credit).',
+      noTabCallout: 'No sheet music / TAB on any tier.',
+      termsHeading: 'Shared terms',
+      terms: [
+        'Credit attribution is mandatory (Guitar: Sulomam or a specified credit)',
+        'No sheet music / TAB creation on any tier',
+        'Prices are indie guidelines; difficulty, count, and rush can change the price',
+        'Default rights: usage license for agreed uses. Label / commercial / ad work is a separate quote',
+        'Please provide a guide, BPM, key, and references',
+        'No work on infringing source material',
+      ],
+      cards: [
+        {
+          id: 'basic',
+          name: 'Basic',
+          price: 'from $100',
+          blurb: '1 song guitar rec for a specified part',
+          includes: [
+            '1 song guitar REC for a specified part',
+            'Deliverable: WAV (48kHz/24bit; stereo or as specified)',
+            'Best 1 take',
+            '1 minor revision (level / noise / short re-take)',
+            'Personal / indie uses (streaming, SNS, live backing — confirm at inquiry)',
+          ],
+          excludes: ['Stems', 'Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
+          turnaround: '~3–5 business days after the guide is received',
+        },
+        {
+          id: 'plus',
+          name: 'Plus',
+          price: 'from $150',
+          blurb: 'Basic, plus take options and stems',
+          includes: [
+            'Everything in Basic',
+            '2–3 take options or double-tracking intent',
+            'Stems where practical (e.g. DI + processed)',
+            'Up to 2 minor revisions',
+          ],
+          excludes: ['Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
+          turnaround: '~4–7 business days',
+        },
+        {
+          id: 'arrange',
+          name: 'Arrange',
+          price: 'from $120',
+          blurb: 'Recording plus phrase / obbligato ideas',
+          includes: [
+            'Basic recording + WAV',
+            'Phrase / obbligato / backing proposals with 1 rough check',
+            'Up to 2 revisions, including direction tweaks',
+          ],
+          excludes: [
+            'Full track production (Production plans coming later)',
+            'Vocals / other instruments',
+            'Buyout / ad packages',
+            'Sheet music / TAB',
+          ],
+          turnaround: '~5–10 business days',
+        },
+      ],
+      commercial: {
+        name: 'Commercial',
+        price: 'Quote only',
+        body: 'Ads, corporate, video, and large-scale work. Rights and delivery are negotiated. This is not a cheap add-on to the indie tiers.',
+        inquire: 'Request a quote',
+      },
     },
     listen: {
       eyebrow: 'Listen',
@@ -145,6 +223,8 @@ export const en: Messages = {
     mailUntitled: 'Untitled',
     mailName: 'Name',
     mailEmail: 'Email',
+    selectedPlan: 'Selected plan',
+    planPrefill: "I'd like to inquire about the {plan} plan.\n\n",
   },
   gna: {
     eyebrow: 'GNA',

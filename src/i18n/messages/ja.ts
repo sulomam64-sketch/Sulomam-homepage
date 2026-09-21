@@ -24,6 +24,7 @@ export const ja: Messages = {
   home: {
     consultCta: '無料で相談する',
     worksCta: 'Works を見る',
+    plansCta: 'ギタープラン',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -31,7 +32,7 @@ export const ja: Messages = {
       paragraphs: [
         'ギタリスト / 作編曲家 / MIX エンジニアの Sulomam です。',
         'BGM や CM、ライブ用トラック、既存曲のアレンジや MIX など、案件ごとに内容を決めて進めています。',
-        '料金表は設けず、ヒアリングのうえでお見積もりします。',
+        'ギターRECはガイドライン料金を公開しています。作編曲・MIXはヒアリングのうえお見積もりします。',
       ],
     },
     services: [
@@ -65,7 +66,7 @@ export const ja: Messages = {
     consult: {
       eyebrow: 'Consultation',
       title: '相談から始めましょう',
-      lead: '決まった料金表はありません。用途・尺・納期・いま手元にある素材を伺ったうえで、個別にお見積もりします。',
+      lead: '作編曲・MIXは用途・尺・納期・素材を伺ったうえで個別お見積もりします。ギターRECは下記のガイドラインプランをご覧ください。',
       points: [
         'メールや Zoom など、まずは無料で打ち合わせ可能です',
         '「こういう映像に音が欲しい」「デモはあるが仕上げたい」など、途中からの相談も歓迎です',
@@ -77,6 +78,83 @@ export const ja: Messages = {
       body: 'まずは無料の打ち合わせで、曲の方向性とお見積もりをお伝えします。お気軽にご相談ください。',
       aside: 'アレンジのみ、MIX のみ、ギター Rec のみなど、部分的なお仕事も歓迎です。',
       cta: 'Contact',
+    },
+    plans: {
+      eyebrow: 'Guitar',
+      title: 'ギター プラン',
+      lead: 'インディー向けのガイドラインです。難易度・曲数・特急は価格が変わります。作編曲・MIXの料金表はまだ公開していません。',
+      categoryName: 'ギター',
+      inquire: 'このプランで相談',
+      includesLabel: '含まれるもの',
+      excludesLabel: '含まれないもの',
+      turnaroundLabel: '目安納期',
+      featuredLabel: 'おすすめ',
+      creditCallout: 'クレジット表記は必須です（Guitar: Sulomam、または指定のクレジット）。',
+      noTabCallout: 'いずれのプランにも、譜面 / TAB 作成は含まれません。',
+      termsHeading: '共通条件',
+      terms: [
+        'クレジット表記は必須です（Guitar: Sulomam または指定クレジット）',
+        '譜面 / TAB 作成は、どのプランにも含まれません',
+        '表示価格はインディー向けガイドラインです。難易度・曲数・特急で変動します',
+        'デフォルトの権利は利用許諾（合意した用途）です。レーベル / 商用 / 広告は別途見積もり',
+        'ガイド音源、BPM、キー、リファレンスをご用意ください',
+        '権利侵害のある素材ではお受けできません',
+      ],
+      cards: [
+        {
+          id: 'basic',
+          name: 'Basic',
+          price: '¥7,000〜',
+          blurb: '指定パートのギターREC（1曲）',
+          includes: [
+            '指定パートのギターREC（1曲）',
+            '納品：WAV（48kHz/24bit、ステレオまたは指定）',
+            'ベスト1テイク',
+            '軽微な修正 1回（レベル / ノイズ / 短い取り直し）',
+            '個人・インディー用途（配信、SNS、ライブバッキング — 相談時に確認）',
+          ],
+          excludes: ['ステム', '譜面 / TAB', 'アレンジ提案', '商用パッケージ'],
+          turnaround: 'ガイド受領後 約3–5営業日',
+        },
+        {
+          id: 'plus',
+          name: 'Plus',
+          price: '¥10,000〜',
+          blurb: 'Basic に加え、テイク選択肢とステム',
+          includes: [
+            'Basic の内容すべて',
+            '2–3テイク案、またはダブルトラッキング想定',
+            '実務的な範囲のステム（例：DI + 処理済み）',
+            '軽微な修正 最大2回',
+          ],
+          excludes: ['譜面 / TAB', 'アレンジ提案', '商用パッケージ'],
+          turnaround: '約4–7営業日',
+        },
+        {
+          id: 'arrange',
+          name: 'Arrange',
+          price: '¥12,000〜',
+          blurb: '録音に加え、フレーズ / オブリゲート提案',
+          includes: [
+            'Basic 相当の録音 + WAV',
+            'フレーズ / オブリゲート / バッキングの提案（ラフ確認 1回）',
+            '方向性の調整を含む修正 最大2回',
+          ],
+          excludes: [
+            'フルトラック制作（Production は今後公開）',
+            'ボーカル / 他楽器',
+            'バイアウト / 広告パッケージ',
+            '譜面 / TAB',
+          ],
+          turnaround: '約5–10営業日',
+        },
+      ],
+      commercial: {
+        name: 'Commercial',
+        price: 'お見積もり',
+        body: '広告・企業・映像・大規模案件。権利と納品物は都度協議します。ガイドラインプランの延長ではありません。',
+        inquire: '商用利用を相談',
+      },
     },
     listen: {
       eyebrow: 'Listen',
@@ -146,6 +224,8 @@ export const ja: Messages = {
     mailUntitled: '無題',
     mailName: 'お名前',
     mailEmail: 'メール',
+    selectedPlan: 'ご相談プラン',
+    planPrefill: '{plan} について相談したいです。\n\n',
   },
   gna: {
     eyebrow: 'GNA',

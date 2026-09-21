@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { AudioPlaylistPlayer } from '../components/AudioPlaylistPlayer'
+import { GuitarPlans } from '../components/GuitarPlans'
 import { ServiceList } from '../components/ServiceList'
 import { homePlaylist } from '../content/playlist'
 import { useI18n } from '../i18n'
@@ -23,6 +24,9 @@ export function HomePage() {
             </Link>
             <a className="btn btn-ghost" href="#listen">
               {home.listen.cta}
+            </a>
+            <a className="btn btn-ghost" href="#plans">
+              {home.plansCta}
             </a>
             <Link className="btn btn-ghost" to="/work">
               {home.worksCta}
@@ -71,6 +75,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <GuitarPlans />
 
       <section className="section closing-section">
         <div className="section-inner narrow">
