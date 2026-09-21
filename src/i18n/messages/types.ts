@@ -6,6 +6,39 @@ export type ServiceItem = {
   description: string
 }
 
+export type GuitarPlanCard = {
+  id: string
+  name: string
+  price: string
+  blurb: string
+  includes: string[]
+  excludes: string[]
+  turnaround: string
+}
+
+export type GuitarPlansCopy = {
+  eyebrow: string
+  title: string
+  lead: string
+  categoryName: string
+  inquire: string
+  includesLabel: string
+  excludesLabel: string
+  turnaroundLabel: string
+  featuredLabel: string
+  creditCallout: string
+  noTabCallout: string
+  termsHeading: string
+  terms: string[]
+  cards: GuitarPlanCard[]
+  commercial: {
+    name: string
+    price: string
+    body: string
+    inquire: string
+  }
+}
+
 export type GnaTerm = {
   id: string
   term: string
@@ -31,6 +64,7 @@ export type Messages = {
   home: {
     consultCta: string
     worksCta: string
+    plansCta: string
     servicesHeading: string
     intro: {
       eyebrow: string
@@ -50,6 +84,7 @@ export type Messages = {
       aside: string
       cta: string
     }
+    plans: GuitarPlansCopy
     listen: {
       eyebrow: string
       title: string
@@ -91,6 +126,8 @@ export type Messages = {
     mailUntitled: string
     mailName: string
     mailEmail: string
+    selectedPlan: string
+    planPrefill: string
   }
   gna: {
     eyebrow: string
