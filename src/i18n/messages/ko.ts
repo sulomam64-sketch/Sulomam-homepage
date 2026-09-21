@@ -1,4 +1,5 @@
 import type { Messages } from './types'
+import { en } from './en'
 
 export const ko: Messages = {
   site: {
@@ -24,7 +25,7 @@ export const ko: Messages = {
   home: {
     consultCta: '무료 상담하기',
     worksCta: 'Works 보기',
-    plansCta: '기타 플랜',
+    plansCta: '플랜',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -32,7 +33,7 @@ export const ko: Messages = {
       paragraphs: [
         '기타리스트 / 작편곡가 / 믹스 엔지니어 Sulomam 입니다.',
         'BGM, CM, 라이브 트랙, 편곡·믹스 등 건별로 맞춰 진행합니다.',
-        '기타 REC는 가이드라인 요금을 공개합니다. 작편곡·믹스는 상담 후 견적합니다.',
+        '기타 REC·트랙 제작·Vocal edit·믹스 가이드라인 요금을 공개합니다. 상업·레이블·광고는 별도 견적입니다.',
       ],
     },
     services: [
@@ -62,99 +63,11 @@ export const ko: Messages = {
         description: '라이브·세션용 연주 지원과, 현장/원격 사운드 도움.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: '상담부터 시작해요',
-      lead: '작편곡·믹스는 용도·길이·일정·소재를 듣고 개별 견적합니다. 기타 REC는 아래 가이드라인 플랜을 보세요.',
-      points: [
-        '메일·Zoom 등 먼저 무료 미팅 가능',
-        '「영상에 음악이 필요」「데모는 있으니 마무리」 등 중간 상담도 환영',
-        'AI로 만든 초안도 편곡·연주·믹스로 함께 다듬을 수 있습니다',
-      ],
-    },
     closing: {
-      title: '마치며',
-      body: '무료 미팅으로 방향과 견적을 안내합니다. 편하게 연락 주세요.',
       aside: '편곡만, 믹스만, 기타 녹음만도 환영합니다.',
-      cta: 'Contact',
+      consultNote: '어떤 플랜이 맞을지 모르겠다면, 무료로 상담할 수 있습니다.',
     },
-    plans: {
-      eyebrow: 'Guitar',
-      title: '기타 플랜',
-      lead: '인디 가이드라인입니다. 난이도·곡 수·급행은 가격이 달라질 수 있습니다. 작편곡·믹스 요금표는 아직 없습니다.',
-      categoryName: '기타',
-      inquire: '이 플랜으로 상담',
-      includesLabel: '포함',
-      excludesLabel: '불포함',
-      turnaroundLabel: '납기 안내',
-      featuredLabel: '추천',
-      creditCallout: '크레딧 표기는 필수입니다 (Guitar: Sulomam, 또는 지정 크레딧).',
-      noTabCallout: '어떤 플랜에도 악보 / TAB 작성은 포함되지 않습니다.',
-      termsHeading: '공통 조건',
-      terms: [
-        '크레딧 표기는 필수입니다 (Guitar: Sulomam 또는 지정 크레딧)',
-        '악보 / TAB 작성은 어떤 플랜에도 포함되지 않습니다',
-        '표시 가격은 인디 가이드라인입니다. 난이도·곡 수·급행으로 변동합니다',
-        '기본 권리는 합의된 용도의 이용 허락입니다. 레이블 / 상업 / 광고는 별도 견적',
-        '가이드, BPM, 키, 레퍼런스를 준비해 주세요',
-        '권리 침해 소재는 작업하지 않습니다',
-      ],
-      cards: [
-        {
-          id: 'basic',
-          name: 'Basic',
-          price: '¥7,000〜',
-          blurb: '지정 파트의 기타 REC (1곡)',
-          includes: [
-            '지정 파트의 기타 REC (1곡)',
-            '납품: WAV (48kHz/24bit, 스테레오 또는 지정)',
-            '베스트 1테이크',
-            '경미한 수정 1회 (레벨 / 노이즈 / 짧은 재녹음)',
-            '개인·인디 용도 (스트리밍, SNS, 라이브 백킹 — 상담 시 확인)',
-          ],
-          excludes: ['스템', '악보 / TAB', '편곡 제안', '상업 패키지'],
-          turnaround: '가이드 수령 후 약 3–5 영업일',
-        },
-        {
-          id: 'plus',
-          name: 'Plus',
-          price: '¥10,000〜',
-          blurb: 'Basic에 더해 테이크 선택과 스템',
-          includes: [
-            'Basic의 모든 내용',
-            '2–3테이크 안, 또는 더블 트래킹 의도',
-            '실무 범위의 스템 (예: DI + 처리본)',
-            '경미한 수정 최대 2회',
-          ],
-          excludes: ['악보 / TAB', '편곡 제안', '상업 패키지'],
-          turnaround: '약 4–7 영업일',
-        },
-        {
-          id: 'arrange',
-          name: 'Arrange',
-          price: '¥12,000〜',
-          blurb: '녹음에 더해 프레이즈 / 오블리가토 제안',
-          includes: [
-            'Basic 상당의 녹음 + WAV',
-            '프레이즈 / 오블리가토 / 백킹 제안 (러프 확인 1회)',
-            '방향 조정을 포함한 수정 최대 2회',
-          ],
-          excludes: [
-            '풀 트랙 제작 (Production은 추후 공개)',
-            '보컬 / 다른 악기',
-            '바이아웃 / 광고 패키지',
-            '악보 / TAB',
-          ],
-          turnaround: '약 5–10 영업일',
-        },
-      ],
-      commercial: {
-        name: 'Commercial',
-        price: '견적',
-        body: '광고·기업·영상·대규모 건. 권리와 납품은 건별로 협의합니다. 인디 플랜의 저가 확장이 아닙니다.',
-        inquire: '상업 이용 상담',
-      },
-    },
+    plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
       title: '음원 데모',

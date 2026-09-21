@@ -1,4 +1,5 @@
 import type { Messages } from './types'
+import { en } from './en'
 
 export const zh: Messages = {
   site: {
@@ -24,7 +25,7 @@ export const zh: Messages = {
   home: {
     consultCta: '免费咨询',
     worksCta: '查看 Works',
-    plansCta: '吉他方案',
+    plansCta: '方案',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -32,7 +33,7 @@ export const zh: Messages = {
       paragraphs: [
         'Sulomam — 吉他手 / 作曲编曲 / 混音工程师。',
         '承接 BGM、广告、现场曲、编曲与混音，按需求推进。',
-        '吉他录音已公布指导价。作曲编曲与混音仍按沟通单独报价。',
+        '吉他录音、编曲、人声编辑与混音已公布指导价。商业 / 厂牌 / 广告另行报价。',
       ],
     },
     services: [
@@ -62,99 +63,11 @@ export const zh: Messages = {
         description: '现场与录音室的演奏支持，以及现场／远程的声音协助。',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: '先从沟通开始',
-      lead: '作曲编曲与混音按用途、时长、交期与素材单独报价。吉他录音请看下方指导方案。',
-      points: [
-        '邮件或 Zoom 可先免费沟通',
-        '欢迎中途咨询：要给影像配乐、已有小样要收尾等',
-        '已有 AI 草稿也可一起编曲、演奏、混音',
-      ],
-    },
     closing: {
-      title: '写在最后',
-      body: '先免费沟通方向与报价，欢迎随时联系。',
       aside: '只做编曲、只做混音、只录吉他也可以。',
-      cta: 'Contact',
+      consultNote: '不确定选哪个方案时，仍可免费咨询。',
     },
-    plans: {
-      eyebrow: 'Guitar',
-      title: '吉他方案',
-      lead: '独立音乐指导价。难度、曲数与加急会影响价格。作曲编曲与混音价目尚未公布。',
-      categoryName: '吉他',
-      inquire: '咨询此方案',
-      includesLabel: '包含',
-      excludesLabel: '不含',
-      turnaroundLabel: '周期参考',
-      featuredLabel: '推荐',
-      creditCallout: '必须署名（Guitar: Sulomam，或指定署名）。',
-      noTabCallout: '任何档位均不含乐谱 / TAB 制作。',
-      termsHeading: '共同条款',
-      terms: [
-        '必须署名（Guitar: Sulomam 或指定署名）',
-        '任何档位均不含乐谱 / TAB 制作',
-        '价格为独立音乐指导价；难度、曲数与加急会变动',
-        '默认权利为约定用途的使用许可。厂牌 / 商业 / 广告另议',
-        '请提供导唱、BPM、调与参考',
-        '不承接侵权素材',
-      ],
-      cards: [
-        {
-          id: 'basic',
-          name: 'Basic',
-          price: '¥7,000〜',
-          blurb: '指定声部的吉他录音（1 首）',
-          includes: [
-            '指定声部的吉他录音（1 首）',
-            '交付：WAV（48kHz/24bit，立体声或按指定）',
-            '最佳 1 条',
-            '轻微修改 1 次（电平 / 底噪 / 短重录）',
-            '个人 / 独立用途（流媒体、社交、现场伴奏 — 咨询时确认）',
-          ],
-          excludes: ['分轨', '乐谱 / TAB', '编曲提案', '商业套餐'],
-          turnaround: '收到导唱后约 3–5 个工作日',
-        },
-        {
-          id: 'plus',
-          name: 'Plus',
-          price: '¥10,000〜',
-          blurb: 'Basic 之上，增加条数选择与分轨',
-          includes: [
-            '包含 Basic 全部内容',
-            '2–3 条可选，或双轨叠加意图',
-            '可行范围内的分轨（如 DI + 处理版）',
-            '轻微修改最多 2 次',
-          ],
-          excludes: ['乐谱 / TAB', '编曲提案', '商业套餐'],
-          turnaround: '约 4–7 个工作日',
-        },
-        {
-          id: 'arrange',
-          name: 'Arrange',
-          price: '¥12,000〜',
-          blurb: '录音之外，提供乐句 / 助奏提案',
-          includes: [
-            '相当于 Basic 的录音 + WAV',
-            '乐句 / 助奏 / 铺底提案（粗听确认 1 次）',
-            '含方向调整的修改最多 2 次',
-          ],
-          excludes: [
-            '完整曲目制作（Production 稍后公布）',
-            '人声 / 其他乐器',
-            '买断 / 广告套餐',
-            '乐谱 / TAB',
-          ],
-          turnaround: '约 5–10 个工作日',
-        },
-      ],
-      commercial: {
-        name: 'Commercial',
-        price: '另行报价',
-        body: '广告、企业、影像与大规模项目。权利与交付另行协商。不是独立档位的低价延伸。',
-        inquire: '咨询商业使用',
-      },
-    },
+    plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
       title: '试听',

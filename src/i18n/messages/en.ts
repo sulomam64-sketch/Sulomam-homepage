@@ -24,7 +24,7 @@ export const en: Messages = {
   home: {
     consultCta: 'Book a free consult',
     worksCta: 'View Works',
-    plansCta: 'Guitar plans',
+    plansCta: 'Plans',
     servicesHeading: 'Skills',
     intro: {
       eyebrow: 'About',
@@ -32,7 +32,7 @@ export const en: Messages = {
       paragraphs: [
         'Sulomam — guitarist, composer/arranger, and mix engineer.',
         'I take on BGM, CM, live tracks, arrangements, and mixes — shaped to each brief.',
-        'Guitar recording has published guideline plans. Composition and mix are quoted after a short hearing.',
+        'Guideline rates for guitar recording, track production, vocal edit, and mix are published below. Commercial / label / ad work is quote only.',
       ],
     },
     services: [
@@ -62,97 +62,287 @@ export const en: Messages = {
         description: 'Performance support for live and sessions, plus on-site or remote sound help.',
       },
     ],
-    consult: {
-      eyebrow: 'Consultation',
-      title: 'Let’s start with a talk',
-      lead: 'Production and mix are quoted after use, length, deadline, and materials. Guitar recording uses the guideline plans below.',
-      points: [
-        'Free first chat by email or Zoom',
-        'Mid-project asks welcome — “need music for this film,” “demo exists, need finish,” etc.',
-        'AI drafts can be arranged, played, and mixed together',
-      ],
-    },
     closing: {
-      title: 'Closing',
-      body: 'A free consult first — direction and estimate. Reach out anytime.',
       aside: 'Arrangement-only, mix-only, or guitar-only jobs are welcome too.',
-      cta: 'Contact',
+      consultNote: 'Not sure which plan? You can still ask for a free consult.',
     },
     plans: {
-      eyebrow: 'Guitar',
-      title: 'Guitar plans',
-      lead: 'Indie guideline rates. Difficulty, song count, and rush jobs can change the price. Track / production and mix menus are not published yet.',
-      categoryName: 'Guitar',
+      eyebrow: 'Plans',
+      title: 'Plans',
+      lead: 'Indie guideline rates. Switching language swaps yen / USD tables (not live FX). Difficulty, song count, and rush jobs can change the price. Commercial / label / ads are quote only.',
       inquire: 'Inquire',
       includesLabel: 'Included',
       excludesLabel: 'Not included',
       turnaroundLabel: 'Turnaround',
       featuredLabel: 'Recommended',
-      creditCallout: 'Credit is mandatory (Guitar: Sulomam, or a specified credit).',
-      noTabCallout: 'No sheet music / TAB on any tier.',
-      termsHeading: 'Shared terms',
-      terms: [
-        'Credit attribution is mandatory (Guitar: Sulomam or a specified credit)',
-        'No sheet music / TAB creation on any tier',
-        'Prices are indie guidelines; difficulty, count, and rush can change the price',
-        'Default rights: usage license for agreed uses. Label / commercial / ad work is a separate quote',
-        'Please provide a guide, BPM, key, and references',
-        'No work on infringing source material',
-      ],
-      cards: [
-        {
-          id: 'basic',
-          name: 'Basic',
+      tablistLabel: 'Plan categories',
+      tabs: {
+        guitar: 'Guitar',
+        track: 'Track',
+        mix: 'Mix',
+      },
+      guitar: {
+        categoryName: 'Guitar',
+        lead: 'Guitar recording for a specified part. Credit is required.',
+        creditCallout: 'Credit is mandatory (Guitar: Sulomam, or a specified credit).',
+        noTabCallout: 'No sheet music / TAB on any tier.',
+        cards: [
+          {
+            id: 'guitar-basic',
+            name: 'Basic',
+            price: 'from $70',
+            blurb: '1 song guitar rec for a specified part',
+            includes: [
+              '1 song guitar REC for a specified part',
+              'Deliverable: WAV (48kHz/24bit)',
+              'Best 1 take',
+              '1 light revision',
+            ],
+            excludes: ['Stems', 'Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
+            turnaround: '3 days–1 week',
+          },
+          {
+            id: 'guitar-plus',
+            name: 'Plus',
+            price: 'from $100',
+            blurb: 'Recording-focused thicker takes / delivery',
+            includes: [
+              'Basic-equivalent recording + WAV',
+              'Thicker takes / delivery (recording-focused, e.g. doubles)',
+              'Light revisions',
+            ],
+            excludes: ['Stems', 'Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
+            turnaround: '3 days–1 week',
+          },
+          {
+            id: 'guitar-arrange',
+            name: 'Arrange',
+            price: 'from $120',
+            blurb: 'Arrangement proposals (phrases / layers)',
+            includes: ['Recording + WAV', 'Phrase / layer arrangement proposals'],
+            excludes: ['Full track production', 'Vocals / other instruments', 'Buyout / ads', 'Sheet music / TAB'],
+            turnaround: '3 days–1 week',
+          },
+        ],
+        commercial: {
+          name: 'Commercial',
+          price: 'Quote only',
+          body: 'Ads, corporate, video, and large-scale work. Rights and delivery are negotiated. This is not a cheap add-on to the indie tiers.',
+          inquire: 'Request a quote',
+        },
+      },
+      track: {
+        categoryName: 'Track',
+        lead: 'Instrumental production — no vocal work. Need vocal editing? See Vocal edit.',
+        hint: 'Rush: surcharge (consult), ~3 days when possible. Exclusive / Buyout / commercial are quote only. Stem export is an optional add-on (from $30).',
+        cards: [
+          {
+            id: 'track-loop',
+            name: 'Loop',
+            price: 'from $150',
+            blurb: 'Few tracks / one-loop-ish',
+            includes: ['Few-track / one-loop-ish instrumental', 'WAV only', '2 light revisions'],
+            excludes: ['Stems (optional add-on)', 'Vocal work', 'Exclusive / Buyout / commercial'],
+            turnaround: '3 days–1 week',
+          },
+          {
+            id: 'track-brush-up',
+            name: 'Brush-up',
+            price: 'from $200',
+            blurb: 'Polish a client-supplied track (tidy / thicken / light arrange)',
+            includes: [
+              'Brush-up of a client-supplied track',
+              'Tidy, thicken, light arrange',
+              '2–3 light revisions',
+            ],
+            excludes: ['New build from scratch', 'Vocal work', 'Stems (optional add-on)'],
+            turnaround: '1–2 weeks',
+          },
+          {
+            id: 'track-standard',
+            name: 'Standard',
+            price: 'from $300',
+            blurb: 'New build with development from a brief',
+            includes: ['New track built from a brief', 'Development / arrangement arc', '1–3 revisions'],
+            excludes: ['Vocal work', 'Stems (optional add-on)', 'Exclusive / Buyout / commercial (quote)'],
+            turnaround: '1–2 weeks',
+          },
+          {
+            id: 'track-arrange',
+            name: 'Arrange',
+            price: 'from $500',
+            blurb: 'Proposal-heavy / major rebuild',
+            includes: ['Proposal-heavy production or major rebuild', 'Unlimited in-scope revisions'],
+            excludes: ['Major direction change (separate quote)', 'Vocal work', 'Stems (optional add-on)'],
+            turnaround: '1–2 weeks',
+          },
+        ],
+      },
+      vocalEdit: {
+        heading: 'Vocal edit',
+        lead: 'Pitch + timing on client-supplied audio. Multi-track / harmony creation scales up. Rush by consult.',
+        card: {
+          id: 'vocal-edit',
+          name: 'Vocal edit',
           price: 'from $100',
-          blurb: '1 song guitar rec for a specified part',
-          includes: [
-            '1 song guitar REC for a specified part',
-            'Deliverable: WAV (48kHz/24bit; stereo or as specified)',
-            'Best 1 take',
-            '1 minor revision (level / noise / short re-take)',
-            'Personal / indie uses (streaming, SNS, live backing — confirm at inquiry)',
-          ],
-          excludes: ['Stems', 'Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
-          turnaround: '~3–5 business days after the guide is received',
-        },
-        {
-          id: 'plus',
-          name: 'Plus',
-          price: 'from $150',
-          blurb: 'Basic, plus take options and stems',
-          includes: [
-            'Everything in Basic',
-            '2–3 take options or double-tracking intent',
-            'Stems where practical (e.g. DI + processed)',
-            'Up to 2 minor revisions',
-          ],
-          excludes: ['Sheet music / TAB', 'Arrangement proposals', 'Commercial package'],
-          turnaround: '~4–7 business days',
-        },
-        {
-          id: 'arrange',
-          name: 'Arrange',
-          price: 'from $120',
-          blurb: 'Recording plus phrase / obbligato ideas',
-          includes: [
-            'Basic recording + WAV',
-            'Phrase / obbligato / backing proposals with 1 rough check',
-            'Up to 2 revisions, including direction tweaks',
-          ],
+          blurb: 'Pitch + timing (simple / single)',
+          includes: ['Pitch + timing edit (simple / single)'],
           excludes: [
-            'Full track production (Production plans coming later)',
-            'Vocals / other instruments',
-            'Buyout / ad packages',
-            'Sheet music / TAB',
+            'New track production',
+            'Lyric / melody guarantee',
+            'Full mix / master',
+            'Buyout',
           ],
-          turnaround: '~5–10 business days',
+          turnaround: '1–3 days (~3 day guideline)',
         },
+      },
+      fullSong: {
+        heading: 'Full song',
+        lead: 'Melody + track package. No lyrics / writing. Also covers 弾き語り / sketch demos as a starting point.',
+        name: 'Full song',
+        price: 'from $1,000',
+        body: 'Quote-style package. Vocal edit depth, full mix/master, buyout, and commercial are separate or an uplift.',
+        turnaround: '2–4 weeks (rush by consult)',
+        inquire: 'Inquire about Full song',
+      },
+      mix: {
+        categoryName: 'Mix',
+        lead: 'Stem export is an optional add-on on every Mix plan (from $30, scales with effort).',
+        cards: [
+          {
+            id: 'mix-light',
+            name: 'Light',
+            price: 'from $100',
+            blurb: 'Sparse / 弾き語り-style. Mix only, no mastering',
+            includes: ['Mix only', '2 revisions'],
+            excludes: ['Mastering', 'Stems (optional add-on from $30)'],
+            turnaround: '~3 days',
+          },
+          {
+            id: 'mix-standard',
+            name: 'Standard',
+            price: 'from $200',
+            blurb: 'Mix + mastering',
+            includes: ['Mix + mastering', '5 revisions'],
+            excludes: ['Stems (optional add-on from $30)'],
+            turnaround: '~1 week',
+          },
+          {
+            id: 'mix-full',
+            name: 'Full',
+            price: 'from $300',
+            blurb: 'Mix + mastering, unlimited in-scope revisions',
+            includes: ['Mix + mastering', 'Unlimited in-scope revisions'],
+            excludes: ['Major direction change (separate quote)', 'Stems (optional add-on from $30)'],
+            turnaround: '~10 days',
+          },
+        ],
+      },
+      notesHeading: 'Shared terms',
+      notes: [
+        'Prices are indie guidelines. Commercial / label / ads are quote only.',
+        'Default: usage license for agreed uses. Copyright for Sulomam-created parts stays with Sulomam. Exclusive / Buyout is a quote.',
+        'Guitar & Track: Sulomam credit required. Client-supplied song / vocals / material → joint credit; the client keeps rights to their material. Vocal edit & Mix credits are case-by-case.',
+        'A light revision is in-scope balance work or small swaps. A major direction change is a separate quote — even on “unlimited”.',
+        'Stem export is an optional add-on from $30 (¥3,000〜; scales with effort) for Track and Mix. No plan includes stems today.',
+        'Payment: under ~¥30,000 / about $300, full amount before start; ¥30,000+ = 50% before start / 50% before finals. Finals after the balance. After we agree on scope, payment details are sent (card payments coming soon; bank transfer available).',
+        'Cancel: before start → generally full refund (minus payment fees if any). After start → deposit non-refundable (applied to work). If Sulomam cancels: reschedule or refund undelivered work.',
       ],
-      commercial: {
-        name: 'Commercial',
-        price: 'Quote only',
-        body: 'Ads, corporate, video, and large-scale work. Rights and delivery are negotiated. This is not a cheap add-on to the indie tiers.',
-        inquire: 'Request a quote',
+      faq: {
+        heading: 'Q&A',
+        lead: 'Choosing a plan, rights, payment, and cancellation.',
+        items: [
+          {
+            id: 'guitar-plus-arrange',
+            question: 'What’s the difference between Guitar Plus and Arrange?',
+            answer:
+              'Plus is recording-focused: thicker takes and delivery options. Arrange adds arrangement proposals (phrases / layers) on top of recording. Neither includes sheet music / TAB. Credit is required.',
+          },
+          {
+            id: 'track-loop',
+            question: 'What does Track Loop cover?',
+            answer:
+              'A few-track / one-loop-ish instrumental. WAV only, 2 light revisions, turnaround 3 days–1 week. No vocal work — use Vocal edit if you need vocal editing.',
+          },
+          {
+            id: 'track-standard-arrange',
+            question: 'Track Standard vs Arrange?',
+            answer:
+              'Standard (from $300) is a new build with development from a brief. 1–3 revisions, 1–2 weeks. Arrange (from $500) is proposal-heavy or a major rebuild, with unlimited in-scope revisions and the same 1–2 week turnaround. A major direction change is a separate quote even on “unlimited”.',
+          },
+          {
+            id: 'track-brush-up',
+            question: 'I want my own track polished — which plan?',
+            answer:
+              'Tidying, thickening, or light-arranging an existing track is Track Brush-up (from $200). 2–3 revisions, 1–2 weeks. A new build is Standard; a proposal-heavy rebuild is Arrange.',
+          },
+          {
+            id: 'demo-routing',
+            question: 'I have a 弾き語り or sketch demo and want a full track',
+            answer:
+              'Track production from a 弾き語り / sketch demo is Full song, or Track Standard / Arrange. Mix only → Mix Light. Existing beat polish → Brush-up.',
+          },
+          {
+            id: 'full-song',
+            question: 'What does Full song include?',
+            answer:
+              'From $1,000 (quote-style): a melody + track package. No lyrics / writing. It also covers 弾き語り / sketch demos as a starting point. Vocal edit depth, full mix/master, buyout, and commercial are separate or an uplift. Turnaround 2–4 weeks; rush by consult.',
+          },
+          {
+            id: 'vocal-edit',
+            question: 'Which plan is vocal edit?',
+            answer:
+              'Pitch + timing on client-supplied audio (simple / single) is Vocal edit (from $100). Guideline 1–3 days (~3 days). Multi-track / harmony creation scales up. It excludes new track production, lyric/melody guarantee, full mix/master, and buyout.',
+          },
+          {
+            id: 'mix-mastering',
+            question: 'Is mastering included in Mix?',
+            answer:
+              'Mix Light (from $100) is mix only — no mastering. Standard (from $200) and Full (from $300) include mix + mastering.',
+          },
+          {
+            id: 'light-revision',
+            question: 'What is a light revision?',
+            answer:
+              'In-scope balance work or small swaps. A major direction change is a separate quote, even on “unlimited” plans.',
+          },
+          {
+            id: 'stems',
+            question: 'What about stems?',
+            answer:
+              'Optional add-on for Track and Mix: from $30 / ¥3,000〜 (scales with effort). No plan includes stems today.',
+          },
+          {
+            id: 'credits',
+            question: 'Is credit required?',
+            answer:
+              'Guitar and Track require a Sulomam credit. Vocal edit and Mix are case-by-case.',
+          },
+          {
+            id: 'rights',
+            question: 'Rights and joint credit?',
+            answer:
+              'Default is a usage license. Copyright for newly created Sulomam parts stays with Sulomam. Client-supplied song / vocals / material gets joint credit; the client keeps rights to their material. Exclusive / Buyout is a quote.',
+          },
+          {
+            id: 'turnaround',
+            question: 'What’s the turnaround overview?',
+            answer:
+              'Guitar: 3 days–1 week. Track Loop: 3 days–1 week; Brush-up / Standard / Arrange: 1–2 weeks. Vocal edit: 1–3 days (~3 days). Mix Light: ~3 days; Standard: ~1 week; Full: ~10 days. Full song: 2–4 weeks. Rush by consult (~3 days when possible).',
+          },
+          {
+            id: 'payment',
+            question: 'When is payment due?',
+            answer:
+              'Under ~¥30,000 / about $300: full amount before start. ¥30,000+: 50% before start / 50% before finals. Finals after the balance. Agree on scope → invoice later (card when ready) → pay → start. The site copy is: payment details after scope agreement; card payments coming soon; bank transfer available (better for larger / corporate jobs).',
+          },
+          {
+            id: 'cancel',
+            question: 'Cancel / refund?',
+            answer:
+              'Before start: generally a full refund (minus payment fees if any). After start: the deposit is non-refundable and applied to the work. If Sulomam cancels: reschedule or refund undelivered work. Finals after the balance.',
+          },
+        ],
       },
     },
     listen: {
