@@ -1,46 +1,73 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
+  payCurrencyForLocale,
+  payOfferFor,
+  stemsPayHref,
+  type PayOffer,
+} from '../content/paymentLinks'
+import {
   contactPathForPlan,
   isFeaturedPlan,
   planTabIds,
   type PlanTabId,
 } from '../content/plans'
 import { useI18n } from '../i18n'
-import type { PlanCard } from '../i18n/messages/types'
+import type { PlanCard, PlansCopy } from '../i18n/messages/types'
 import './Plans.css'
+
+function PayActions({ offer, plans }: { offer: PayOffer; plans: PlansCopy }) {
+  if (offer.kind === 'full') {
+    return (
+      <a className="btn btn-outline" href={offer.href} target="_blank" rel="noopener noreferrer">
+        {plans.pay}
+      </a>
+    )
+  }
+
+  return (
+    <>
+      <a
+        className="btn btn-outline"
+        href={offer.depositHref}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {plans.payDeposit}
+      </a>
+      <a className="plan-pay-alt" href={offer.fullHref} target="_blank" rel="noopener noreferrer">
+        {plans.payFull}
+      </a>
+      <p className="plan-pay-note">{plans.balanceNote}</p>
+    </>
+  )
+}
 
 function PlanCardView({
   card,
-  inquire,
-  includesLabel,
-  excludesLabel,
-  turnaroundLabel,
-  featuredLabel,
+  plans,
+  offer,
 }: {
   card: PlanCard
-  inquire: string
-  includesLabel: string
-  excludesLabel: string
-  turnaroundLabel: string
-  featuredLabel: string
+  plans: PlansCopy
+  offer: PayOffer | null
 }) {
   const featured = isFeaturedPlan(card.id)
   return (
     <article className={featured ? 'plan-card featured' : 'plan-card'}>
-      {featured ? <p className="plan-badge">{featuredLabel}</p> : null}
+      {featured ? <p className="plan-badge">{plans.featuredLabel}</p> : null}
       <h3 className="plan-name">{card.name}</h3>
       <p className="plan-price">{card.price}</p>
       <p className="plan-blurb">{card.blurb}</p>
 
-      <h4 className="plan-list-label">{includesLabel}</h4>
+      <h4 className="plan-list-label">{plans.includesLabel}</h4>
       <ul className="plan-list plan-includes">
         {card.includes.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
 
-      <h4 className="plan-list-label">{excludesLabel}</h4>
+      <h4 className="plan-list-label">{plans.excludesLabel}</h4>
       <ul className="plan-list plan-excludes">
         {card.excludes.map((item) => (
           <li key={item}>{item}</li>
@@ -48,14 +75,15 @@ function PlanCardView({
       </ul>
 
       <p className="plan-turnaround">
-        <span className="plan-turnaround-label">{turnaroundLabel}</span>
+        <span className="plan-turnaround-label">{plans.turnaroundLabel}</span>
         {card.turnaround}
       </p>
 
       <div className="plan-cta">
         <Link className="btn btn-primary" to={contactPathForPlan(card.id)}>
-          {inquire}
+          {plans.inquire}
         </Link>
+        {offer ? <PayActions offer={offer} plans={plans} /> : null}
       </div>
     </article>
   )
@@ -70,8 +98,11 @@ function tabFromHash(): PlanTabId {
 }
 
 export function Plans() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const { plans } = t.home
+  const currency = payCurrencyForLocale(locale)
+  const offerFor = (planId: string) => payOfferFor(planId, currency)
+  const fullSongOffer = offerFor('full-song')
   const [tab, setTab] = useState<PlanTabId>(tabFromHash)
 
   useEffect(() => {
@@ -129,15 +160,7 @@ export function Plans() {
             </div>
             <div className="plan-grid">
               {plans.guitar.cards.map((card) => (
-                <PlanCardView
-                  key={card.id}
-                  card={card}
-                  inquire={plans.inquire}
-                  includesLabel={plans.includesLabel}
-                  excludesLabel={plans.excludesLabel}
-                  turnaroundLabel={plans.turnaroundLabel}
-                  featuredLabel={plans.featuredLabel}
-                />
+                <PlanCardView key={card.id} card={card} plans={plans} offer={offerFor(card.id)} />
               ))}
             </div>
             <aside className="plan-commercial">
@@ -163,15 +186,7 @@ export function Plans() {
             <p className="plan-category-lead">{plans.track.lead}</p>
             <div className="plan-grid plan-grid-track">
               {plans.track.cards.map((card) => (
-                <PlanCardView
-                  key={card.id}
-                  card={card}
-                  inquire={plans.inquire}
-                  includesLabel={plans.includesLabel}
-                  excludesLabel={plans.excludesLabel}
-                  turnaroundLabel={plans.turnaroundLabel}
-                  featuredLabel={plans.featuredLabel}
-                />
+                <PlanCardView key={card.id} card={card} plans={plans} offer={offerFor(card.id)} />
               ))}
             </div>
             <p className="plan-category-hint">{plans.track.hint}</p>
@@ -182,11 +197,8 @@ export function Plans() {
               <div className="plan-grid plan-grid-single">
                 <PlanCardView
                   card={plans.vocalEdit.card}
-                  inquire={plans.inquire}
-                  includesLabel={plans.includesLabel}
-                  excludesLabel={plans.excludesLabel}
-                  turnaroundLabel={plans.turnaroundLabel}
-                  featuredLabel={plans.featuredLabel}
+                  plans={plans}
+                  offer={offerFor(plans.vocalEdit.card.id)}
                 />
               </div>
             </div>
@@ -204,9 +216,12 @@ export function Plans() {
                     {plans.fullSong.turnaround}
                   </p>
                 </div>
-                <Link className="btn btn-outline" to={contactPathForPlan('full-song')}>
-                  {plans.fullSong.inquire}
-                </Link>
+                <div className="plan-commercial-actions">
+                  <Link className="btn btn-outline" to={contactPathForPlan('full-song')}>
+                    {plans.fullSong.inquire}
+                  </Link>
+                  {fullSongOffer ? <PayActions offer={fullSongOffer} plans={plans} /> : null}
+                </div>
               </aside>
             </div>
           </div>
@@ -222,15 +237,7 @@ export function Plans() {
             <p className="plan-category-lead">{plans.mix.lead}</p>
             <div className="plan-grid">
               {plans.mix.cards.map((card) => (
-                <PlanCardView
-                  key={card.id}
-                  card={card}
-                  inquire={plans.inquire}
-                  includesLabel={plans.includesLabel}
-                  excludesLabel={plans.excludesLabel}
-                  turnaroundLabel={plans.turnaroundLabel}
-                  featuredLabel={plans.featuredLabel}
-                />
+                <PlanCardView key={card.id} card={card} plans={plans} offer={offerFor(card.id)} />
               ))}
             </div>
           </div>
@@ -243,6 +250,13 @@ export function Plans() {
               <li key={note}>{note}</li>
             ))}
           </ul>
+          <p className="plans-stems-line">
+            {plans.stemsOption}{' '}
+            <a href={stemsPayHref(currency)} target="_blank" rel="noopener noreferrer">
+              {plans.stemsPay}
+            </a>
+          </p>
+          <p className="plans-stripe-footnote">{plans.stripeFootnote}</p>
         </div>
 
         <section className="plans-faq" aria-labelledby="plans-faq-title">

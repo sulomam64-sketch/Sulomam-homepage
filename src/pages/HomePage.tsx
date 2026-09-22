@@ -46,13 +46,27 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section intro-section">
-        <div className="section-inner narrow">
-          <p className="eyebrow">{home.intro.eyebrow}</p>
-          <h2 className="section-title">{home.intro.title}</h2>
-          {home.intro.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
+      <section className="section intro-section" aria-labelledby="about-title">
+        <div className="section-inner">
+          <div className="intro-layout">
+            <div className="intro-copy">
+              <p className="eyebrow">{home.intro.eyebrow}</p>
+              <h2 className="section-title" id="about-title">
+                {home.intro.title}
+              </h2>
+              {home.intro.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <figure className="about-photo">
+              <img
+                src="/images/about-desk.jpg"
+                alt={home.intro.photoAlt}
+                width={1920}
+                height={1080}
+              />
+            </figure>
+          </div>
         </div>
       </section>
 

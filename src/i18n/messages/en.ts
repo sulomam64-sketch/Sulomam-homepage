@@ -34,6 +34,7 @@ export const en: Messages = {
         'Guideline rates for personal / indie work: guitar on my tracks, brush-ups, vocal edit, and mix. Commercial, label, and advertising jobs are quote-only.',
         "Start from Plans — or just ask if you're unsure.",
       ],
+      photoAlt: 'Sulomam at a desk with a guitar and a DAW session',
     },
     services: [
       {
@@ -77,6 +78,14 @@ export const en: Messages = {
       title: 'Plans',
       lead: 'Guideline rates for personal / indie work. Switching language swaps yen / USD tables (not live FX). Difficulty, song count, and rush jobs can change the price. Commercial / label / ads are quote only.',
       inquire: 'Inquire',
+      pay: 'Pay',
+      payDeposit: 'Pay 50% deposit',
+      payFull: 'Pay in full',
+      balanceNote: 'Balance is due before delivery.',
+      stripeFootnote:
+        'Payments via Stripe. Guideline rates are for personal / indie work. Commercial and label work is still a quote.',
+      stemsOption: 'Stem export (Track / Mix option, from $30)',
+      stemsPay: 'Pay',
       includesLabel: 'Included',
       excludesLabel: 'Not included',
       turnaroundLabel: 'Turnaround',
@@ -251,7 +260,7 @@ export const en: Messages = {
         'Guitar & Track: Sulomam credit required. Client-supplied song / vocals / material → joint credit; the client keeps rights to their material. Vocal edit & Mix credits are case-by-case.',
         'A light revision is in-scope balance work or small swaps. A major direction change is a separate quote — even on “unlimited”.',
         'Stem export is an optional add-on from $30 (¥3,000〜; scales with effort) for Track and Mix. No plan includes stems today.',
-        'Payment: under ~¥30,000 / about $300, full amount before start; ¥30,000+ = 50% before start / 50% before finals. Finals after the balance. After we agree on scope, payment details are sent (card payments coming soon; bank transfer available).',
+        'Payment: under ~¥30,000 / about $300, full amount before start; ¥30,000+ = 50% before start / 50% before finals. Finals after the balance. Guideline tiers can be paid from each plan via Stripe. Commercial / label work is still a quote. Bank transfer is also available.',
         'Cancel: before start → generally full refund (minus payment fees if any). After start → deposit non-refundable (applied to work). If Sulomam cancels: reschedule or refund undelivered work.',
       ],
       faq: {
@@ -340,7 +349,7 @@ export const en: Messages = {
             id: 'payment',
             question: 'When is payment due?',
             answer:
-              'Under ~¥30,000 / about $300: full amount before start. ¥30,000+: 50% before start / 50% before finals. Finals after the balance. Agree on scope → invoice later (card when ready) → pay → start. The site copy is: payment details after scope agreement; card payments coming soon; bank transfer available (better for larger / corporate jobs).',
+              'Under ~¥30,000 / about $300: full amount before start. ¥30,000+: 50% before start / 50% before finals. Finals after the balance. Guideline tiers can be paid from each plan via Stripe. Commercial / label work is still a quote. Bank transfer is also available.',
           },
           {
             id: 'cancel',
