@@ -34,6 +34,13 @@ export type PlansCopy = {
   title: string
   lead: string
   inquire: string
+  pay: string
+  payDeposit: string
+  payFull: string
+  balanceNote: string
+  stripeFootnote: string
+  stemsOption: string
+  stemsPay: string
   includesLabel: string
   excludesLabel: string
   turnaroundLabel: string
@@ -117,6 +124,7 @@ export type Messages = {
       eyebrow: string
       title: string
       paragraphs: string[]
+      photoAlt: string
     }
     services: ServiceItem[]
     closing: {
