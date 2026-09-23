@@ -18,11 +18,6 @@ export function HomePage() {
           <p className="hero-brand">{site.brand}</p>
           <h1 className="hero-headline">{site.headline}</h1>
           {site.description ? <p className="hero-lead">{site.description}</p> : null}
-          <div className="hero-actions">
-            <a className="btn btn-ghost" href="#plans">
-              {home.plansCta}
-            </a>
-          </div>
         </div>
       </section>
 

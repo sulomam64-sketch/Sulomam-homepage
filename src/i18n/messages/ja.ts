@@ -13,7 +13,7 @@ export const ja: Messages = {
     nav: [
       { to: '/', label: 'Home' },
       { to: '/work', label: 'Work' },
-      { to: '/gna', label: 'GNA' },
+      { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },
     ],
   },
