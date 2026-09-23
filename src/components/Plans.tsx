@@ -154,6 +154,7 @@ export function Plans() {
             aria-labelledby="plan-tab-guitar"
           >
             <p className="plan-category-lead">{plans.guitar.lead}</p>
+            <p className="plan-scope-hint">{plans.guitar.scopeHint}</p>
             <div className="plans-callouts">
               <p className="plans-callout plans-callout-credit">{plans.guitar.creditCallout}</p>
               <p className="plans-callout plans-callout-tab">{plans.guitar.noTabCallout}</p>

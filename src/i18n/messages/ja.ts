@@ -46,7 +46,7 @@ export const ja: Messages = {
       {
         id: 'guitar',
         title: 'ギター演奏・REC',
-        description: 'Basic／Plus／Arrange のギターREC。',
+        description: 'Basic／Plus／Arrange のギターREC。ソロアコギは Solo。',
       },
       {
         id: 'vocal-edit',
@@ -102,6 +102,8 @@ export const ja: Messages = {
         lead: '指定パートのギターREC。クレジット表記は必須です。',
         creditCallout: 'クレジット表記は必須です（Guitar: Sulomam、または指定のクレジット）。',
         noTabCallout: 'いずれのプランにも、譜面 / TAB 作成は含まれません。',
+        scopeHint:
+          'Arrange は REC 上のフレーズ／レイヤー提案です。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo です。弾き語り／歌入りも相談できます。',
         cards: [
           {
             id: 'guitar-basic',
@@ -138,6 +140,26 @@ export const ja: Messages = {
             includes: ['録音 + WAV', 'フレーズ / レイヤーなどのアレンジ提案'],
             excludes: ['フルトラック制作', 'ボーカル / 他楽器', 'バイアウト / 広告', '譜面 / TAB'],
             turnaround: '3日〜1週間',
+          },
+          {
+            id: 'guitar-solo',
+            name: 'Solo',
+            price: '¥30,000〜',
+            blurb: 'ソロアコギ（メロディ＋伴奏を一人で持つ）のアレンジ＋REC＋簡易MIX。1曲単位。弾き語り／歌入りも相談可。',
+            includes: [
+              'アレンジ設計',
+              'ソロギター演奏REC',
+              '簡易MIX',
+              '納品：WAV（48kHz/24bit）',
+              '軽微な修正',
+            ],
+            excludes: [
+              '譜面 / TAB（オプション相談）',
+              '他楽器（ボーカル／歌は別途相談）',
+              'フルトラック制作',
+              'バイアウト / 広告パッケージ',
+            ],
+            turnaround: '1〜2週間（要相談）',
           },
         ],
         commercial: {
@@ -268,7 +290,7 @@ export const ja: Messages = {
             id: 'guitar-plus-arrange',
             question: 'Guitar の Plus と Arrange の違いは？',
             answer:
-              'Plus は録音寄りのプランで、テイクを厚くする／納品の選択肢を増やすことに重点があります。Arrange は録音に加えて、フレーズやレイヤーなどのアレンジ提案を含みます。どちらも譜面 / TAB は含まれません。クレジット表記は必須です。',
+              'Plus は録音寄りのプランで、テイクを厚くする／納品の選択肢を増やすことに重点があります。Arrange は録音に加えて、フレーズやレイヤーなどのアレンジ提案を含みます。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo（¥30,000〜）です。弾き語り／歌入りも相談できます。いずれも譜面 / TAB は含まれません。クレジット表記は必須です。',
           },
           {
             id: 'track-loop',

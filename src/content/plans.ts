@@ -10,6 +10,7 @@ const planIdAliases: Record<string, string> = {
   basic: 'guitar-basic',
   plus: 'guitar-plus',
   arrange: 'guitar-arrange',
+  solo: 'guitar-solo',
   commercial: 'guitar-commercial',
 }
 
