@@ -13,6 +13,7 @@ export const es: Messages = {
     themeDark: 'Noche',
     nav: [
       { to: '/', label: 'Home' },
+      { to: '/#plans', label: 'Planes' },
       { to: '/work', label: 'Work' },
       { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },
