@@ -222,8 +222,8 @@ export const ja: Messages = {
           {
             id: 'mix-light',
             name: 'Light',
-            price: '¥10,000〜',
-            blurb: '少トラック／弾き語り系。ミックスのみ（マスタリングなし）',
+            price: '¥5,000〜',
+            blurb: '弾き語り／シンプルな歌＋ギター向け。ミックスのみ（マスタリングなし）',
             includes: ['ミックスのみ', '修正 2回'],
             excludes: ['マスタリング', 'ステム（オプション ¥3,000〜）'],
             turnaround: '約3日',
@@ -308,7 +308,7 @@ export const ja: Messages = {
             id: 'mix-mastering',
             question: 'MIX にマスタリングは含まれますか？',
             answer:
-              'Mix Light（¥10,000〜）はミックスのみで、マスタリングは含みません。Standard（¥20,000〜）と Full（¥30,000〜）はミックス＋マスタリングです。',
+              'Mix Light（¥5,000〜）は弾き語り／シンプルな歌＋ギター向けのミックスのみで、マスタリングは含みません。Standard（¥20,000〜）と Full（¥30,000〜）はミックス＋マスタリングです。',
           },
           {
             id: 'light-revision',

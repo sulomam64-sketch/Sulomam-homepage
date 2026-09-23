@@ -227,8 +227,8 @@ export const en: Messages = {
           {
             id: 'mix-light',
             name: 'Light',
-            price: 'from $100',
-            blurb: 'Sparse / 弾き語り-style. Mix only, no mastering',
+            price: 'from $50',
+            blurb: '弾き語り / simple singer-songwriter mixes. Mix only, no mastering',
             includes: ['Mix only', '2 revisions'],
             excludes: ['Mastering', 'Stems (optional add-on from $30)'],
             turnaround: '~3 days',
@@ -313,7 +313,7 @@ export const en: Messages = {
             id: 'mix-mastering',
             question: 'Is mastering included in Mix?',
             answer:
-              'Mix Light (from $100) is mix only — no mastering. Standard (from $200) and Full (from $300) include mix + mastering.',
+              'Mix Light (from $50) is for 弾き語り / simple singer-songwriter mixes — mix only, no mastering. Standard (from $200) and Full (from $300) include mix + mastering.',
           },
           {
             id: 'light-revision',
