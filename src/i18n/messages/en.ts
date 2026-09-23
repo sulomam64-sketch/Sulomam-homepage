@@ -103,7 +103,7 @@ export const en: Messages = {
         creditCallout: 'Credit is mandatory (Guitar: Sulomam, or a specified credit).',
         noTabCallout: 'No sheet music / TAB on any tier.',
         scopeHint:
-          'Arrange is phrase / layer suggestions on a REC. Solo is melody + accompaniment on one guitar.',
+          'Arrange is phrase / layer suggestions on a REC. Solo is melody + accompaniment on one guitar. Singing / vocal over it can be discussed.',
         cards: [
           {
             id: 'guitar-basic',
@@ -146,7 +146,7 @@ export const en: Messages = {
             name: 'Solo',
             price: 'from $300',
             blurb:
-              'Solo acoustic arrangement (melody + accompaniment on one guitar), recording, and light mix. Per song.',
+              'Solo acoustic arrangement (melody + accompaniment on one guitar), recording, and light mix. Per song. Singing / vocal over it available by consult.',
             includes: [
               'Arrangement design',
               'Solo guitar performance REC',
@@ -156,7 +156,7 @@ export const en: Messages = {
             ],
             excludes: [
               'Sheet music / TAB (optional, by consult)',
-              'Other instruments / vocals',
+              'Other instruments (vocals / singing by consult)',
               'Full track production',
               'Buyout / ad package',
             ],
@@ -296,7 +296,7 @@ export const en: Messages = {
             id: 'guitar-plus-arrange',
             question: 'What’s the difference between Guitar Plus and Arrange?',
             answer:
-              'Plus is recording-focused: thicker takes and delivery options. Arrange adds arrangement proposals (phrases / layers) on top of recording. Solo acoustic arrangement (melody + accompaniment on one guitar) is Solo (from $300). Sheet music / TAB stays off these tiers. Credit is required.',
+              'Plus is recording-focused: thicker takes and delivery options. Arrange adds arrangement proposals (phrases / layers) on top of recording. Solo acoustic arrangement (melody + accompaniment on one guitar) is Solo (from $300). Singing / vocal over it can be discussed. Sheet music / TAB stays off these tiers. Credit is required.',
           },
           {
             id: 'track-loop',

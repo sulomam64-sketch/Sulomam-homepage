@@ -103,7 +103,7 @@ export const ja: Messages = {
         creditCallout: 'クレジット表記は必須です（Guitar: Sulomam、または指定のクレジット）。',
         noTabCallout: 'いずれのプランにも、譜面 / TAB 作成は含まれません。',
         scopeHint:
-          'Arrange は REC 上のフレーズ／レイヤー提案です。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo です。',
+          'Arrange は REC 上のフレーズ／レイヤー提案です。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo です。弾き語り／歌入りも相談できます。',
         cards: [
           {
             id: 'guitar-basic',
@@ -145,7 +145,7 @@ export const ja: Messages = {
             id: 'guitar-solo',
             name: 'Solo',
             price: '¥30,000〜',
-            blurb: 'ソロアコギ（メロディ＋伴奏を一人で持つ）のアレンジ＋REC＋簡易MIX。1曲単位。',
+            blurb: 'ソロアコギ（メロディ＋伴奏を一人で持つ）のアレンジ＋REC＋簡易MIX。1曲単位。弾き語り／歌入りも相談可。',
             includes: [
               'アレンジ設計',
               'ソロギター演奏REC',
@@ -155,7 +155,7 @@ export const ja: Messages = {
             ],
             excludes: [
               '譜面 / TAB（オプション相談）',
-              '他楽器 / ボーカル',
+              '他楽器（ボーカル／歌は別途相談）',
               'フルトラック制作',
               'バイアウト / 広告パッケージ',
             ],
@@ -290,7 +290,7 @@ export const ja: Messages = {
             id: 'guitar-plus-arrange',
             question: 'Guitar の Plus と Arrange の違いは？',
             answer:
-              'Plus は録音寄りのプランで、テイクを厚くする／納品の選択肢を増やすことに重点があります。Arrange は録音に加えて、フレーズやレイヤーなどのアレンジ提案を含みます。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo（¥30,000〜）です。いずれも譜面 / TAB は含まれません。クレジット表記は必須です。',
+              'Plus は録音寄りのプランで、テイクを厚くする／納品の選択肢を増やすことに重点があります。Arrange は録音に加えて、フレーズやレイヤーなどのアレンジ提案を含みます。ソロアコギ（メロディ＋伴奏を一人で持つ）は Solo（¥30,000〜）です。弾き語り／歌入りも相談できます。いずれも譜面 / TAB は含まれません。クレジット表記は必須です。',
           },
           {
             id: 'track-loop',
