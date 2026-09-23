@@ -43,6 +43,14 @@
   line-height: 1.7;
 }
 
+.plan-scope-hint {
+  margin: -0.45rem 0 1.15rem;
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 .plan-category-hint {
   margin: 1.15rem 0 0;
   max-width: 46rem;

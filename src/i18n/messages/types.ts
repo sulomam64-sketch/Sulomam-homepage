@@ -56,6 +56,7 @@ export type PlansCopy = {
     lead: string
     creditCallout: string
     noTabCallout: string
+    scopeHint: string
     cards: PlanCard[]
     commercial: PlanQuote
   }

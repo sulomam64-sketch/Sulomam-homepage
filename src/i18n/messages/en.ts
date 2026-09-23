@@ -46,7 +46,7 @@ export const en: Messages = {
       {
         id: 'guitar',
         title: 'Guitar performance / REC',
-        description: 'Basic / Plus / Arrange.',
+        description: 'Basic / Plus / Arrange guitar REC, plus Solo acoustic arrangement.',
       },
       {
         id: 'vocal-edit',
@@ -102,6 +102,8 @@ export const en: Messages = {
         lead: 'Guitar recording for a specified part. Credit is required.',
         creditCallout: 'Credit is mandatory (Guitar: Sulomam, or a specified credit).',
         noTabCallout: 'No sheet music / TAB on any tier.',
+        scopeHint:
+          'Arrange is phrase / layer suggestions on a REC. Solo is melody + accompaniment on one guitar.',
         cards: [
           {
             id: 'guitar-basic',
@@ -138,6 +140,27 @@ export const en: Messages = {
             includes: ['Recording + WAV', 'Phrase / layer arrangement proposals'],
             excludes: ['Full track production', 'Vocals / other instruments', 'Buyout / ads', 'Sheet music / TAB'],
             turnaround: '3 days–1 week',
+          },
+          {
+            id: 'guitar-solo',
+            name: 'Solo',
+            price: 'from $300',
+            blurb:
+              'Solo acoustic arrangement (melody + accompaniment on one guitar), recording, and light mix. Per song.',
+            includes: [
+              'Arrangement design',
+              'Solo guitar performance REC',
+              'Light mix',
+              'Deliverable: WAV (48kHz/24bit)',
+              'Light revisions',
+            ],
+            excludes: [
+              'Sheet music / TAB (optional, by consult)',
+              'Other instruments / vocals',
+              'Full track production',
+              'Buyout / ad package',
+            ],
+            turnaround: '1–2 weeks (by consult)',
           },
         ],
         commercial: {
@@ -273,7 +296,7 @@ export const en: Messages = {
             id: 'guitar-plus-arrange',
             question: 'What’s the difference between Guitar Plus and Arrange?',
             answer:
-              'Plus is recording-focused: thicker takes and delivery options. Arrange adds arrangement proposals (phrases / layers) on top of recording. Neither includes sheet music / TAB. Credit is required.',
+              'Plus is recording-focused: thicker takes and delivery options. Arrange adds arrangement proposals (phrases / layers) on top of recording. Solo acoustic arrangement (melody + accompaniment on one guitar) is Solo (from $300). Sheet music / TAB stays off these tiers. Credit is required.',
           },
           {
             id: 'track-loop',
