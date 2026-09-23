@@ -358,7 +358,7 @@ export const ja: Messages = {
     },
     listen: {
       eyebrow: 'Listen',
-      title: '音源デモ',
+      title: 'Demo Songs',
       lead: 'オリジナルのデモです。クライアント案件のマスターではありません。',
       cta: 'デモを聴く',
       play: '再生',

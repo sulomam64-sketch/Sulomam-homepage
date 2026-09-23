@@ -36,7 +36,7 @@ export const ko: Messages = {
     plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
-      title: '음원 데모',
+      title: 'Demo Songs',
       lead: '오리지널 데모입니다. 클라이언트 마스터가 아닙니다.',
       cta: '데모 듣기',
       play: '재생',

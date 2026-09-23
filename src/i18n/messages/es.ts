@@ -36,7 +36,7 @@ export const es: Messages = {
     plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
-      title: 'Demos',
+      title: 'Demo Songs',
       lead: 'Demos originales — no son masters de clientes.',
       cta: 'Escuchar demos',
       play: 'Reproducir',

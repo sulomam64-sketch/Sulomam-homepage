@@ -363,7 +363,7 @@ export const en: Messages = {
     },
     listen: {
       eyebrow: 'Listen',
-      title: 'Demos',
+      title: 'Demo Songs',
       lead: 'Original demos — not client masters.',
       cta: 'Listen to demos',
       play: 'Play',
