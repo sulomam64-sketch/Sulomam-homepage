@@ -37,7 +37,7 @@ export const es: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: 'Demos originales — no son masters de clientes.',
+      lead: '',
       cta: 'Escuchar demos',
       play: 'Reproducir',
       pause: 'Pausa',

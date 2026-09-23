@@ -37,7 +37,7 @@ export const zh: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: '原创试听。不是客户成品母带。',
+      lead: '',
       cta: '试听 Demo',
       play: '播放',
       pause: '暂停',

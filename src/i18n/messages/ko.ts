@@ -37,7 +37,7 @@ export const ko: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: '오리지널 데모입니다. 클라이언트 마스터가 아닙니다.',
+      lead: '',
       cta: '데모 듣기',
       play: '재생',
       pause: '일시정지',

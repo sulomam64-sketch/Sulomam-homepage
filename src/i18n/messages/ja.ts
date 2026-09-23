@@ -359,7 +359,7 @@ export const ja: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: 'オリジナルのデモです。クライアント案件のマスターではありません。',
+      lead: '',
       cta: 'デモを聴く',
       play: '再生',
       pause: '一時停止',
