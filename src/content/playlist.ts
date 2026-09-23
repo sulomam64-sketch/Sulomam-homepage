@@ -21,6 +21,12 @@ export const homePlaylist: PlaylistTrack[] = [
     src: '/audio/pocketmonster_show_op.mp3',
   },
   {
+    id: 'sin-jazzhiphop-demo',
+    title: 'SIN_JazzHIPHOP_demo',
+    artist: 'Sulomam',
+    src: '/audio/SIN_JazzHIPHOP_demo.mp3',
+  },
+  {
     id: 'undoor-remix',
     title: 'UNDOOR_REMIX',
     artist: 'Sulomam',
