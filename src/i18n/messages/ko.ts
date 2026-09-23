@@ -6,7 +6,7 @@ export const ko: Messages = {
     brand: 'Sulomam',
     tagline: 'Touch of Sound',
     headline: '소리에, 손맛을.',
-    description: '작편곡·기타·믹스. 용도에 맞춰 개별 견적합니다.',
+    description: '',
     languageLabel: '언어',
     themeLabel: '표시',
     themeLight: '라이트',

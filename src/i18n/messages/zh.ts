@@ -6,7 +6,7 @@ export const zh: Messages = {
     brand: 'Sulomam',
     tagline: 'Touch of Sound',
     headline: '让声音有手感。',
-    description: '作曲编曲、吉他、混音。按项目单独报价。',
+    description: '',
     languageLabel: '语言',
     themeLabel: '外观',
     themeLight: '浅色',

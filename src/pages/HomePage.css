@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: min(92vh, 52rem);
+  min-height: min(46vh, 24rem);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -41,7 +41,7 @@
   position: relative;
   z-index: 1;
   width: min(44rem, 100%);
-  padding: clamp(3rem, 10vh, 6rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 8vh, 5rem);
+  padding: clamp(1.75rem, 5vh, 3.75rem) clamp(1.25rem, 4vw, 3rem) clamp(1.5rem, 4vh, 2.75rem);
   animation: hero-rise 0.9s ease-out both;
 }
 
@@ -149,6 +149,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    padding-top: 1.5rem;
+    padding-bottom: 1.35rem;
   }
 }
 

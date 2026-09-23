@@ -5,7 +5,7 @@ export const en: Messages = {
     brand: 'Sulomam',
     tagline: 'Touch of Sound',
     headline: 'Give sound a human touch.',
-    description: 'Composition, arrangement, guitar, and mix — quoted per project.',
+    description: '',
     languageLabel: 'Language',
     themeLabel: 'Theme',
     themeLight: 'Light',
