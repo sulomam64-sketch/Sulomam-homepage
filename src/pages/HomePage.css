@@ -88,9 +88,10 @@
 }
 
 .intro-layout {
-  display: grid;
-  gap: 1.5rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  align-items: flex-start;
 }
 
 .intro-copy {
@@ -110,12 +111,12 @@
 
 .about-photo {
   margin: 0;
-  width: min(100%, 22rem);
-  border-radius: 0.9rem;
+  width: min(100%, 19rem);
+  border-radius: 0.4rem;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--line) 42%, transparent);
-  background: var(--bg-elevated);
-  box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 18%, transparent);
+  background: transparent;
+  box-shadow: none;
 }
 
 .about-photo img {
@@ -124,14 +125,6 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-}
-
-@media (min-width: 800px) {
-  .intro-layout {
-    grid-template-columns: minmax(0, 1fr) 22rem;
-    gap: 2.25rem 2.75rem;
-    align-items: center;
-  }
 }
 
 .closing-section {
