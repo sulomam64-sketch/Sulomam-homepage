@@ -30,11 +30,11 @@ export const en: Messages = {
       eyebrow: 'About',
       title: 'About',
       paragraphs: [
-        'Track maker / guitarist — Sulomam.',
-        'Guideline rates for personal / indie work: guitar on my tracks, brush-ups, vocal edit, and mix. Commercial, label, and advertising jobs are quote-only.',
-        "Start from Plans — or just ask if you're unsure.",
+        'Track maker / guitarist Sulomam',
+        'Guitar on my own tracks, brush-ups of existing songs, writing from a hummed melody, from-scratch (0→1) commissions, vocal edit, and mix. Partial jobs and bundled requests are fine — we work flexibly to the brief.',
+        'Guideline rates for indie / personal work are listed below. Commercial, label, and ad work is quoted.',
+        'Album-style singer-songwriter mix batches and unusual briefs are welcome. Ask about a set rate by song count or scope.',
       ],
-      photoAlt: 'Sulomam at a desk with a guitar and a DAW session',
     },
     services: [
       {
@@ -222,13 +222,14 @@ export const en: Messages = {
       },
       mix: {
         categoryName: 'Mix',
-        lead: 'Stem export is an optional add-on on every Mix plan (from $30, scales with effort).',
+        lead: 'Stem export is an optional add-on on every Mix plan (from $30, scales with effort). Albums, EPs, and other multi-song batches can be priced as a flexible set.',
         cards: [
           {
             id: 'mix-light',
             name: 'Light',
-            price: 'from $100',
-            blurb: 'Sparse / 弾き語り-style. Mix only, no mastering',
+            price: 'from $50',
+            blurb:
+              '弾き語り / singer-songwriter mixes. Mix only, no mastering. Ask about a set rate for several songs together.',
             includes: ['Mix only', '2 revisions'],
             excludes: ['Mastering', 'Stems (optional add-on from $30)'],
             turnaround: '~3 days',
@@ -313,7 +314,7 @@ export const en: Messages = {
             id: 'mix-mastering',
             question: 'Is mastering included in Mix?',
             answer:
-              'Mix Light (from $100) is mix only — no mastering. Standard (from $200) and Full (from $300) include mix + mastering.',
+              'Mix Light (from $50) is a 弾き語り / singer-songwriter mix only — no mastering. Ask about a set rate for several songs together. Standard (from $200) and Full (from $300) include mix + mastering.',
           },
           {
             id: 'light-revision',

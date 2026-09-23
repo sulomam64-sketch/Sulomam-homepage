@@ -87,12 +87,6 @@
   margin-bottom: 1.35rem;
 }
 
-.intro-layout {
-  display: grid;
-  gap: 1.5rem;
-  align-items: start;
-}
-
 .intro-copy {
   min-width: 0;
   max-width: 36rem;
@@ -106,32 +100,6 @@
 
 .intro-section p:last-child {
   margin-bottom: 0;
-}
-
-.about-photo {
-  margin: 0;
-  width: min(100%, 22rem);
-  border-radius: 0.9rem;
-  overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--line) 42%, transparent);
-  background: var(--bg-elevated);
-  box-shadow: 0 14px 32px color-mix(in srgb, var(--ink) 8%, transparent);
-}
-
-.about-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
-}
-
-@media (min-width: 800px) {
-  .intro-layout {
-    grid-template-columns: minmax(0, 1fr) 22rem;
-    gap: 2.25rem 2.75rem;
-    align-items: center;
-  }
 }
 
 .closing-section {

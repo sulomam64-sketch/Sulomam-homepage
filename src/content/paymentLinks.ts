@@ -54,7 +54,7 @@ const jpy = {
   },
   'mix-light': {
     kind: 'full',
-    href: 'https://buy.stripe.com/3cI9ASeMa8XodVCes7a7C06',
+    href: 'https://buy.stripe.com/3cI14meMab5w3gY5VBa7C0G',
   },
   'mix-standard': {
     kind: 'full',
@@ -113,7 +113,7 @@ const usd = {
   },
   'mix-light': {
     kind: 'full',
-    href: 'https://buy.stripe.com/eVq9ASbzY0qS8Bi6ZFa7C0r',
+    href: 'https://buy.stripe.com/fZu3cugUia1s2cU6ZFa7C0H',
   },
   'mix-standard': {
     kind: 'full',
