@@ -30,10 +30,10 @@ export const en: Messages = {
       eyebrow: 'About',
       title: 'About',
       paragraphs: [
-        'Track maker / guitarist Sulomam.',
-        'Guitar on my own tracks, brush-ups of existing songs, writing from a hummed melody, from-scratch (0→1) commissions, vocal edit, and mix.',
+        'Track maker / guitarist Sulomam',
+        'Guitar on my own tracks, brush-ups of existing songs, writing from a hummed melody, from-scratch (0→1) commissions, vocal edit, and mix. Partial jobs and bundled requests are fine — we work flexibly to the brief.',
         'Guideline rates for indie / personal work are listed below. Commercial, label, and ad work is quoted.',
-        'Multi-song singer-songwriter mix jobs are welcome. Ask about a set rate by song count.',
+        'Album-style singer-songwriter mix batches and unusual briefs are welcome. Ask about a set rate by song count or scope.',
       ],
     },
     services: [
