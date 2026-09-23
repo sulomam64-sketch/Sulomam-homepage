@@ -124,7 +124,6 @@ export type Messages = {
       eyebrow: string
       title: string
       paragraphs: string[]
-      photoAlt: string
     }
     services: ServiceItem[]
     closing: {

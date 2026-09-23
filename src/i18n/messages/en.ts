@@ -35,7 +35,6 @@ export const en: Messages = {
         'Guideline rates for indie / personal work are listed below. Commercial, label, and ad work is quoted.',
         'Multi-song singer-songwriter mix jobs are welcome too. Ask about a set rate by song count.',
       ],
-      photoAlt: 'Sulomam at a desk with a guitar and a DAW session',
     },
     services: [
       {
