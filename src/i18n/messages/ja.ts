@@ -12,7 +12,7 @@ export const ja: Messages = {
     themeDark: 'ナイト',
     nav: [
       { to: '/', label: 'Home' },
-      { to: '/#plans', label: 'プラン' },
+      { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
       { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },

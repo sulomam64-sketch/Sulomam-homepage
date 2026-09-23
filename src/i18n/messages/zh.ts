@@ -13,7 +13,7 @@ export const zh: Messages = {
     themeDark: '夜间',
     nav: [
       { to: '/', label: 'Home' },
-      { to: '/#plans', label: '方案' },
+      { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
       { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },

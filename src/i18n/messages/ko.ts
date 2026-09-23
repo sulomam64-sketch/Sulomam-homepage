@@ -13,7 +13,7 @@ export const ko: Messages = {
     themeDark: '나이트',
     nav: [
       { to: '/', label: 'Home' },
-      { to: '/#plans', label: '플랜' },
+      { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
       { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },
