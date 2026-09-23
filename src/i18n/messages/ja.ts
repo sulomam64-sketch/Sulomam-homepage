@@ -4,8 +4,8 @@ export const ja: Messages = {
   site: {
     brand: 'Sulomam',
     tagline: 'Touch of Sound',
-    headline: '音に、手触りを。',
-    description: '作編曲・ギター・MIX。用途に合わせて個別にお見積もりします。',
+    headline: '音に手触りを',
+    description: '',
     languageLabel: '言語',
     themeLabel: '表示',
     themeLight: 'ライト',
@@ -358,7 +358,7 @@ export const ja: Messages = {
     },
     listen: {
       eyebrow: 'Listen',
-      title: '音源デモ',
+      title: 'Demo Songs',
       lead: 'オリジナルのデモです。クライアント案件のマスターではありません。',
       cta: 'デモを聴く',
       play: '再生',

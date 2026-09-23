@@ -6,7 +6,7 @@ export const es: Messages = {
     brand: 'Sulomam',
     tagline: 'Touch of Sound',
     headline: 'Dale tacto al sonido.',
-    description: 'Composición, arreglo, guitarra y mezcla — presupuesto por proyecto.',
+    description: '',
     languageLabel: 'Idioma',
     themeLabel: 'Tema',
     themeLight: 'Claro',
@@ -36,7 +36,7 @@ export const es: Messages = {
     plans: en.home.plans,
     listen: {
       eyebrow: 'Listen',
-      title: 'Demos',
+      title: 'Demo Songs',
       lead: 'Demos originales — no son masters de clientes.',
       cta: 'Escuchar demos',
       play: 'Reproducir',

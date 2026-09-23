@@ -17,7 +17,7 @@ export function HomePage() {
         <div className="hero-inner">
           <p className="hero-brand">{site.brand}</p>
           <h1 className="hero-headline">{site.headline}</h1>
-          <p className="hero-lead">{site.description}</p>
+          {site.description ? <p className="hero-lead">{site.description}</p> : null}
           <div className="hero-actions">
             <a className="btn btn-ghost" href="#listen">
               {home.listen.cta}
@@ -46,6 +46,18 @@ export function HomePage() {
         </div>
       </section>
 
+      <Plans />
+
+      <section className="section section-alt" aria-labelledby="skills-title">
+        <div className="section-inner">
+          <p className="eyebrow">{home.servicesHeading}</p>
+          <h2 className="section-title" id="skills-title">
+            {home.servicesHeading}
+          </h2>
+          <ServiceList services={home.services} />
+        </div>
+      </section>
+
       <section className="section intro-section" aria-labelledby="about-title">
         <div className="section-inner">
           <div className="intro-copy">
@@ -59,18 +71,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
-      <section className="section section-alt" aria-labelledby="skills-title">
-        <div className="section-inner">
-          <p className="eyebrow">{home.servicesHeading}</p>
-          <h2 className="section-title" id="skills-title">
-            {home.servicesHeading}
-          </h2>
-          <ServiceList services={home.services} />
-        </div>
-      </section>
-
-      <Plans />
 
       <section className="section closing-section">
         <div className="section-inner narrow">
