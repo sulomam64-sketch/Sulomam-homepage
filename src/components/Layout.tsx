@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { siteConfig } from '../content/config'
 import { localeLabels, locales, useI18n, type Locale } from '../i18n'
 import { useTheme, type Theme } from '../theme'
@@ -11,6 +11,8 @@ type Props = {
 export function Layout({ children }: Props) {
   const { t, locale, setLocale } = useI18n()
   const { theme, setTheme } = useTheme()
+  const location = useLocation()
+  const onPlans = location.pathname === '/' && location.hash.startsWith('#plans')
 
   return (
     <div className="layout">
@@ -21,16 +23,29 @@ export function Layout({ children }: Props) {
         </NavLink>
         <div className="header-tools">
           <nav className="site-nav" aria-label={t.layout.navAria}>
-            {t.site.nav.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.to === '/'}
-                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            {t.site.nav.map((item) =>
+              item.to.includes('#') ? (
+                <a
+                  key={item.to}
+                  className={onPlans ? 'nav-link active' : 'nav-link'}
+                  href={item.to}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  className={({ isActive }) => {
+                    const active = item.to === '/' ? isActive && !onPlans : isActive
+                    return active ? 'nav-link active' : 'nav-link'
+                  }}
+                >
+                  {item.label}
+                </NavLink>
+              ),
+            )}
             <a
               className="nav-link nav-external"
               href={siteConfig.instagram.url}

@@ -12,8 +12,9 @@ export const en: Messages = {
     themeDark: 'Night',
     nav: [
       { to: '/', label: 'Home' },
+      { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
-      { to: '/gna', label: 'GNA' },
+      { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },
     ],
   },
@@ -364,7 +365,7 @@ export const en: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: 'Original demos — not client masters.',
+      lead: '',
       cta: 'Listen to demos',
       play: 'Play',
       pause: 'Pause',

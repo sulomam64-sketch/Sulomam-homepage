@@ -13,8 +13,9 @@ export const zh: Messages = {
     themeDark: '夜间',
     nav: [
       { to: '/', label: 'Home' },
+      { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
-      { to: '/gna', label: 'GNA' },
+      { to: '/gna', label: 'Tips' },
       { to: '/contact', label: 'Contact' },
     ],
   },
@@ -37,7 +38,7 @@ export const zh: Messages = {
     listen: {
       eyebrow: 'Listen',
       title: 'Demo Songs',
-      lead: '原创试听。不是客户成品母带。',
+      lead: '',
       cta: '试听 Demo',
       play: '播放',
       pause: '暂停',
