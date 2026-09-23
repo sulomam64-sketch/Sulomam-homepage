@@ -152,6 +152,20 @@
   }
 }
 
+/* Phone: keep the headline on screen and park 「Demo Songs」 on the
+   bottom edge. 18.75rem covers the wrapped header, Listen padding, and
+   eyebrow on a ~390px-wide phone. Desktop keeps the tall hero. */
+@media (max-width: 720px) {
+  .hero {
+    min-height: calc(100svh - 18.75rem);
+  }
+
+  .hero-inner {
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-atmosphere,
   .hero-inner {
