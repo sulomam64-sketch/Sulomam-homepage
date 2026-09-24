@@ -1,5 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { PlaylistTrack } from '../content/playlist'
+import { createPlayRecorder, trackIdFromAudioSrc, type PlayEventName } from './playCounter'
+
+const recordTrackEvent = createPlayRecorder((body) => {
+  try {
+    void fetch('/api/play', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body,
+      keepalive: true,
+      credentials: 'omit',
+      cache: 'no-store',
+    }).catch(() => {})
+  } catch {
+    // Counting is fire-and-forget and must not affect playback.
+  }
+})
 
 export function formatTimecode(seconds: number) {
   if (!Number.isFinite(seconds) || seconds < 0) {
@@ -136,7 +152,22 @@ export function useAudioPlaylist(tracks: PlaylistTrack[]) {
     setDuration(Number.isFinite(audio.duration) ? audio.duration : 0)
   }, [])
 
+  const notePlayback = useCallback(
+    (event: PlayEventName) => {
+      try {
+        const audio = audioRef.current
+        const fromSrc = trackIdFromAudioSrc(audio?.currentSrc || audio?.src || '', tracks)
+        const id = fromSrc ?? track?.id
+        if (id) recordTrackEvent(id, event)
+      } catch {
+        // Counting must not affect playback.
+      }
+    },
+    [track, tracks],
+  )
+
   const onEnded = useCallback(() => {
+    notePlayback('complete')
     if (tracks.length === 0) return
     if (safeIndex >= tracks.length - 1) {
       wantPlayingRef.current = false
@@ -145,7 +176,7 @@ export function useAudioPlaylist(tracks: PlaylistTrack[]) {
       return
     }
     goToTrack(safeIndex + 1, true)
-  }, [goToTrack, safeIndex, tracks.length])
+  }, [goToTrack, notePlayback, safeIndex, tracks.length])
 
   const onCanPlay = useCallback(() => {
     if (!wantPlayingRef.current) return
@@ -158,7 +189,8 @@ export function useAudioPlaylist(tracks: PlaylistTrack[]) {
   const onPlay = useCallback(() => {
     wantPlayingRef.current = true
     setIsPlaying(true)
-  }, [])
+    notePlayback('play')
+  }, [notePlayback])
 
   const onPause = useCallback(() => {
     const audio = audioRef.current

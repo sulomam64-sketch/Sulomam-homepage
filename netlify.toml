@@ -2,7 +2,51 @@
   command = "npm run build"
   publish = "dist"
 
+# public/_redirects is processed first and repeats these rules. The SPA
+# catch-all has to come after the function routes in BOTH places.
+
+[[redirects]]
+  from = "/api/play"
+  to = "/.netlify/functions/play"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/play-stats"
+  to = "/.netlify/functions/play-stats"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/stats"
+  to = "/.netlify/functions/stats-page"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/404"
+  status = 404
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/api/play"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/api/play-stats"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/stats"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
