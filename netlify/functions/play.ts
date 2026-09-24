@@ -3,10 +3,11 @@ import { badRequest, methodNotAllowed, privateHeaders } from '../lib/http.ts'
 import { parsePlayRequest } from '../lib/parse-play-request.ts'
 import { isCrossSite } from '../lib/request-guards.ts'
 import { incrementTrack } from '../lib/stats.ts'
+import { readDeployContext, type NetlifyHandlerContext } from '../lib/store-name.ts'
 
 const MAX_BODY = 1024
 
-export default async function play(req: Request): Promise<Response> {
+export default async function play(req: Request, context: NetlifyHandlerContext): Promise<Response> {
   if (req.method !== 'POST') return methodNotAllowed('POST')
   if (isCrossSite(req)) return badRequest()
 
@@ -35,7 +36,7 @@ export default async function play(req: Request): Promise<Response> {
   if (!playRequest) return badRequest()
 
   try {
-    await incrementTrack(blobCounterStore(), playRequest.trackId, playRequest.event)
+    await incrementTrack(blobCounterStore(readDeployContext(context)), playRequest.trackId, playRequest.event)
   } catch (error) {
     console.error('play counter increment failed')
     console.error(error)

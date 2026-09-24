@@ -1,9 +1,9 @@
 import { getStore } from '@netlify/blobs'
 import type { CounterStore, TrackCounts } from './stats.ts'
-import { playStoreName } from './store-name.ts'
+import { playStoreName, readDeployContext } from './store-name.ts'
 
-export function blobCounterStore(): CounterStore {
-  const store = getStore({ name: playStoreName(), consistency: 'strong' })
+export function blobCounterStore(context = readDeployContext()): CounterStore {
+  const store = getStore({ name: playStoreName(context), consistency: 'strong' })
   return {
     async get(key) {
       const entry = await store.getWithMetadata(key, { type: 'json', consistency: 'strong' })

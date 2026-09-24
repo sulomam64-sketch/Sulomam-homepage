@@ -1,4 +1,5 @@
 import { homePlaylist } from '../../src/content/playlist.ts'
+import { readDeployContext } from './store-name.ts'
 
 export type PlayEvent = 'play' | 'complete'
 
@@ -142,7 +143,11 @@ function sortedDays(days: Record<string, DayCounts>): Record<string, DayCounts> 
   return sorted
 }
 
-export async function loadReport(store: CounterStore, now = new Date()): Promise<StatsReport> {
+export async function loadReport(
+  store: CounterStore,
+  now = new Date(),
+  context = readDeployContext(),
+): Promise<StatsReport> {
   const tracks = await Promise.all(
     homePlaylist.map(async (track) => {
       const entry = await store.get(track.id)
@@ -166,7 +171,7 @@ export async function loadReport(store: CounterStore, now = new Date()): Promise
   return {
     generatedAt: now.toISOString(),
     timezone: 'Asia/Tokyo',
-    context: process.env.CONTEXT || 'dev',
+    context,
     totals,
     tracks,
   }
