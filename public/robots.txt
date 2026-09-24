@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Owner-only play stats. Not linked from the site.
+Disallow: /stats
+Disallow: /api/play
+Disallow: /api/play-stats

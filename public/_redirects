@@ -1,1 +1,7 @@
-/*    /index.html   200
+# API routes must stay above the SPA catch-all. This file is applied
+# before netlify.toml, so a leading /* would swallow these paths.
+/api/play          /.netlify/functions/play          200!
+/api/play-stats    /.netlify/functions/play-stats    200!
+/stats             /.netlify/functions/stats-page    200!
+/api/*             /404                              404
+/*                 /index.html                       200
