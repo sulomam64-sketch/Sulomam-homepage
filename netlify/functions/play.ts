@@ -33,12 +33,7 @@ export default async function play(req: Request, context: NetlifyHandlerContext)
   }
 
   const playRequest = parsePlayRequest(body)
-  if (!playRequest) {
-    return new Response(null, {
-      status: 400,
-      headers: { ...privateHeaders, 'x-play-deploy-context': readDeployContext(context) },
-    })
-  }
+  if (!playRequest) return badRequest()
 
   try {
     await incrementTrack(blobCounterStore(readDeployContext(context)), playRequest.trackId, playRequest.event)
