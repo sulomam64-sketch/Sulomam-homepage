@@ -5,7 +5,7 @@ import { credentialFromRequest, isAuthorized } from './auth.ts'
 import { isCrossSite } from './request-guards.ts'
 import { parsePlayRequest } from './parse-play-request.ts'
 import { renderStatsPage } from './stats-page.ts'
-import { playStoreName } from './store-name.ts'
+import { playStoreName, readDeployContext } from './store-name.ts'
 import {
   dayKey,
   emptyCounts,
@@ -105,22 +105,15 @@ describe('incrementTrack', () => {
 
 describe('loadReport', () => {
   it('lists every playlist track, including ones with no plays', async () => {
-    const previous = process.env.CONTEXT
-    process.env.CONTEXT = 'production'
-    try {
-      const store = memoryStore()
-      await incrementTrack(store, 'undoor-remix', 'play', new Date('2026-09-24T00:00:00.000Z'))
-      const report = await loadReport(store, new Date('2026-09-24T03:00:00.000Z'))
-      assert.equal(report.context, 'production')
-      assert.equal(report.timezone, 'Asia/Tokyo')
-      assert.equal(report.tracks.length, 6)
-      assert.equal(report.totals.plays, 1)
-      assert.equal(report.tracks.find((track) => track.id === 'undoor-remix')?.plays, 1)
-      assert.equal(report.tracks.find((track) => track.id === 'rin-r6b-ballade')?.plays, 0)
-    } finally {
-      if (previous === undefined) delete process.env.CONTEXT
-      else process.env.CONTEXT = previous
-    }
+    const store = memoryStore()
+    await incrementTrack(store, 'undoor-remix', 'play', new Date('2026-09-24T00:00:00.000Z'))
+    const report = await loadReport(store, new Date('2026-09-24T03:00:00.000Z'), 'production')
+    assert.equal(report.context, 'production')
+    assert.equal(report.timezone, 'Asia/Tokyo')
+    assert.equal(report.tracks.length, 6)
+    assert.equal(report.totals.plays, 1)
+    assert.equal(report.tracks.find((track) => track.id === 'undoor-remix')?.plays, 1)
+    assert.equal(report.tracks.find((track) => track.id === 'rin-r6b-ballade')?.plays, 0)
   })
 })
 
@@ -186,6 +179,32 @@ describe('playStoreName', () => {
     assert.equal(playStoreName('deploy-preview'), 'play-counts-deploy-preview')
     assert.equal(playStoreName('dev'), 'play-counts-dev')
     assert.equal(playStoreName(''), 'play-counts-dev')
+  })
+})
+
+describe('readDeployContext', () => {
+  const runtime = globalThis as {
+    Netlify?: { context: { deploy: { context: string } } | null }
+  }
+
+  it('uses the handler context, then Netlify.context, and ignores the build-time CONTEXT env var', () => {
+    const previousEnv = process.env.CONTEXT
+    const previousNetlify = runtime.Netlify
+    process.env.CONTEXT = 'dev'
+    runtime.Netlify = { context: { deploy: { context: 'deploy-preview' } } }
+    try {
+      assert.equal(readDeployContext({ deploy: { context: 'production' } }), 'production')
+      assert.equal(readDeployContext(), 'deploy-preview')
+      assert.equal(playStoreName(), 'play-counts-deploy-preview')
+      runtime.Netlify = { context: null }
+      assert.equal(readDeployContext(), 'dev')
+      assert.equal(playStoreName(), 'play-counts-dev')
+    } finally {
+      if (previousEnv === undefined) delete process.env.CONTEXT
+      else process.env.CONTEXT = previousEnv
+      if (previousNetlify === undefined) delete runtime.Netlify
+      else runtime.Netlify = previousNetlify
+    }
   })
 })
 
