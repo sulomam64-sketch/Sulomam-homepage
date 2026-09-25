@@ -19,6 +19,7 @@ export function Metronome() {
   const [running, setRunning] = useState(false)
   const [beat, setBeat] = useState(0)
   const [pulse, setPulse] = useState(0)
+  const [tapHint, setTapHint] = useState('')
   const [soundError, setSoundError] = useState(false)
 
   const bpmRef = useRef(bpm)
@@ -119,7 +120,11 @@ export function Metronome() {
     recent.push(now)
     tapsRef.current = recent.slice(-5)
     setPulse((n) => n + 1)
-    if (recent.length < 2) return
+    if (recent.length < 2) {
+      setTapHint('Once more, in time')
+      return
+    }
+    setTapHint('')
     let total = 0
     for (let i = 1; i < recent.length; i++) total += recent[i] - recent[i - 1]
     setTempo(60000 / (total / (recent.length - 1)))
@@ -180,6 +185,11 @@ export function Metronome() {
           {running ? 'Stop' : 'Start'}
         </button>
       </div>
+      {tapHint ? (
+        <p className="toy-note" role="status">
+          {tapHint}
+        </p>
+      ) : null}
       {soundError ? (
         <p className="toy-note" role="status">
           Sound isn’t available in this browser. The tempo still counts on screen.
