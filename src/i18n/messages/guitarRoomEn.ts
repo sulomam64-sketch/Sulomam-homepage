@@ -16,6 +16,7 @@ export const guitarRoomEn: GuitarRoomCopy = {
     'eleanor-rigby': "Based on Jacob's version / standard tuning",
     redbone: 'Still on the stand.',
   },
+  lessonSoon: 'Lesson video coming soon',
   watchOn: 'Watch on {platform}',
   watchReel: 'Watch the reel',
   watch: 'Watch',

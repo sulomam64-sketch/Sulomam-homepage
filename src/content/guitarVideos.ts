@@ -1,57 +1,60 @@
-import { siteConfig } from './config'
-
-export type GuitarVideoPlatform = 'instagram' | 'tiktok' | 'youtube'
-
 export type GuitarVideo = {
   id: string
   title: string
   artist: string
-  platform: GuitarVideoPlatform
   /**
-   * Exact reel or video URL.
-   * Paste over the profile link when you have it, for example:
-   * https://www.instagram.com/reel/XXXXXXXXXXX/
-   * https://www.tiktok.com/@sulomam/video/XXXXXXXX
-   * https://youtu.be/XXXXXXXX
-   * Cards stay plain links — no Instagram embed.
+   * Optional YouTube lesson. Paste an 11-character id or a full URL, for example:
+   * `xxxxxxxxxxx`
+   * `https://www.youtube.com/watch?v=xxxxxxxxxxx`
+   * `https://youtu.be/xxxxxxxxxxx`
+   * Leave it unset and the card shows a coming-soon state. Nothing links out to Instagram.
    */
-  url: string
-  /** Optional image in `public/`, e.g. `/guitar/eleanor.jpg`. Omit for a text card. */
+  youtube?: string
+  /** Optional image in `public/`, e.g. `/guitar/eleanor.jpg`. Hidden once a lesson embed is set. */
   thumbnail?: string
   note?: string
   /**
-   * `upcoming` is a teaser and does not link out, even if `url` is filled in.
-   * Switch to `ready` (or omit) when the video should be tappable.
+   * `upcoming` is a teaser (no lesson line) until `youtube` is set.
+   * Any other card with no `youtube` shows the lesson coming-soon line.
    */
   status?: 'ready' | 'upcoming'
 }
 
-/** Footer / profile. Reel URLs belong on each video's `url`, not here. */
+/** Footer profile. Arrangement lessons are not Instagram links. */
 export const guitarTikTok = {
   handle: '@sulomam',
   url: 'https://www.tiktok.com/@sulomam',
 } as const
 
-const platformName: Record<GuitarVideoPlatform, string> = {
-  instagram: 'Instagram',
-  tiktok: 'TikTok',
-  youtube: 'YouTube',
-}
+const YOUTUBE_ID = /^[\w-]{11}$/
 
-export function guitarPlatformName(platform: GuitarVideoPlatform): string {
-  return platformName[platform]
-}
-
-/** Link text. Profile URLs use `watchOn`; a pasted reel URL uses `watchReel`. */
-export function guitarWatchLabel(
-  video: GuitarVideo,
-  labels: { watchOn: string; watchReel: string; watch: string },
-): string {
-  const platform = platformName[video.platform]
-  if (/\/(reel|p|tv)\//.test(video.url)) return labels.watchReel
-  if (/tiktok\.com\/@[^/]+\/video\//.test(video.url)) return labels.watch
-  if (/youtube\.com|youtu\.be/.test(video.url)) return labels.watch
-  return labels.watchOn.replaceAll('{platform}', platform)
+/** Pull a YouTube id out of a bare id or a watch / share / embed URL. */
+export function youtubeVideoId(value: string | undefined): string | null {
+  const trimmed = value?.trim()
+  if (!trimmed) return null
+  if (YOUTUBE_ID.test(trimmed)) return trimmed
+  try {
+    const url = new URL(trimmed)
+    const host = url.hostname.replace(/^www\./, '')
+    if (host === 'youtu.be') {
+      const id = url.pathname.split('/').filter(Boolean)[0] ?? ''
+      return YOUTUBE_ID.test(id) ? id : null
+    }
+    if (
+      host === 'youtube.com' ||
+      host === 'm.youtube.com' ||
+      host === 'music.youtube.com' ||
+      host === 'youtube-nocookie.com'
+    ) {
+      const fromQuery = url.searchParams.get('v') ?? ''
+      if (YOUTUBE_ID.test(fromQuery)) return fromQuery
+      const fromPath = url.pathname.match(/\/(?:embed|shorts|live)\/([\w-]{11})/)
+      return fromPath ? fromPath[1] : null
+    }
+  } catch {
+    return null
+  }
+  return null
 }
 
 export const guitarVideos: GuitarVideo[] = [
@@ -59,17 +62,12 @@ export const guitarVideos: GuitarVideo[] = [
     id: 'eleanor-rigby',
     title: 'Eleanor Rigby',
     artist: 'The Beatles',
-    platform: 'instagram',
-    url: siteConfig.instagram.url,
     note: "Based on Jacob's version / standard tuning",
-    status: 'ready',
   },
   {
     id: 'redbone',
     title: 'Redbone',
     artist: 'Childish Gambino',
-    platform: 'instagram',
-    url: siteConfig.instagram.url,
     note: 'Still on the stand.',
     status: 'upcoming',
   },

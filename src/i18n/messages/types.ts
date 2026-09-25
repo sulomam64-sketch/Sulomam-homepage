@@ -112,6 +112,8 @@ export type GuitarRoomCopy = {
   /** `Up next: {title} ({artist}) solo arrangement` */
   upNext: string
   notes: Record<string, string>
+  /** Shown on a lesson card that has no YouTube id yet. */
+  lessonSoon: string
   /** `Watch on {platform}` */
   watchOn: string
   watchReel: string

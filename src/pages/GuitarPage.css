@@ -184,6 +184,37 @@ a.guitar-card:hover {
   border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
 }
 
+.guitar-card-lesson {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-height: 100%;
+}
+
+.guitar-embed {
+  align-self: stretch;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 0.45rem;
+  background: color-mix(in srgb, var(--ink) 10%, var(--bg-alt));
+}
+
+.guitar-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.guitar-lesson-soon {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .guitar-card-upcoming,
 .guitar-soon {
   display: flex;

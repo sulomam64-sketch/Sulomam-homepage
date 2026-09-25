@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { siteConfig } from '../content/config'
 import { getGnaNoteArticles } from '../content/gnaNotes'
 import { gnaStoreLinks, guitarStoreUrl } from '../content/guitarGna'
-import { guitarPlatformName, guitarTikTok, guitarVideos, guitarWatchLabel, type GuitarVideo } from '../content/guitarVideos'
+import { guitarTikTok, guitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
 import { contactPathForPlan } from '../content/plans'
 import { scalePlatformLabel, scalePracticeVideos } from '../content/scalePractice'
 import { localeLabels, locales, useI18n, type Locale } from '../i18n'
@@ -22,31 +22,33 @@ function isHttpUrl(value: string | undefined): value is string {
 function ArrangementCard({ video }: { video: GuitarVideo }) {
   const { t } = useI18n()
   const copy = t.guitar
-  const upcoming = video.status === 'upcoming'
   const note = copy.notes[video.id] ?? video.note
-  const body = (
-    <>
-      {video.thumbnail ? <img src={video.thumbnail} alt="" /> : null}
-      {upcoming ? null : <p className="eyebrow">{guitarPlatformName(video.platform)}</p>}
+  const videoId = youtubeVideoId(video.youtube)
+  const upcoming = !videoId && video.status === 'upcoming'
+
+  return (
+    <article className={upcoming ? 'guitar-card guitar-card-upcoming' : 'guitar-card guitar-card-lesson'}>
+      {videoId ? (
+        <div className="guitar-embed">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+            title={`${video.title} — ${video.artist}`}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+      ) : video.thumbnail ? (
+        <img src={video.thumbnail} alt="" />
+      ) : null}
       <h3 className="guitar-card-title">
         {upcoming ? fill(copy.upNext, { title: video.title, artist: video.artist }) : video.title}
       </h3>
       {upcoming ? null : <p className="guitar-card-artist">{video.artist}</p>}
       {note ? <p className="guitar-card-note">{note}</p> : null}
-      {upcoming || !isHttpUrl(video.url) ? null : (
-        <span className="guitar-watch">{guitarWatchLabel(video, copy)}</span>
-      )}
-    </>
-  )
-
-  if (upcoming || !isHttpUrl(video.url)) {
-    return <article className="guitar-card guitar-card-upcoming">{body}</article>
-  }
-
-  return (
-    <a className="guitar-card" href={video.url} target="_blank" rel="noreferrer">
-      {body}
-    </a>
+      {videoId || upcoming ? null : <p className="guitar-lesson-soon">{copy.lessonSoon}</p>}
+    </article>
   )
 }
 

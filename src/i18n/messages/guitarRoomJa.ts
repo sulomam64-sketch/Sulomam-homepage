@@ -16,6 +16,7 @@ export const guitarRoomJa: GuitarRoomCopy = {
     'eleanor-rigby': 'Jacob の弾き方をもとにしてます。レギュラーチューニング。',
     redbone: 'まだ譜面台の上。',
   },
+  lessonSoon: '解説動画は近日公開',
   watchOn: '{platform} で観る',
   watchReel: 'リールを観る',
   watch: '観る',
