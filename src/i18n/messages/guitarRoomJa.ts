@@ -11,6 +11,7 @@ export const guitarRoomJa: GuitarRoomCopy = {
   arrangementsEyebrow: '合わせて弾く',
   arrangementsTitle: 'ソロアレンジ',
   arrangementsLead: '動画が少しあります。弾きたくなったら、タップして。',
+  arrangementsSoon: '準備中です。',
   upNext: '次は {title}（{artist}）のソロアレンジ',
   notes: {
     'eleanor-rigby': 'Jacob の弾き方をもとにしてます。レギュラーチューニング。',

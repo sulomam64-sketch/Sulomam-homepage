@@ -109,6 +109,8 @@ export type GuitarRoomCopy = {
   arrangementsEyebrow: string
   arrangementsTitle: string
   arrangementsLead: string
+  /** Shown in place of arrangement cards while `visibleGuitarVideos` is empty. */
+  arrangementsSoon: string
   /** `Up next: {title} ({artist}) solo arrangement` */
   upNext: string
   notes: Record<string, string>

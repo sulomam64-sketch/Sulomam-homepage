@@ -4,7 +4,7 @@ import { siteConfig } from '../content/config'
 import { getGnaNoteArticles } from '../content/gnaNotes'
 import { gnaStoreLinks, guitarStoreUrl } from '../content/guitarGna'
 import { gnaGameSrc, type GnaGameMode } from '../content/gnaGames'
-import { guitarTikTok, guitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
+import { guitarTikTok, visibleGuitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
 import { contactPathForPlan } from '../content/plans'
 import { scalePlatformLabel, scalePracticeVideos } from '../content/scalePractice'
 import { localeLabels, locales, useI18n, type Locale } from '../i18n'
@@ -180,12 +180,18 @@ export function GuitarPage() {
           <h2 className="section-title" id="arrangements-title">
             {copy.arrangementsTitle}
           </h2>
-          <p className="section-lead">{copy.arrangementsLead}</p>
-          <div className="guitar-grid cols-2">
-            {guitarVideos.map((video) => (
-              <ArrangementCard key={video.id} video={video} />
-            ))}
-          </div>
+          {visibleGuitarVideos.length > 0 ? (
+            <>
+              <p className="section-lead">{copy.arrangementsLead}</p>
+              <div className="guitar-grid cols-2">
+                {visibleGuitarVideos.map((video) => (
+                  <ArrangementCard key={video.id} video={video} />
+                ))}
+              </div>
+            </>
+          ) : (
+            <p className="section-lead">{copy.arrangementsSoon}</p>
+          )}
         </section>
 
         <section className="guitar-wrap guitar-section" aria-labelledby="scales-title">

@@ -11,6 +11,7 @@ export const guitarRoomEn: GuitarRoomCopy = {
   arrangementsEyebrow: 'Play along',
   arrangementsTitle: 'Solo arrangements',
   arrangementsLead: 'A few videos. Tap one when you want to play along.',
+  arrangementsSoon: 'Coming soon.',
   upNext: 'Up next: {title} ({artist}) solo arrangement',
   notes: {
     'eleanor-rigby': "Based on Jacob's version / standard tuning",

@@ -72,3 +72,9 @@ export const guitarVideos: GuitarVideo[] = [
     status: 'upcoming',
   },
 ]
+
+/**
+ * Cards actually rendered in the solo arrangements section.
+ * Empty for now. Assign `guitarVideos` (or a subset) to show them again.
+ */
+export const visibleGuitarVideos: readonly GuitarVideo[] = []
