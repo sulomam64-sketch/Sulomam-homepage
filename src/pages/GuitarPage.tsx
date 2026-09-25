@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { siteConfig } from '../content/config'
 import { getGnaNoteArticles } from '../content/gnaNotes'
 import { gnaStoreLinks, guitarStoreUrl } from '../content/guitarGna'
+import { gnaGameSrc, type GnaGameMode } from '../content/gnaGames'
 import { guitarTikTok, guitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
 import { contactPathForPlan } from '../content/plans'
 import { scalePlatformLabel, scalePracticeVideos } from '../content/scalePractice'
@@ -10,10 +11,33 @@ import { localeLabels, locales, useI18n, type Locale } from '../i18n'
 import { en } from '../i18n/messages/en'
 import { useTheme, type Theme } from '../theme'
 import { around, fill } from './guitar/fill'
-import { Metronome } from './guitar/Metronome'
-import { PracticeRoom } from './guitar/PracticeRoom'
 import { SongRequestForm } from './guitar/SongRequestForm'
 import './GuitarPage.css'
+
+function FretboardGame({
+  mode,
+  title,
+  lead,
+}: {
+  mode: GnaGameMode
+  title: string
+  lead: string
+}) {
+  const { locale } = useI18n()
+  const headingId = mode === 'puzzle' ? 'fretboard-puzzle' : 'fretboard-quiz'
+
+  return (
+    <article className="guitar-game" aria-labelledby={headingId}>
+      <h3 className="guitar-card-title" id={headingId}>
+        {title}
+      </h3>
+      <p className="guitar-card-note">{lead}</p>
+      <div className={mode === 'puzzle' ? 'guitar-game-frame is-puzzle' : 'guitar-game-frame is-quiz'}>
+        <iframe src={gnaGameSrc(mode, locale)} title={title} loading="lazy" />
+      </div>
+    </article>
+  )
+}
 
 function isHttpUrl(value: string | undefined): value is string {
   return typeof value === 'string' && /^https?:\/\//i.test(value)
@@ -246,9 +270,9 @@ export function GuitarPage() {
             {copy.lingerTitle}
           </h2>
           <p className="section-lead">{copy.lingerLead}</p>
-          <div className="guitar-toys">
-            <Metronome />
-            <PracticeRoom />
+          <div className="guitar-games">
+            <FretboardGame mode="puzzle" title={copy.puzzleTitle} lead={copy.puzzleLead} />
+            <FretboardGame mode="game" title={copy.quizTitle} lead={copy.quizLead} />
           </div>
         </section>
 

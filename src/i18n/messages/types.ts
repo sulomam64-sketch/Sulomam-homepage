@@ -135,27 +135,10 @@ export type GuitarRoomCopy = {
   lingerEyebrow: string
   lingerTitle: string
   lingerLead: string
-  metroTitle: string
-  metroLead: string
-  slower: string
-  faster: string
-  tempo: string
-  bpmUnit: string
-  /** `{bpm} beats per minute` */
-  tempoValue: string
-  tap: string
-  tapHint: string
-  start: string
-  stop: string
-  soundError: string
-  roomTitle: string
-  roomLead: string
-  play: string
-  pause: string
-  loop: string
-  volume: string
-  /** `{n} percent` */
-  volumeValue: string
+  puzzleTitle: string
+  puzzleLead: string
+  quizTitle: string
+  quizLead: string
   requestEyebrow: string
   requestTitle: string
   requestLead: string

@@ -163,8 +163,7 @@
 }
 
 .guitar-card,
-.guitar-soon,
-.toy {
+.guitar-soon {
   background: var(--bg-elevated);
   border: 1px solid color-mix(in srgb, var(--line) 42%, transparent);
   padding: 1.1rem 1.1rem 1.15rem;
@@ -333,224 +332,35 @@ a.guitar-card:hover {
   gap: 0.35rem 1rem;
 }
 
-.guitar-toys {
+.guitar-games {
   display: grid;
-  gap: 0.85rem;
+  gap: 1.75rem;
   margin-top: 1.15rem;
 }
 
-.toy-title {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--accent-deep);
+.guitar-game {
+  min-width: 0;
 }
 
-.toy-lead,
-.toy-note {
-  margin: 0.4rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-  line-height: 1.55;
-}
-
-.metro-bpm-row {
-  display: grid;
-  grid-template-columns: 2.75rem 1fr 2.75rem;
-  align-items: center;
-  gap: 0.35rem;
-  margin-top: 0.9rem;
-}
-
-.metro-bpm {
-  margin: 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.35rem;
-}
-
-.metro-bpm-num {
-  font-family: var(--font-display);
-  font-size: 3.1rem;
-  font-weight: 500;
-  line-height: 0.9;
-  color: var(--accent-deep);
-}
-
-.metro-bpm-unit {
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.metro-step,
-.metro-tap,
-.metro-start,
-.room-play,
-.room-loop,
-.guitar-submit,
-.room-track {
-  font: inherit;
-  cursor: pointer;
-  touch-action: manipulation;
-}
-
-.metro-step {
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
-  background: var(--bg);
-  color: var(--ink);
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.metro-slider,
-.room-volume {
-  display: block;
+.guitar-game .guitar-card-note {
   margin-top: 0.35rem;
 }
 
-.guitar-page input[type='range'] {
-  width: 100%;
-  accent-color: var(--accent);
-  margin: 0.55rem 0 0;
-}
-
-.metro-string {
-  position: relative;
-  height: 2px;
-  margin: 0.95rem 0 0.7rem;
-  background: color-mix(in srgb, var(--line) 55%, transparent);
-  overflow: hidden;
-}
-
-.metro-string i {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 100%;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left center;
-}
-
-.metro-string.is-hit i {
-  animation: string-pluck 0.42s ease-out;
-}
-
-.metro-beats {
-  display: flex;
-  gap: 0.45rem;
-}
-
-.metro-beats span {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--line) 65%, transparent);
-}
-
-.metro-beats span.is-current {
-  background: var(--accent);
-}
-
-.metro-actions,
-.room-now,
-.room-tools {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.metro-actions {
-  margin-top: 0.9rem;
-}
-
-.metro-tap,
-.metro-start,
-.room-play,
-.room-loop,
-.guitar-submit {
-  min-height: 2.75rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
-  background: var(--bg);
-  color: var(--ink);
-}
-
-.metro-tap {
-  flex: 1;
-}
-
-.metro-start,
-.room-play {
-  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
-  color: var(--accent-deep);
-}
-
-.metro-start[aria-pressed='true'],
-.room-play[aria-pressed='true'],
-.room-loop.is-on {
-  background: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
-}
-
-.room-now {
-  margin-top: 0.95rem;
-}
-
-.room-title {
-  margin: 0;
-  min-width: 0;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  line-height: 1.25;
-  color: var(--accent-deep);
-}
-
-.room-tools {
+.guitar-game-frame {
   margin-top: 0.75rem;
+  background: color-mix(in srgb, var(--ink) 8%, var(--bg-alt));
+  border: 1px solid color-mix(in srgb, var(--line) 42%, transparent);
 }
 
-.room-volume {
-  flex: 1;
-  margin-top: 0;
-}
-
-.room-volume input[type='range'] {
-  margin: 0;
-}
-
-.room-list {
-  list-style: none;
-  margin: 0.85rem 0 0;
-  padding: 0;
-}
-
-.room-track {
+.guitar-game-frame iframe {
+  display: block;
   width: 100%;
-  display: flex;
-  gap: 0.65rem;
-  align-items: baseline;
-  padding: 0.6rem 0.1rem;
+  height: 680px;
   border: 0;
-  border-top: 1px solid color-mix(in srgb, var(--line) 35%, transparent);
-  background: transparent;
-  color: var(--ink-soft);
-  text-align: left;
-  font-size: 0.92rem;
 }
 
-.room-track.is-current {
-  color: var(--accent-deep);
-}
-
-.room-num {
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+.guitar-game-frame.is-puzzle iframe {
+  height: 590px;
 }
 
 .guitar-request {
@@ -586,6 +396,14 @@ a.guitar-card:hover {
 .guitar-submit {
   justify-self: start;
   margin-top: 0.15rem;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .guitar-submit:disabled {
@@ -689,28 +507,9 @@ a.guitar-card:hover {
     max-width: none;
   }
 
-  .guitar-grid.cols-2,
-  .guitar-toys {
+  .guitar-grid.cols-2 {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
 }
 
-@keyframes string-pluck {
-  0% {
-    transform: scaleX(0.08);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 0.15;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .metro-string.is-hit i {
-    animation: none;
-    transform: scaleX(1);
-    opacity: 0.7;
-  }
-}
