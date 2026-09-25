@@ -12,6 +12,17 @@
   </head>
   <body>
     <div id="root"></div>
+    <!--
+      Netlify Forms detection for /guitar. The live form is rendered by React
+      and posted to /. Field names must match SongRequestForm.
+    -->
+    <form name="guitar-song-request" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="song" />
+      <input type="text" name="artist" />
+      <input type="text" name="handle" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

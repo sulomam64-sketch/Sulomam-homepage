@@ -50,3 +50,15 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Cache-Control = "no-store"
+
+# /guitar is a client route (the /* rewrite serves index.html).
+# Preview only — keep it out of search results until it is linked.
+[[headers]]
+  for = "/guitar"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/guitar/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
