@@ -144,6 +144,9 @@ export type GuitarRoomCopy = {
   requestEyebrow: string
   requestTitle: string
   requestLead: string
+  /** Optional single choice. Submitted as the field `hear`. */
+  hearLabel: string
+  hearChoices: string[]
   thanks: string
   /** `… message {handle}.` */
   formError: string

@@ -44,9 +44,15 @@ export const guitarRoomEn: GuitarRoomCopy = {
   quizTitle: 'Fretboard Quiz',
   quizLead: 'A few questions about the neck, whenever you feel like it.',
   requestEyebrow: 'Your turn',
-  requestTitle: 'Request a song',
-  requestLead:
-    'A song you’d like to hear on solo guitar? Leave it here. I’ll read it when I sit down to arrange.',
+  requestTitle: 'Songs you want me to play',
+  requestLead: 'Acoustic or electric, send me a song.',
+  hearLabel: 'How would you like to hear it?',
+  hearChoices: [
+    'Acoustic solo arrangement',
+    'Electric rock cover',
+    'Rock-leaning arrangement',
+    'How to play the riff / solo',
+  ],
   thanks: 'Got it. It’s on the list — I’ll read it when I sit down with the guitar.',
   formError: 'That didn’t send. Try once more, or message {handle}.',
   honeypot: 'Don’t fill this out',

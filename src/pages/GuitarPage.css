@@ -393,6 +393,64 @@ a.guitar-card:hover {
   font-size: 1rem;
 }
 
+.guitar-hear {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.guitar-hear legend {
+  padding: 0;
+}
+
+.guitar-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.guitar-chip {
+  position: relative;
+  cursor: pointer;
+}
+
+.guitar-chip input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.guitar-chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.guitar-chip input:checked + span {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  background: color-mix(in srgb, var(--accent) 16%, var(--bg-elevated));
+  color: var(--accent-deep);
+}
+
+.guitar-chip input:focus-visible + span {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
+}
+
 .guitar-submit {
   justify-self: start;
   margin-top: 0.15rem;

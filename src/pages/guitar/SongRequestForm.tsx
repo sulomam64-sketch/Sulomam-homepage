@@ -87,6 +87,17 @@ export function SongRequestForm() {
         <span>{copy.message}</span>
         <textarea name="message" rows={4} maxLength={2000} />
       </label>
+      <fieldset className="guitar-field guitar-hear">
+        <legend>{copy.hearLabel}</legend>
+        <div className="guitar-chips">
+          {copy.hearChoices.map((choice) => (
+            <label key={choice} className="guitar-chip">
+              <input type="radio" name="hear" value={choice} />
+              <span>{choice}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <button type="submit" className="guitar-submit" disabled={status === 'sending'}>
         {status === 'sending' ? copy.sending : copy.submit}
       </button>
