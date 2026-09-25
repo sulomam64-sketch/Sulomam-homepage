@@ -12,6 +12,8 @@ import {
 } from '../content/guitarVideos'
 import { contactPathForPlan } from '../content/plans'
 import { scalePlatformLabel, scalePracticeVideos } from '../content/scalePractice'
+import { useI18n } from '../i18n'
+import { localeHtmlLang } from '../i18n/locales'
 import { en } from '../i18n/messages/en'
 import { useTheme, type Theme } from '../theme'
 import { Metronome } from './guitar/Metronome'
@@ -67,6 +69,7 @@ function ArrangementCard({ video }: { video: GuitarVideo }) {
 
 export function GuitarPage() {
   const { theme, setTheme } = useTheme()
+  const { locale } = useI18n()
   const tips = en.site.nav.find((item) => item.to === '/gna')
   const articles = linkedTips()
   const scales = scalePracticeVideos.filter((video) => isHttpUrl(video.url))
@@ -75,9 +78,13 @@ export function GuitarPage() {
 
   useEffect(() => {
     const previousTitle = document.title
-    const previousLang = document.documentElement.lang
     document.title = PAGE_TITLE
-    document.documentElement.lang = 'en'
+    // I18nProvider writes <html lang> from the studio locale after child effects.
+    const applyLang = () => {
+      document.documentElement.lang = 'en'
+    }
+    applyLang()
+    const langTimer = window.setTimeout(applyLang, 0)
 
     const existing = document.querySelector('meta[name="robots"]')
     const created = !existing
@@ -91,13 +98,14 @@ export function GuitarPage() {
     window.scrollTo(0, 0)
 
     return () => {
+      window.clearTimeout(langTimer)
       document.title = previousTitle
-      document.documentElement.lang = previousLang
+      document.documentElement.lang = localeHtmlLang[locale]
       if (created) meta.remove()
       else if (previousContent == null) meta.removeAttribute('content')
       else meta.setAttribute('content', previousContent)
     }
-  }, [])
+  }, [locale])
 
   return (
     <div className="guitar-page">
