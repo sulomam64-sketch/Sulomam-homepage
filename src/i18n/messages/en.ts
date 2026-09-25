@@ -1,3 +1,4 @@
+import { guitarRoomEn } from './guitarRoomEn'
 import type { Messages } from './types'
 
 export const en: Messages = {
@@ -497,4 +498,5 @@ export const en: Messages = {
       },
     ],
   },
+  guitar: guitarRoomEn,
 }

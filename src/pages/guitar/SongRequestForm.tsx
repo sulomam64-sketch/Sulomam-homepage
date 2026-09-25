@@ -1,10 +1,15 @@
 import { useState, type FormEvent } from 'react'
 import { siteConfig } from '../../content/config'
+import { useI18n } from '../../i18n'
+import { around } from './fill'
 
 const FORM_NAME = 'guitar-song-request'
 
 export function SongRequestForm() {
+  const { t } = useI18n()
+  const copy = t.guitar
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [errorBefore, errorAfter] = around(copy.formError, 'handle')
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -35,7 +40,7 @@ export function SongRequestForm() {
   if (status === 'sent') {
     return (
       <p className="guitar-thanks" role="status">
-        Got it. It’s on the list — I’ll read it when I sit down with the guitar.
+        {copy.thanks}
       </p>
     )
   }
@@ -53,37 +58,37 @@ export function SongRequestForm() {
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <p className="guitar-hp" hidden>
         <label>
-          Don’t fill this out
+          {copy.honeypot}
           <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
       {status === 'error' ? (
         <p className="guitar-form-error" role="alert">
-          That didn’t send. Try once more, or message{' '}
+          {errorBefore}
           <a href={siteConfig.instagram.url} target="_blank" rel="noreferrer">
             {siteConfig.instagram.handle}
           </a>
-          .
+          {errorAfter}
         </p>
       ) : null}
       <label className="guitar-field">
-        <span>Song</span>
+        <span>{copy.song}</span>
         <input name="song" required maxLength={200} autoComplete="off" />
       </label>
       <label className="guitar-field">
-        <span>Artist</span>
+        <span>{copy.artist}</span>
         <input name="artist" required maxLength={200} autoComplete="off" />
       </label>
       <label className="guitar-field">
-        <span>Name or Instagram (optional)</span>
+        <span>{copy.handle}</span>
         <input name="handle" maxLength={200} autoComplete="nickname" />
       </label>
       <label className="guitar-field">
-        <span>A note (optional)</span>
+        <span>{copy.message}</span>
         <textarea name="message" rows={4} maxLength={2000} />
       </label>
       <button type="submit" className="guitar-submit" disabled={status === 'sending'}>
-        {status === 'sending' ? 'Sending…' : 'Send it'}
+        {status === 'sending' ? copy.sending : copy.submit}
       </button>
     </form>
   )

@@ -42,13 +42,16 @@ export function guitarPlatformName(platform: GuitarVideoPlatform): string {
   return platformName[platform]
 }
 
-/** Link text. Profile URLs read as "Watch on Instagram"; a pasted reel URL reads as "Watch the reel". */
-export function guitarWatchLabel(video: GuitarVideo): string {
+/** Link text. Profile URLs use `watchOn`; a pasted reel URL uses `watchReel`. */
+export function guitarWatchLabel(
+  video: GuitarVideo,
+  labels: { watchOn: string; watchReel: string; watch: string },
+): string {
   const platform = platformName[video.platform]
-  if (/\/(reel|p|tv)\//.test(video.url)) return 'Watch the reel'
-  if (/tiktok\.com\/@[^/]+\/video\//.test(video.url)) return 'Watch'
-  if (/youtube\.com|youtu\.be/.test(video.url)) return 'Watch'
-  return `Watch on ${platform}`
+  if (/\/(reel|p|tv)\//.test(video.url)) return labels.watchReel
+  if (/tiktok\.com\/@[^/]+\/video\//.test(video.url)) return labels.watch
+  if (/youtube\.com|youtu\.be/.test(video.url)) return labels.watch
+  return labels.watchOn.replaceAll('{platform}', platform)
 }
 
 export const guitarVideos: GuitarVideo[] = [

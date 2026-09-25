@@ -100,6 +100,81 @@ export type GnaTerm = {
   body: string
 }
 
+export type GuitarRoomCopy = {
+  pageTitle: string
+  brandTag: string
+  title: string
+  tagline: string
+  intro: string
+  arrangementsEyebrow: string
+  arrangementsTitle: string
+  arrangementsLead: string
+  /** `Up next: {title} ({artist}) solo arrangement` */
+  upNext: string
+  notes: Record<string, string>
+  /** `Watch on {platform}` */
+  watchOn: string
+  watchReel: string
+  watch: string
+  scalesEyebrow: string
+  scalesTitle: string
+  scalesLead: string
+  comingSoon: string
+  comingSoonBody: string
+  gnaEyebrow: string
+  gnaTitle: string
+  gnaLead: string
+  postsNote: string
+  /** `Full list on {tips}.` */
+  tipsLine: string
+  appStore: string
+  googlePlay: string
+  appPending: string
+  lingerEyebrow: string
+  lingerTitle: string
+  lingerLead: string
+  metroTitle: string
+  metroLead: string
+  slower: string
+  faster: string
+  tempo: string
+  bpmUnit: string
+  /** `{bpm} beats per minute` */
+  tempoValue: string
+  tap: string
+  tapHint: string
+  start: string
+  stop: string
+  soundError: string
+  roomTitle: string
+  roomLead: string
+  play: string
+  pause: string
+  loop: string
+  volume: string
+  /** `{n} percent` */
+  volumeValue: string
+  requestEyebrow: string
+  requestTitle: string
+  requestLead: string
+  thanks: string
+  /** `… message {handle}.` */
+  formError: string
+  honeypot: string
+  song: string
+  artist: string
+  handle: string
+  message: string
+  sending: string
+  submit: string
+  /** `… The {solo} is back in the studio.` */
+  commission: string
+  soloPlan: string
+  instagram: string
+  tiktok: string
+  backToStudio: string
+}
+
 export type Messages = {
   site: {
     brand: string
@@ -191,4 +266,5 @@ export type Messages = {
     termsLead: string
     terms: GnaTerm[]
   }
+  guitar: GuitarRoomCopy
 }

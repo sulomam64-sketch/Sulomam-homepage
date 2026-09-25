@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { homePlaylist } from '../../content/playlist'
+import { useI18n } from '../../i18n'
+import { fill } from './fill'
 
 function displayTitle(title: string) {
   return title.replaceAll('_', ' ')
@@ -11,6 +13,8 @@ function displayTitle(title: string) {
  * is reported to the homepage play counter. Audio never starts by itself.
  */
 export function PracticeRoom() {
+  const { t } = useI18n()
+  const copy = t.guitar
   const tracks = homePlaylist
   const audioRef = useRef<HTMLAudioElement>(null)
   const wantPlayRef = useRef(false)
@@ -80,8 +84,8 @@ export function PracticeRoom() {
 
   return (
     <div className="toy">
-      <h3 className="toy-title">Practice room</h3>
-      <p className="toy-lead">Studio demos, if you want something on. It stays quiet until you press play.</p>
+      <h3 className="toy-title">{copy.roomTitle}</h3>
+      <p className="toy-lead">{copy.roomLead}</p>
 
       <audio
         ref={audioRef}
@@ -106,7 +110,7 @@ export function PracticeRoom() {
 
       <div className="room-now">
         <button type="button" className="room-play" onClick={togglePlay} aria-pressed={playing}>
-          {playing ? 'Pause' : 'Play'}
+          {playing ? copy.pause : copy.play}
         </button>
         <p className="room-title">{displayTitle(track.title)}</p>
       </div>
@@ -118,17 +122,17 @@ export function PracticeRoom() {
           aria-pressed={loop}
           onClick={() => setLoop((current) => !current)}
         >
-          Loop
+          {copy.loop}
         </button>
         <label className="room-volume">
-          <span className="guitar-sr">Volume</span>
+          <span className="guitar-sr">{copy.volume}</span>
           <input
             type="range"
             min={0}
             max={1}
             step={0.01}
             value={volume}
-            aria-valuetext={`${Math.round(volume * 100)} percent`}
+            aria-valuetext={fill(copy.volumeValue, { n: Math.round(volume * 100) })}
             onChange={(event) => setVolume(Number(event.target.value))}
           />
         </label>

@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { useI18n } from '../../i18n'
+import { fill } from './fill'
 
 const MIN_BPM = 40
 const MAX_BPM = 240
@@ -15,6 +17,8 @@ function createAudioContext(): AudioContext | null {
 }
 
 export function Metronome() {
+  const { t } = useI18n()
+  const copy = t.guitar
   const [bpm, setBpm] = useState(76)
   const [running, setRunning] = useState(false)
   const [beat, setBeat] = useState(0)
@@ -121,7 +125,7 @@ export function Metronome() {
     tapsRef.current = recent.slice(-5)
     setPulse((n) => n + 1)
     if (recent.length < 2) {
-      setTapHint('Once more, in time')
+      setTapHint(copy.tapHint)
       return
     }
     setTapHint('')
@@ -132,30 +136,30 @@ export function Metronome() {
 
   return (
     <div className="toy">
-      <h3 className="toy-title">Metronome</h3>
-      <p className="toy-lead">Tap a few times, or slide the tempo. Beat one is a little brighter.</p>
+      <h3 className="toy-title">{copy.metroTitle}</h3>
+      <p className="toy-lead">{copy.metroLead}</p>
 
       <div className="metro-bpm-row">
-        <button type="button" className="metro-step" onClick={() => setTempo(bpm - 1)} aria-label="Slower">
+        <button type="button" className="metro-step" onClick={() => setTempo(bpm - 1)} aria-label={copy.slower}>
           −
         </button>
         <p className="metro-bpm">
           <span className="metro-bpm-num">{bpm}</span>
-          <span className="metro-bpm-unit">bpm</span>
+          <span className="metro-bpm-unit">{copy.bpmUnit}</span>
         </p>
-        <button type="button" className="metro-step" onClick={() => setTempo(bpm + 1)} aria-label="Faster">
+        <button type="button" className="metro-step" onClick={() => setTempo(bpm + 1)} aria-label={copy.faster}>
           +
         </button>
       </div>
 
       <label className="metro-slider">
-        <span className="guitar-sr">Tempo</span>
+        <span className="guitar-sr">{copy.tempo}</span>
         <input
           type="range"
           min={MIN_BPM}
           max={MAX_BPM}
           value={bpm}
-          aria-valuetext={`${bpm} beats per minute`}
+          aria-valuetext={fill(copy.tempoValue, { bpm })}
           onChange={(event) => setTempo(Number(event.target.value))}
         />
       </label>
@@ -171,7 +175,7 @@ export function Metronome() {
 
       <div className="metro-actions">
         <button type="button" className="metro-tap" onClick={tap}>
-          Tap tempo
+          {copy.tap}
         </button>
         <button
           type="button"
@@ -182,7 +186,7 @@ export function Metronome() {
             else void start()
           }}
         >
-          {running ? 'Stop' : 'Start'}
+          {running ? copy.stop : copy.start}
         </button>
       </div>
       {tapHint ? (
@@ -192,7 +196,7 @@ export function Metronome() {
       ) : null}
       {soundError ? (
         <p className="toy-note" role="status">
-          Sound isn’t available in this browser. The tempo still counts on screen.
+          {copy.soundError}
         </p>
       ) : null}
     </div>
