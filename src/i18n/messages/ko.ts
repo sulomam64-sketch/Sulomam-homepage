@@ -16,7 +16,7 @@ export const ko: Messages = {
       { to: '/', label: 'Home' },
       { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
-      { to: '/gna', label: 'Tips' },
+      { to: '/guitar', label: 'Guitar Room' },
       { to: '/contact', label: 'Contact' },
     ],
   },

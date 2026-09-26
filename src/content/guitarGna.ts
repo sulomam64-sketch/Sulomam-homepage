@@ -1,8 +1,7 @@
 /**
  * Store links for Guitar Navigation Assistant on /guitar.
  *
- * Tips are NOT copied here. The page uses the header Tips item (`/gna` in
- * `src/i18n/messages/en.ts`) and article URLs from `src/content/gnaNotes.ts`.
+ * Tips archive stays at `/gna`. Article URLs come from `src/content/gnaNotes.ts`.
  *
  * PLACEHOLDER: this repository has no App Store or Google Play URL.
  * Replace a value with a full https URL when you have one.

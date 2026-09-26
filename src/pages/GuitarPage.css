@@ -1,83 +1,5 @@
 .guitar-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   color: var(--ink);
-}
-
-.guitar-page main {
-  flex: 1;
-}
-
-.guitar-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1.25rem;
-  padding: 0.85rem 1.25rem;
-  padding-top: max(0.85rem, env(safe-area-inset-top));
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid color-mix(in srgb, var(--teal) 18%, transparent);
-}
-
-.guitar-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
-  min-width: 0;
-}
-
-.guitar-brand-name {
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  color: var(--accent-deep);
-}
-
-.guitar-brand-tag {
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.guitar-tools {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.45rem 0.85rem;
-  margin-left: auto;
-}
-
-.guitar-theme {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  flex: 0 0 auto;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-
-.guitar-theme select {
-  appearance: none;
-  padding: 0.35rem 1.6rem 0.35rem 0.55rem;
-  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
-  background:
-    var(--bg-elevated)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2371717a' d='M1 1l5 5 5-5'/%3E%3C/svg%3E")
-    no-repeat right 0.45rem center;
-  color: var(--ink);
-  font: inherit;
-  font-size: 0.82rem;
-  cursor: pointer;
 }
 
 .guitar-wrap {
@@ -511,38 +433,21 @@ a.guitar-card:hover {
   font-size: 0.92rem;
 }
 
-.guitar-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.85rem 1.5rem;
-  margin-top: 2.75rem;
-  padding: 1.6rem 1.25rem max(2.4rem, env(safe-area-inset-bottom));
-  border-top: 1px solid color-mix(in srgb, var(--teal) 15%, transparent);
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-.guitar-footer-links {
+.guitar-social {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem 1.15rem;
+  margin-top: 2.75rem;
+  padding-top: 1.35rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--teal) 15%, transparent);
+  font-size: 0.9rem;
 }
 
-.guitar-footer-links a {
+.guitar-social a {
   color: var(--accent);
-  text-decoration: none;
-}
-
-.guitar-back {
-  color: var(--muted);
   text-decoration: underline;
   text-underline-offset: 0.18em;
-}
-
-.guitar-footer p {
-  margin: 0;
 }
 
 .guitar-sr {
@@ -563,12 +468,6 @@ a.guitar-card:hover {
 }
 
 @media (min-width: 720px) {
-  .guitar-header,
-  .guitar-footer {
-    padding-left: clamp(1.25rem, 4vw, 3rem);
-    padding-right: clamp(1.25rem, 4vw, 3rem);
-  }
-
   .guitar-wrap {
     padding-left: clamp(1.25rem, 4vw, 3rem);
     padding-right: clamp(1.25rem, 4vw, 3rem);

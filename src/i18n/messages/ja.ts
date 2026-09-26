@@ -15,7 +15,7 @@ export const ja: Messages = {
       { to: '/', label: 'Home' },
       { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
-      { to: '/gna', label: 'Tips' },
+      { to: '/guitar', label: 'ギタールーム' },
       { to: '/contact', label: 'Contact' },
     ],
   },
