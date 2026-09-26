@@ -15,6 +15,9 @@ export const gnaStoreLinks = {
   android: 'PLACEHOLDER',
 } as const
 
+/** Full GNA web app (not the embed iframe). Same host as production games. */
+export const gnaWebAppUrl = 'https://guitar-dna-20260711.netlify.app/'
+
 export function guitarStoreUrl(value: string): string | null {
   if (/^https?:\/\//i.test(value)) return value
   return null

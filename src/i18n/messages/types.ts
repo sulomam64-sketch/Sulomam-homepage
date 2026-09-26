@@ -131,6 +131,8 @@ export type GuitarRoomCopy = {
   postsNote: string
   /** `Full list on {tips}.` */
   tipsLine: string
+  webAppLine: string
+  webAppLink: string
   appStore: string
   googlePlay: string
   appPending: string

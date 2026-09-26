@@ -32,6 +32,8 @@ export const guitarRoomJa: GuitarRoomCopy = {
     'GNA（Guitar Navigation Assistant）は、スケールとコードとキーのための、小さめの指板アプリです。使い方はスタジオの Tips と同じ。アプリを開きながらでも、ただ読んでもいい。',
   postsNote: '日本語は note、英語は Substack。',
   tipsLine: '一覧は {tips} にあります。',
+  webAppLine: 'GNA のウェブ版もあります。ブラウザでスケールやコード、指板を触れます。',
+  webAppLink: 'ウェブ版の GNA を開く',
   appStore: 'App Store',
   googlePlay: 'Google Play',
   appPending: 'スマホアプリのリンクは、まだこのページには置いてません。',
