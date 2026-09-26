@@ -94,11 +94,6 @@ export function GuitarPage() {
   const scales = scalePracticeVideos.filter((video) => isHttpUrl(video.url))
   const ios = guitarStoreUrl(gnaStoreLinks.ios)
   const android = guitarStoreUrl(gnaStoreLinks.android)
-  const closedTest = getGnaNoteArticles().find((article) => article.id === 'closed-test')
-  const androidTesterUrl =
-    (locale === 'ja' ? closedTest?.noteUrl : closedTest?.substackUrl || closedTest?.noteUrl) ||
-    closedTest?.noteUrl ||
-    null
   const [tipsBefore, tipsAfter] = around(copy.tipsLine, 'tips')
   const [commissionBefore, commissionAfter] = around(copy.commission, 'solo')
 
@@ -236,14 +231,6 @@ export function GuitarPage() {
               {copy.webAppLink}
             </a>
           </p>
-          {androidTesterUrl ? (
-            <p className="guitar-gna-cta guitar-android-tester">
-              {copy.androidTesterLine}{' '}
-              <a href={androidTesterUrl} target="_blank" rel="noreferrer">
-                {copy.androidTesterLink}
-              </a>
-            </p>
-          ) : null}
           <p className="guitar-aside">{copy.postsNote}</p>
           {articles.length > 0 ? (
             <ul className="guitar-tips">
