@@ -94,6 +94,11 @@ export function GuitarPage() {
   const scales = scalePracticeVideos.filter((video) => isHttpUrl(video.url))
   const ios = guitarStoreUrl(gnaStoreLinks.ios)
   const android = guitarStoreUrl(gnaStoreLinks.android)
+  const closedTest = getGnaNoteArticles().find((article) => article.id === 'closed-test')
+  const androidTesterUrl =
+    (locale === 'ja' ? closedTest?.noteUrl : closedTest?.substackUrl || closedTest?.noteUrl) ||
+    closedTest?.noteUrl ||
+    null
   const [tipsBefore, tipsAfter] = around(copy.tipsLine, 'tips')
   const [commissionBefore, commissionAfter] = around(copy.commission, 'solo')
 
@@ -225,6 +230,20 @@ export function GuitarPage() {
             {copy.gnaTitle}
           </h2>
           <p className="section-lead">{copy.gnaLead}</p>
+          <p className="guitar-gna-cta guitar-web-app">
+            {copy.webAppLine}{' '}
+            <a href={gnaWebAppUrl} target="_blank" rel="noreferrer">
+              {copy.webAppLink}
+            </a>
+          </p>
+          {androidTesterUrl ? (
+            <p className="guitar-gna-cta guitar-android-tester">
+              {copy.androidTesterLine}{' '}
+              <a href={androidTesterUrl} target="_blank" rel="noreferrer">
+                {copy.androidTesterLink}
+              </a>
+            </p>
+          ) : null}
           <p className="guitar-aside">{copy.postsNote}</p>
           {articles.length > 0 ? (
             <ul className="guitar-tips">
@@ -252,12 +271,6 @@ export function GuitarPage() {
               {tipsAfter}
             </p>
           ) : null}
-          <p className="guitar-aside guitar-web-app">
-            {copy.webAppLine}{' '}
-            <a href={gnaWebAppUrl} target="_blank" rel="noreferrer">
-              {copy.webAppLink}
-            </a>
-          </p>
           {ios || android ? (
             <p className="guitar-aside guitar-stores">
               {ios ? (
@@ -271,9 +284,7 @@ export function GuitarPage() {
                 </a>
               ) : null}
             </p>
-          ) : (
-            <p className="guitar-aside">{copy.appPending}</p>
-          )}
+          ) : null}
         </section>
 
         <section className="guitar-wrap guitar-section" aria-labelledby="linger-title">

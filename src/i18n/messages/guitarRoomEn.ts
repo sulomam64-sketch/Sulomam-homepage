@@ -30,12 +30,13 @@ export const guitarRoomEn: GuitarRoomCopy = {
   gnaEyebrow: 'Tools & tips',
   gnaTitle: 'For your practice',
   gnaLead:
-    'GNA (Guitar Navigation Assistant) is a small fretboard app for scales, chords, and keys. The how-tos are the same Tips — handy beside the app, fine to read on their own.',
+    'GNA (Guitar Navigation Assistant) is a small fretboard app for scales, chords, and keys. Right now I’m recruiting Android closed-test testers. You can also try it in the browser.',
   postsNote: 'Japanese on note · English on Substack.',
   tipsLine: 'Full list on {tips}.',
-  webAppLine:
-    'Try the web version of GNA — scales, chords, and the fretboard in the browser.',
+  webAppLine: 'Start with the web version.',
   webAppLink: 'Open GNA on the web',
+  androidTesterLine: 'Android testers wanted for the closed test.',
+  androidTesterLink: 'Read about the signup',
   appStore: 'App Store',
   googlePlay: 'Google Play',
   appPending: 'The phone app isn’t linked from this page yet.',
