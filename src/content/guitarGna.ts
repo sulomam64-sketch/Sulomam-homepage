@@ -18,6 +18,9 @@ export const gnaStoreLinks = {
 /** Full GNA web app (not the embed iframe). Same host as production games. */
 export const gnaWebAppUrl = 'https://guitar-dna-20260711.netlify.app/'
 
+/** English GNA tips publication on Substack. */
+export const gnaSubstackUrl = 'https://sulomamgna.substack.com/'
+
 export function guitarStoreUrl(value: string): string | null {
   if (/^https?:\/\//i.test(value)) return value
   return null

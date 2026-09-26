@@ -34,6 +34,8 @@ export const guitarRoomJa: GuitarRoomCopy = {
   tipsLine: '一覧は {tips} にあります。',
   webAppLine: 'まずはウェブ版から。',
   webAppLink: 'ウェブ版の GNA を開く',
+  substackLine: '英語の Tips は Substack にあります。',
+  substackLink: 'Substack を開く',
   appStore: 'App Store',
   googlePlay: 'Google Play',
   appPending: 'スマホアプリのリンクは、まだこのページには置いてません。',

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { siteConfig } from '../content/config'
 import { getGnaNoteArticles } from '../content/gnaNotes'
-import { gnaStoreLinks, gnaWebAppUrl, guitarStoreUrl } from '../content/guitarGna'
+import { gnaStoreLinks, gnaSubstackUrl, gnaWebAppUrl, guitarStoreUrl } from '../content/guitarGna'
 import { gnaGameSrc, type GnaGameMode } from '../content/gnaGames'
 import { guitarTikTok, visibleGuitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
 import { contactPathForPlan } from '../content/plans'
@@ -229,6 +229,12 @@ export function GuitarPage() {
             {copy.webAppLine}{' '}
             <a href={gnaWebAppUrl} target="_blank" rel="noreferrer">
               {copy.webAppLink}
+            </a>
+          </p>
+          <p className="guitar-gna-cta guitar-substack">
+            {copy.substackLine}{' '}
+            <a href={gnaSubstackUrl} target="_blank" rel="noreferrer">
+              {copy.substackLink}
             </a>
           </p>
           <p className="guitar-aside">{copy.postsNote}</p>

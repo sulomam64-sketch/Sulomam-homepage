@@ -133,6 +133,8 @@ export type GuitarRoomCopy = {
   tipsLine: string
   webAppLine: string
   webAppLink: string
+  substackLine: string
+  substackLink: string
   appStore: string
   googlePlay: string
   appPending: string
