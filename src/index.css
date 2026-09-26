@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 
 :root,
-[data-theme='light'] {
-  /* Simple studio palette: ink + stone + turquoise accent */
-  --accent: #0d9488;
-  --accent-soft: #5eead4;
-  --accent-deep: #0f172a;
-  --line: #a1a1aa;
+[data-theme='dark'] {
+  /* Simple studio palette: ink + stone + turquoise accent (night default) */
+  --accent: #2dd4bf;
+  --accent-soft: #99f6e4;
+  --accent-deep: #f4f4f5;
+  --line: #52525b;
   --on-dark: #f4f4f5;
-  --bg: #f0efeb;
-  --bg-elevated: #fafaf8;
-  --bg-alt: #e5e4df;
-  --ink: #141414;
-  --ink-soft: #3f3f46;
-  --muted: #71717a;
+  --bg: #0a0a0a;
+  --bg-elevated: #141414;
+  --bg-alt: #171717;
+  --ink: #f4f4f5;
+  --ink-soft: #d4d4d8;
+  --muted: #a1a1aa;
   /* legacy aliases used across components */
   --rose: var(--accent);
   --rose-soft: var(--accent-soft);
@@ -32,18 +32,18 @@
   line-height: 1.6;
 }
 
-[data-theme='dark'] {
-  --accent: #2dd4bf;
-  --accent-soft: #99f6e4;
-  --accent-deep: #f4f4f5;
-  --line: #52525b;
+[data-theme='light'] {
+  --accent: #0d9488;
+  --accent-soft: #5eead4;
+  --accent-deep: #0f172a;
+  --line: #a1a1aa;
   --on-dark: #f4f4f5;
-  --bg: #0a0a0a;
-  --bg-elevated: #141414;
-  --bg-alt: #171717;
-  --ink: #f4f4f5;
-  --ink-soft: #d4d4d8;
-  --muted: #a1a1aa;
+  --bg: #f0efeb;
+  --bg-elevated: #fafaf8;
+  --bg-alt: #e5e4df;
+  --ink: #141414;
+  --ink-soft: #3f3f46;
+  --muted: #71717a;
   --rose: var(--accent);
   --rose-soft: var(--accent-soft);
   --teal: var(--line);

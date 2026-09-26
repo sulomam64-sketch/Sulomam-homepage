@@ -25,7 +25,7 @@ function readStoredTheme(): Theme {
   } catch {
     /* ignore */
   }
-  return 'light'
+  return 'dark'
 }
 
 function applyTheme(theme: Theme) {
@@ -34,7 +34,7 @@ function applyTheme(theme: Theme) {
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'light'
+    if (typeof window === 'undefined') return 'dark'
     const initial = readStoredTheme()
     applyTheme(initial)
     return initial
