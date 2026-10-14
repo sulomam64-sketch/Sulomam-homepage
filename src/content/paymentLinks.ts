@@ -145,6 +145,43 @@ export function payOfferFor(planId: string, currency: PayCurrency): PayOffer | n
   return links[currency][planId] ?? null
 }
 
+/**
+ * Lesson Payment Links, kept apart from the production tiers above.
+ * The Zoom keys are live. PLACEHOLDER: the other values stay '#' until their Stripe links exist.
+ * Only the Zoom keys (jp-zoom-60 / jp-zoom-30) appear on the lesson pages. Video lessons
+ * and add-ons are paid through a link sent by hand after the student's video is accepted.
+ */
+export const lessonPayLinks = {
+  /** Zoom lesson, 60 minutes, ¥6,000. */
+  'jp-zoom-60': 'https://buy.stripe.com/5kQ4gy7jIc9AdVCfwba7C0I',
+  /** Zoom lesson, 30 minutes, ¥3,500. */
+  'jp-zoom-30': 'https://buy.stripe.com/9B6fZgeMagpQ2cU4Rxa7C0J',
+  /** Video lesson, one chorus, ¥6,000. */
+  'jp-video-chorus': '#',
+  /** Video lesson, one phrase, ¥3,000. */
+  'jp-video-phrase': '#',
+  /** Video lesson extra section, ¥2,500 each (tentative). */
+  'jp-extra-section': '#',
+  /** 15-minute Zoom added to a video lesson, ¥2,000 (tentative). */
+  'jp-zoom-addon': '#',
+  /** Review video added to a Zoom lesson, ¥2,000 (tentative). */
+  'jp-review-video': '#',
+  /** Phrase video lesson, $20. */
+  'lesson-phrase': '#',
+  /** One Chorus video lesson, $60. */
+  'lesson-chorus': '#',
+  /** Extra section, $20 each. */
+  'lesson-extra-section': '#',
+  /** Live Zoom support add-on, $15. */
+  'lesson-zoom-addon': '#',
+} as const
+
+export type LessonPayKey = keyof typeof lessonPayLinks
+
+export function lessonPayHref(id: string): string | null {
+  return id in lessonPayLinks ? lessonPayLinks[id as LessonPayKey] : null
+}
+
 export function stemsPayHref(currency: PayCurrency): string {
   const offer = links[currency].stems
   if (!offer || offer.kind !== 'full') {

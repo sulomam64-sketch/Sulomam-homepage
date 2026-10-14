@@ -1,0 +1,345 @@
+.lesson-tagline {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+
+.lesson-intro {
+  margin-bottom: 0;
+  max-width: 40rem;
+}
+
+.lesson-body {
+  max-width: 46rem;
+  padding-bottom: 4rem;
+}
+
+.lesson-section {
+  padding-top: 1.6rem;
+  margin-top: 1.6rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 30%, transparent);
+}
+
+.lesson-section:first-child {
+  margin-top: 0;
+}
+
+.lesson-heading {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--accent-deep);
+}
+
+.lesson-text {
+  margin: 0 0 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.lesson-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.lesson-list li + li {
+  margin-top: 0.45rem;
+}
+
+.lesson-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.72em;
+  width: 0.38rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+.lesson-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: lesson-step;
+}
+
+.lesson-steps li {
+  position: relative;
+  padding-left: 2.1rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  counter-increment: lesson-step;
+}
+
+.lesson-steps li + li {
+  margin-top: 0.7rem;
+}
+
+.lesson-steps li::before {
+  content: counter(lesson-step);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.lesson-plans {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.lesson-plan {
+  padding: 1.15rem 1.1rem 1.05rem;
+  background: var(--bg-elevated);
+  border: 1px solid color-mix(in srgb, var(--line) 38%, transparent);
+  border-top: 3px solid var(--accent);
+}
+
+.lesson-plan-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--accent-deep);
+}
+
+.lesson-plan-price {
+  margin: 0.3rem 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.lesson-plan-body {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.lesson-trial {
+  padding: 1.35rem 1.2rem 1.4rem;
+  background: color-mix(in srgb, var(--accent) 7%, var(--bg-elevated));
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.lesson-trial-lead {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.lesson-trial .lesson-list {
+  margin-bottom: 1.15rem;
+}
+
+.lesson-faq {
+  display: grid;
+}
+
+.lesson-details {
+  border-top: 1px solid color-mix(in srgb, var(--line) 30%, transparent);
+}
+
+.lesson-details:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 30%, transparent);
+}
+
+.lesson-section > .lesson-details {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.lesson-details summary {
+  cursor: pointer;
+  padding: 0.9rem 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  list-style: none;
+}
+
+.lesson-section > .lesson-details > summary {
+  padding-top: 0;
+  font-size: 1.35rem;
+}
+
+.lesson-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-details summary::after {
+  content: '+';
+  float: right;
+  margin-left: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.lesson-details[open] summary::after {
+  content: '–';
+}
+
+.lesson-details p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.lesson-details .lesson-list {
+  margin-bottom: 0.4rem;
+}
+
+.lesson-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+}
+
+.lesson-actions-stack {
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 26rem;
+}
+
+.lesson-actions-stack .btn {
+  text-align: center;
+}
+
+.lesson-actions-inline {
+  margin-top: 1.4rem;
+}
+
+.lesson-thanks .lesson-steps {
+  margin: 0.25rem 0 1.1rem;
+}
+
+.lesson-thanks-extra {
+  margin-top: 2.5rem;
+}
+
+.lesson-steps-after {
+  margin: 1rem 0 0;
+}
+
+.lesson-plan-pay {
+  margin: 0.9rem 0 0;
+}
+
+.lesson-plan-pay .btn {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+}
+
+.lesson-entrances {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.lesson-entrance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.15rem 1.1rem 1.05rem;
+  background: var(--bg-elevated);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.lesson-entrance:hover,
+.lesson-entrance:focus-visible {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--bg-elevated));
+}
+
+.lesson-entrance-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--accent-deep);
+}
+
+.lesson-entrance-price {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.lesson-entrance-body {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.lesson-entrance-cta {
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+
+.lesson-part {
+  scroll-margin-top: 14rem;
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  border-top: 2px solid var(--accent);
+}
+
+.lesson-part .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.lesson-part-title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.lesson-part + .lesson-section {
+  margin-top: 0.6rem;
+  border-top: 0;
+}
+
+@media (min-width: 1000px) {
+  .lesson-part {
+    scroll-margin-top: 8rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .lesson-plans.cols-2,
+  .lesson-entrances {
+    grid-template-columns: 1fr 1fr;
+  }
+}

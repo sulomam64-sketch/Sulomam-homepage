@@ -2,9 +2,33 @@ import { Link } from 'react-router-dom'
 import { AudioPlaylistPlayer } from '../components/AudioPlaylistPlayer'
 import { Plans } from '../components/Plans'
 import { ServiceList } from '../components/ServiceList'
+import { lessonPathForLocale } from '../content/lesson'
 import { homePlaylist } from '../content/playlist'
 import { useI18n } from '../i18n'
+import { lessonEn } from '../i18n/messages/lessonEn'
+import { lessonJa } from '../i18n/messages/lessonJa'
 import './HomePage.css'
+
+function LessonCard() {
+  const { locale } = useI18n()
+  const card = locale === 'ja' ? lessonJa.card : lessonEn.card
+
+  return (
+    <section className="section lesson-card-section" aria-labelledby="lesson-card-title">
+      <div className="section-inner">
+        <Link className="lesson-card" to={lessonPathForLocale(locale)}>
+          <p className="eyebrow">{card.eyebrow}</p>
+          <h2 className="lesson-card-title" id="lesson-card-title">
+            {card.title}
+          </h2>
+          <p className="lesson-card-tagline">{card.tagline}</p>
+          <p className="lesson-card-prices">{card.prices}</p>
+          <span className="lesson-card-cta">{card.cta}</span>
+        </Link>
+      </div>
+    </section>
+  )
+}
 
 export function HomePage() {
   const { t } = useI18n()
@@ -56,6 +80,8 @@ export function HomePage() {
       </section>
 
       <Plans />
+
+      <LessonCard />
 
       <section className="section closing-section">
         <div className="section-inner narrow">

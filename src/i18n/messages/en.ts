@@ -16,6 +16,7 @@ export const en: Messages = {
       { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
       { to: '/guitar', label: 'Guitar Room' },
+      { to: '/video-lessons', label: 'Lessons' },
       { to: '/contact', label: 'Contact' },
     ],
   },

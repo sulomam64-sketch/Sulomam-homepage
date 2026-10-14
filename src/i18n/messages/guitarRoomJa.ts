@@ -70,4 +70,6 @@ export const guitarRoomJa: GuitarRoomCopy = {
   instagram: 'Instagram',
   tiktok: 'TikTok',
   backToStudio: 'スタジオに戻る',
+  lessonLine: '弾きたい曲を習いたいなら、レッスンもあります。',
+  lessonLink: 'レッスンを見る',
 }

@@ -5,11 +5,24 @@ import { resolvePlanLabel } from '../content/plans'
 import { useI18n } from '../i18n'
 import './ContactPage.css'
 
+const lessonPlanLabels: Record<string, { ja: string; en: string }> = {
+  'video-chorus': { ja: '動画レッスン（1コーラス）', en: 'One Chorus Lesson' },
+  'video-phrase': { ja: '動画レッスン（フレーズ）', en: 'Phrase Lesson' },
+  'free-trial-jp': { ja: '無料体験レッスン（動画）', en: 'Free Trial Lesson (Japanese)' },
+  'free-trial': { ja: '無料体験レッスン（動画）', en: 'Free Trial Lesson' },
+  lesson: { ja: 'Zoomレッスン（曲と日時の連絡）', en: 'Zoom Lesson' },
+  'zoom-60': { ja: 'Zoomレッスン60分', en: 'Zoom Lesson 60 min' },
+  'zoom-30': { ja: 'Zoomレッスン30分', en: 'Zoom Lesson 30 min' },
+}
+
 export function ContactPage() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const { contact } = t
   const [searchParams] = useSearchParams()
-  const planLabel = resolvePlanLabel(t, searchParams.get('plan'))
+  const planId = searchParams.get('plan')
+  const lessonLabel = planId ? lessonPlanLabels[planId] : undefined
+  const planLabel =
+    resolvePlanLabel(t, planId) ?? (lessonLabel ? lessonLabel[locale === 'ja' ? 'ja' : 'en'] : null)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [draft, setDraft] = useState('')

@@ -71,4 +71,6 @@ export const guitarRoomEn: GuitarRoomCopy = {
   instagram: 'Instagram',
   tiktok: 'TikTok',
   backToStudio: 'Back to studio',
+  lessonLine: 'Want to learn a song? I teach too.',
+  lessonLink: 'See lessons',
 }

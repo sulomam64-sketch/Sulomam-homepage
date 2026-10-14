@@ -16,6 +16,7 @@ export const ja: Messages = {
       { to: '/#plans', label: 'Plans' },
       { to: '/work', label: 'Work' },
       { to: '/guitar', label: 'Guitar Room' },
+      { to: '/lesson', label: 'Lessons' },
       { to: '/contact', label: 'Contact' },
     ],
   },

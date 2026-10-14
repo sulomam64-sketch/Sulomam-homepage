@@ -5,6 +5,7 @@ import { getGnaNoteArticles } from '../content/gnaNotes'
 import { gnaStoreLinks, gnaSubstackUrl, gnaWebAppUrl, guitarStoreUrl } from '../content/guitarGna'
 import { gnaGameSrc, type GnaGameMode } from '../content/gnaGames'
 import { guitarTikTok, visibleGuitarVideos, youtubeVideoId, type GuitarVideo } from '../content/guitarVideos'
+import { lessonPathForLocale } from '../content/lesson'
 import { contactPathForPlan } from '../content/plans'
 import { scalePlatformLabel, scalePracticeVideos } from '../content/scalePractice'
 import { useI18n } from '../i18n'
@@ -245,6 +246,9 @@ export function GuitarPage() {
           {commissionBefore}
           <Link to={contactPathForPlan('solo')}>{copy.soloPlan}</Link>
           {commissionAfter}
+        </p>
+        <p className="guitar-quiet">
+          {copy.lessonLine} <Link to={lessonPathForLocale(locale)}>{copy.lessonLink}</Link>
         </p>
       </section>
 
